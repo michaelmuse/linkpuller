@@ -8,15 +8,14 @@ client = Twitter::REST::Client.new do |config|
   config.access_token        = ENV['TWITTER_ACCESS_TOKEN']
   config.access_token_secret = ENV['TWITTER_ACCESS_TOKEN_SECRET']
 end
-binding.pry
     options = {
-      count: 200,
       exclude_replies: true,
       include_rts: false,
+      count: 100,
     }
-    tweets = client.user_timeline("michaelmuse", options) 
+    @tweets = client.user_timeline("michaelmuse", options) 
 
-    a.uris.first.attrs[:display_url]
+    # a.uris.first.attrs[:display_url]
 
 # def collect_with_max_id(collection=[], max_id=nil, &block)
 #   response = yield max_id

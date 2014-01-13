@@ -288,3 +288,39 @@ NameError (undefined local variable or method `a' for #<TweetsController:0x007ff
   Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
   Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
   Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.4ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-13 15:21:46 -0500
+Processing by TweetsController#index as HTML
+Completed 500 Internal Server Error in 29256ms
+
+NameError (undefined local variable or method `a' for #<TweetsController:0x007fb6726e22d0>):
+  app/controllers/tweets_controller.rb:19:in `index'
+
+
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-13 15:22:55 -0500
+Processing by TweetsController#index as HTML
+  Rendered tweets/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 13719ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-13 15:23:09 -0500
+Served asset /application.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-13 15:23:09 -0500
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-13 15:23:09 -0500
+Served asset /application.js - 200 OK (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-13 15:23:09 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
