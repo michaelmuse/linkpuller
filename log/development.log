@@ -1,0 +1,290 @@
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (19.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (8.8ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (1.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateTweets (20140112232951)
+  [1m[35m (0.6ms)[0m  BEGIN
+  [1m[36m (20.0ms)[0m  [1mCREATE TABLE "tweets" ("id" serial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (2.7ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20140112232951')
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2014-01-12 18:43:18 -0500
+Served asset /rails.png - 200 OK (5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-12 18:43:36 -0500
+Processing by TweetsController#index as HTML
+  Rendered tweets/index.html.erb within layouts/application (1.4ms)
+Compiled application.css  (0ms)  (pid 54695)
+Compiled jquery.js  (4ms)  (pid 54695)
+Compiled jquery_ujs.js  (0ms)  (pid 54695)
+Compiled application.js  (19ms)  (pid 54695)
+Completed 200 OK in 76ms (Views: 75.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-12 18:43:36 -0500
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-12 18:43:36 -0500
+Served asset /application.css - 200 OK (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-12 18:43:36 -0500
+Served asset /application.js - 200 OK (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-12 18:43:36 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-12 18:51:27 -0500
+Processing by TweetsController#index as HTML
+Completed 500 Internal Server Error in 500ms
+
+Twitter::Error::Forbidden (Unable to verify your credentials):
+  app/controllers/tweets_controller.rb:12:in `index'
+
+
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-12 18:59:46 -0500
+Processing by TweetsController#index as HTML
+Completed 500 Internal Server Error in 516ms
+
+Twitter::Error::Forbidden (Unable to verify your credentials):
+  app/controllers/tweets_controller.rb:12:in `index'
+
+
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-12 19:00:30 -0500
+Processing by TweetsController#index as HTML
+Completed 500 Internal Server Error in 832ms
+
+Twitter::Error::Forbidden (Unable to verify your credentials):
+  app/controllers/tweets_controller.rb:12:in `index'
+
+
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.5ms)
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-12 19:00:33 -0500
+Processing by TweetsController#index as HTML
+Completed 500 Internal Server Error in 651ms
+
+Twitter::Error::Forbidden (Unable to verify your credentials):
+  app/controllers/tweets_controller.rb:12:in `index'
+
+
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-12 19:01:48 -0500
+Processing by TweetsController#index as HTML
+Completed 500 Internal Server Error in 0ms
+
+NoMethodError (undefined method `pry' for #<Binding:0x007fd2fa5d34f8>):
+  app/controllers/tweets_controller.rb:4:in `index'
+
+
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-12 19:09:35 -0500
+Processing by TweetsController#index as HTML
+Completed 500 Internal Server Error in 1863647ms
+
+Twitter::Error::Forbidden (Unable to verify your credentials):
+  app/controllers/tweets_controller.rb:13:in `index'
+
+
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-12 19:40:39 -0500
+Processing by TweetsController#index as HTML
+Completed 500 Internal Server Error in 477ms
+
+Twitter::Error::Forbidden (Unable to verify your credentials):
+  app/controllers/tweets_controller.rb:12:in `index'
+
+
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-12 19:43:05 -0500
+Processing by TweetsController#index as HTML
+  Rendered tweets/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 12683ms (Views: 32.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-12 19:43:17 -0500
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-12 19:43:17 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-12 19:43:17 -0500
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-12 19:43:17 -0500
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-12 19:43:22 -0500
+Processing by TweetsController#index as HTML
+  Rendered tweets/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 3979ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-12 19:43:26 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-12 19:43:26 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-12 19:43:26 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-12 19:43:26 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-12 19:44:13 -0500
+Processing by TweetsController#index as HTML
+  Rendered tweets/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 410ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-12 19:44:13 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-12 19:44:13 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-12 19:44:13 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-12 19:44:13 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-12 20:02:59 -0500
+Processing by TweetsController#index as HTML
+  Rendered tweets/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 46212022ms (Views: 32.5ms | ActiveRecord: 0.0ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/tweets" for 127.0.0.1 at 2014-01-13 14:53:18 -0500
+
+ActionController::RoutingError (No route matches [GET] "/tweets"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/michaelmuse/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/michaelmuse/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/michaelmuse/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-13 14:53:24 -0500
+Processing by TweetsController#index as HTML
+Completed 500 Internal Server Error in 35536ms
+
+NameError (undefined local variable or method `a' for #<TweetsController:0x007fd1ebe78190>):
+  app/controllers/tweets_controller.rb:19:in `index'
+
+
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-13 14:53:59 -0500
+Processing by TweetsController#index as HTML
+Completed 500 Internal Server Error in 7329ms
+
+NameError (undefined local variable or method `a' for #<TweetsController:0x007fd1ef003bd8>):
+  app/controllers/tweets_controller.rb:19:in `index'
+
+
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-13 14:54:07 -0500
+Processing by TweetsController#index as HTML
+Completed 500 Internal Server Error in 1484ms
+
+NameError (undefined local variable or method `a' for #<TweetsController:0x007fd1ebdf2a68>):
+  app/controllers/tweets_controller.rb:19:in `index'
+
+
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (38.5ms)
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (46.4ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-13 14:54:37 -0500
+Processing by TweetsController#index as HTML
+Completed 500 Internal Server Error in 235555ms
+
+NameError (undefined local variable or method `a' for #<TweetsController:0x007ff47aef61d8>):
+  app/controllers/tweets_controller.rb:19:in `index'
+
+
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.4ms)
