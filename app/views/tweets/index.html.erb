@@ -2,8 +2,19 @@
 
 <h1>linkpuller: All links</h1>
 
-<% @tweets.each do |tweet| %>
-  <h3><%=tweet.text%></h3>
+<table>
+<% @tweets.each do |tweet| %>  
+  <tr>
+    <td><%= tweet.text %></td>
+    <td><%= tweet.url %></td>
+    <td><%= tweet.domain %></td>
+    <td><%= @tweets.select{|k, v| }(tweet.domain).find_each %></td>
+    <td><%= tweet.tweet_date %></td>
+    <td><%= TwitterName.find_by_twitter_name_id(tweet.twitter_name_id).username %></td>
+  </tr>
+
+ <!--  <h3><%=tweet.text%></h3>
   <a href="http://<%=tweet.url%>"><%=tweet.url%></a>
-  <hr>
+  <hr> -->
 <% end %>
+</table>

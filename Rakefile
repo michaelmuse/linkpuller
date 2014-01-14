@@ -17,12 +17,6 @@ namespace :db do
       config.access_token        = ENV['TWITTER_ACCESS_TOKEN']
       config.access_token_secret = ENV['TWITTER_ACCESS_TOKEN_SECRET']
     end
-    # options = {
-    #   exclude_replies: true,
-    #   include_rts: false,
-    #   count: 200,
-    # }
-    # @tweets = client.user_timeline("michaelmuse", options) 
 
     def collect_with_max_id(collection=[], max_id=nil, &block)
       response = yield max_id
@@ -50,7 +44,6 @@ namespace :db do
         t.tweet_date = tweet.attrs[:created_at]
         t.twitter_name_id = tweet.attrs[:user][:id]
         t.text = tweet.attrs[:text]
-        # t.domain = curr_url.first.attrs[:expanded_url] #WITH SOME REGEX AFTER
         tn.twitter_name_id = tweet.attrs[:user][:id]
         tn.username = tweet.attrs[:user][:screen_name]
         t.save

@@ -595,3 +595,165 @@ Connecting to database specified by database.yml
   [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
   [1m[36mTweet Load (0.3ms)[0m  [1mSELECT "tweets".* FROM "tweets" [0m
   [1m[35m (0.1ms)[0m  ROLLBACK
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.5ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTwitterName Exists (1.2ms)[0m  [1mSELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" IS NULL LIMIT 1[0m
+  [1m[35mSQL (56.8ms)[0m  INSERT INTO "twitter_names" ("created_at", "twitter_name_id", "updated_at", "username") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Tue, 14 Jan 2014 20:03:58 UTC +00:00], ["twitter_name_id", nil], ["updated_at", Tue, 14 Jan 2014 20:03:58 UTC +00:00], ["username", "Bill"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTwitterName Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" IS NULL LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Exists (0.8ms)[0m  SELECT 1 AS one FROM "twitter_names" WHERE ("twitter_names"."twitter_name_id" = 1 AND "twitter_names"."id" != 1) LIMIT 1
+  [1m[36m (0.6ms)[0m  [1mUPDATE "twitter_names" SET "twitter_name_id" = 1, "updated_at" = '2014-01-14 20:03:58.594073' WHERE "twitter_names"."id" = 1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Exists (0.3ms)[0m  SELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" = 2 LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "twitter_names" ("created_at", "twitter_name_id", "updated_at", "username") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Tue, 14 Jan 2014 20:03:58 UTC +00:00], ["twitter_name_id", 2], ["updated_at", Tue, 14 Jan 2014 20:03:58 UTC +00:00], ["username", "Sarah"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mTwitterName Load (0.2ms)[0m  [1mSELECT "twitter_names".* FROM "twitter_names" [0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTwitterName Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" IS NULL LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "twitter_names" ("created_at", "twitter_name_id", "updated_at", "username") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Tue, 14 Jan 2014 20:03:58 UTC +00:00], ["twitter_name_id", nil], ["updated_at", Tue, 14 Jan 2014 20:03:58 UTC +00:00], ["username", "Bill"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTwitterName Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Exists (0.3ms)[0m  SELECT 1 AS one FROM "twitter_names" WHERE ("twitter_names"."twitter_name_id" = 1 AND "twitter_names"."id" != 3) LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mUPDATE "twitter_names" SET "twitter_name_id" = 1, "updated_at" = '2014-01-14 20:03:58.607329' WHERE "twitter_names"."id" = 3[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Exists (0.3ms)[0m  SELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Load (0.2ms)[0m  SELECT "twitter_names".* FROM "twitter_names" 
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTwitterName Exists (1.0ms)[0m  [1mSELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" IS NULL LIMIT 1[0m
+  [1m[35mSQL (49.0ms)[0m  INSERT INTO "twitter_names" ("created_at", "twitter_name_id", "updated_at", "username") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Tue, 14 Jan 2014 20:06:39 UTC +00:00], ["twitter_name_id", nil], ["updated_at", Tue, 14 Jan 2014 20:06:39 UTC +00:00], ["username", "Bill"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTwitterName Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Exists (0.6ms)[0m  SELECT 1 AS one FROM "twitter_names" WHERE ("twitter_names"."twitter_name_id" = 1 AND "twitter_names"."id" != 1) LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mUPDATE "twitter_names" SET "twitter_name_id" = 1, "updated_at" = '2014-01-14 20:06:39.334773' WHERE "twitter_names"."id" = 1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Exists (0.3ms)[0m  SELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Load (0.2ms)[0m  SELECT "twitter_names".* FROM "twitter_names" 
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Exists (0.4ms)[0m  SELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" IS NULL LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "twitter_names" ("created_at", "twitter_name_id", "updated_at", "username") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Tue, 14 Jan 2014 20:06:39 UTC +00:00], ["twitter_name_id", nil], ["updated_at", Tue, 14 Jan 2014 20:06:39 UTC +00:00], ["username", "Bill"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Exists (0.3ms)[0m  SELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTwitterName Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "twitter_names" WHERE ("twitter_names"."twitter_name_id" = 1 AND "twitter_names"."id" != 2) LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  UPDATE "twitter_names" SET "twitter_name_id" = 1, "updated_at" = '2014-01-14 20:06:39.346966' WHERE "twitter_names"."id" = 2
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTwitterName Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" = 2 LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "twitter_names" ("created_at", "twitter_name_id", "updated_at", "username") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Tue, 14 Jan 2014 20:06:39 UTC +00:00], ["twitter_name_id", 2], ["updated_at", Tue, 14 Jan 2014 20:06:39 UTC +00:00], ["username", "Sarah"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Load (0.2ms)[0m  SELECT "twitter_names".* FROM "twitter_names" 
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTwitterName Exists (0.7ms)[0m  [1mSELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" IS NULL LIMIT 1[0m
+  [1m[35mSQL (51.9ms)[0m  INSERT INTO "twitter_names" ("created_at", "twitter_name_id", "updated_at", "username") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Tue, 14 Jan 2014 20:08:57 UTC +00:00], ["twitter_name_id", nil], ["updated_at", Tue, 14 Jan 2014 20:08:57 UTC +00:00], ["username", "Bill"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTwitterName Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" IS NULL LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Exists (0.7ms)[0m  SELECT 1 AS one FROM "twitter_names" WHERE ("twitter_names"."twitter_name_id" = 1 AND "twitter_names"."id" != 1) LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mUPDATE "twitter_names" SET "twitter_name_id" = 1, "updated_at" = '2014-01-14 20:08:57.612108' WHERE "twitter_names"."id" = 1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Exists (0.3ms)[0m  SELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" = 2 LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "twitter_names" ("created_at", "twitter_name_id", "updated_at", "username") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Tue, 14 Jan 2014 20:08:57 UTC +00:00], ["twitter_name_id", 2], ["updated_at", Tue, 14 Jan 2014 20:08:57 UTC +00:00], ["username", "Sarah"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mTwitterName Load (0.2ms)[0m  [1mSELECT "twitter_names".* FROM "twitter_names" [0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTwitterName Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" IS NULL LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "twitter_names" ("created_at", "twitter_name_id", "updated_at", "username") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Tue, 14 Jan 2014 20:08:57 UTC +00:00], ["twitter_name_id", nil], ["updated_at", Tue, 14 Jan 2014 20:08:57 UTC +00:00], ["username", "Bill"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTwitterName Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Exists (0.4ms)[0m  SELECT 1 AS one FROM "twitter_names" WHERE ("twitter_names"."twitter_name_id" = 1 AND "twitter_names"."id" != 3) LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mUPDATE "twitter_names" SET "twitter_name_id" = 1, "updated_at" = '2014-01-14 20:08:57.625986' WHERE "twitter_names"."id" = 3[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Exists (0.3ms)[0m  SELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Load (0.2ms)[0m  SELECT "twitter_names".* FROM "twitter_names" 
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTwitterName Exists (0.8ms)[0m  [1mSELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" IS NULL LIMIT 1[0m
+  [1m[35mSQL (47.3ms)[0m  INSERT INTO "twitter_names" ("created_at", "twitter_name_id", "updated_at", "username") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Tue, 14 Jan 2014 20:15:39 UTC +00:00], ["twitter_name_id", nil], ["updated_at", Tue, 14 Jan 2014 20:15:39 UTC +00:00], ["username", "Bill"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTwitterName Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Exists (0.6ms)[0m  SELECT 1 AS one FROM "twitter_names" WHERE ("twitter_names"."twitter_name_id" = 1 AND "twitter_names"."id" != 1) LIMIT 1
+  [1m[36m (0.7ms)[0m  [1mUPDATE "twitter_names" SET "twitter_name_id" = 1, "updated_at" = '2014-01-14 20:15:40.029308' WHERE "twitter_names"."id" = 1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Exists (0.3ms)[0m  SELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" = 2 LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "twitter_names" ("created_at", "twitter_name_id", "updated_at", "username") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Tue, 14 Jan 2014 20:15:40 UTC +00:00], ["twitter_name_id", 2], ["updated_at", Tue, 14 Jan 2014 20:15:40 UTC +00:00], ["username", "Sarah"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mTwitterName Load (0.3ms)[0m  [1mSELECT "twitter_names".* FROM "twitter_names" [0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTwitterName Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" IS NULL LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "twitter_names" ("created_at", "twitter_name_id", "updated_at", "username") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Tue, 14 Jan 2014 20:15:40 UTC +00:00], ["twitter_name_id", nil], ["updated_at", Tue, 14 Jan 2014 20:15:40 UTC +00:00], ["username", "Bill"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTwitterName Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Exists (0.3ms)[0m  SELECT 1 AS one FROM "twitter_names" WHERE ("twitter_names"."twitter_name_id" = 1 AND "twitter_names"."id" != 3) LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mUPDATE "twitter_names" SET "twitter_name_id" = 1, "updated_at" = '2014-01-14 20:15:40.043664' WHERE "twitter_names"."id" = 3[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Exists (0.3ms)[0m  SELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Load (0.3ms)[0m  SELECT "twitter_names".* FROM "twitter_names" 
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
