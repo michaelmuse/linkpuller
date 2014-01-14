@@ -4,8 +4,9 @@ describe Tweet do
   describe "given two tweets" do
     before do
       @options = {url: "http://www.theatlantic.com/technology/archive/2014/01/him-love-in-the-time-of-operating-systems/283062/", tweet_date: "Tue Jan 07 18:06:21 +0000 2014", twitter_name_id: 14129087}
-      @t1 = Tweet.create(@options)
-      @t2 = Tweet.create(@options)
+      @t1 = Tweet.new(@options)
+      @t2 = Tweet.new(@options)
+      #possibly because of uniqueness contraint on the db, cant use Tweet.create here (breaks)
     end
     #Unique IDs
     describe "and given the tweet ids are unique" do
