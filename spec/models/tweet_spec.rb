@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Tweet do
   describe "given two tweets" do
     before do
-      @options = {url: "http://alleywat.ch/1", tweet_date: "Tue Jan 07 18:06:21 +0000 2014", twitter_name_id: 14129087}
+      @options = {url: "http://alleywat.ch/1", tweet_date: "Tue Jan 07 18:06:21 +0000 2014", twitter_name_id: 14129087, domain: "michaelmuse.com"}
       @t1 = Tweet.create(@options)
       @t2 = Tweet.create(@options)
     end
@@ -22,6 +22,7 @@ describe Tweet do
           tweet.url.should == @options[:url]
           tweet.tweet_date.should == @options[:tweet_date]
           tweet.twitter_name_id.should == @options[:twitter_name_id]
+          tweet.domain.should == @options[:domain]
         end
       end
     end

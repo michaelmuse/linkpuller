@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140114011206) do
+ActiveRecord::Schema.define(:version => 20140114191016) do
 
   create_table "tweets", :force => true do |t|
     t.datetime "created_at",                    :null => false
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(:version => 20140114011206) do
     t.datetime "tweet_date"
     t.integer  "twitter_name_id"
     t.string   "text"
+    t.string   "domain"
   end
 
   add_index "tweets", ["twitter_tweet_id"], :name => "index_tweets_on_twitter_tweet_id", :unique => true
