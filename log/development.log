@@ -894,3 +894,39 @@ Connecting to database specified by database.yml
   [1m[36m (0.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140113212523')[0m
   [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140113221749')
   [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140113221928')[0m
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-13 19:02:06 -0500
+Processing by TweetsController#index as HTML
+  [1m[36mTweet Load (0.9ms)[0m  [1mSELECT "tweets".* FROM "tweets" [0m
+  Rendered tweets/index.html.erb within layouts/application (2.0ms)
+Compiled bootstrap.css  (1ms)  (pid 75783)
+Compiled application.css  (8ms)  (pid 75783)
+Compiled bootstrap.js  (1ms)  (pid 75783)
+Compiled application.js  (8ms)  (pid 75783)
+Completed 200 OK in 122ms (Views: 94.2ms | ActiveRecord: 8.9ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-01-13 19:02:06 -0500
+Served asset /bootstrap.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-13 19:02:06 -0500
+Served asset /application.css - 200 OK (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-13 19:02:06 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-13 19:02:06 -0500
+Served asset /application.js - 200 OK (5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-13 19:02:06 -0500
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-01-13 19:02:06 -0500
+Served asset /bootstrap.js - 304 Not Modified (2ms)
