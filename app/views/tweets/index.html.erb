@@ -1,6 +1,9 @@
-<h1>hello linkpuller</h1>
+<%= render "header" %>
+
+<h1>linkpuller: All links</h1>
 
 <% @tweets.each do |tweet| %>
   <h3><%=tweet.text%></h3>
+  <a href="http://<%=tweet.url%>"><%=tweet.url%></a>
   <hr>
 <% end %>

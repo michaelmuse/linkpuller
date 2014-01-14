@@ -3043,3 +3043,1898 @@ Served asset /jquery.js - 304 Not Modified (1ms)
 
 Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-13 20:15:58 -0500
 Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-13 21:34:50 -0500
+Processing by TweetsController#index as HTML
+  [1m[36mTweet Load (2.9ms)[0m  [1mSELECT "tweets".* FROM "tweets" [0m
+  Rendered tweets/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 124ms (Views: 41.9ms | ActiveRecord: 16.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-13 21:34:50 -0500
+Served asset /application.css - 304 Not Modified (12ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-13 21:34:50 -0500
+Served asset /jquery.js - 304 Not Modified (36ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-13 21:34:50 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-01-13 21:34:50 -0500
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-01-13 21:34:50 -0500
+Served asset /bootstrap.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-13 21:34:50 -0500
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-13 21:35:24 -0500
+Processing by TweetsController#index as HTML
+  [1m[35mTweet Load (1.0ms)[0m  SELECT "tweets".* FROM "tweets" 
+  Rendered tweets/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 18ms (Views: 13.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-01-13 21:35:24 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-13 21:35:24 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-13 21:35:24 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-13 21:35:24 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-01-13 21:35:24 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-13 21:35:24 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/techcrunch.com/2013/06/27/upf%E2%80%A6" for 127.0.0.1 at 2014-01-13 21:35:46 -0500
+
+ActionController::RoutingError (No route matches [GET] "/techcrunch.com/2013/06/27/upf%E2%80%A6"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/michaelmuse/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/michaelmuse/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/michaelmuse/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-13 21:36:14 -0500
+Processing by TweetsController#index as HTML
+  [1m[36mTweet Load (1.0ms)[0m  [1mSELECT "tweets".* FROM "tweets" [0m
+  Rendered tweets/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 18ms (Views: 13.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-01-13 21:36:15 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-13 21:36:15 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-13 21:36:15 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-01-13 21:36:15 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-13 21:36:15 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-13 21:36:15 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-13 21:44:30 -0500
+Processing by TweetsController#index as HTML
+  [1m[36mTweet Load (1.2ms)[0m  [1mSELECT "tweets".* FROM "tweets" [0m
+  Rendered tweets/index.html.erb within layouts/application (7.5ms)
+Completed 500 Internal Server Error in 95ms
+
+ActionView::Template::Error (Missing partial tweets/header, application/header with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee]}. Searched in:
+  * "/Users/michaelmuse/Documents/ga_wdi/projects/linkpuller/app/views"
+  * "/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/devise-3.2.2/app/views"
+):
+    1: <%= render "header" %>
+    2: 
+    3: <h1>hello linkpuller</h1>
+    4: 
+  app/views/tweets/index.html.erb:1:in `_app_views_tweets_index_html_erb__2632222892368825378_70361403983340'
+
+
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-13 21:45:01 -0500
+Processing by TweetsController#index as HTML
+  [1m[35mTweet Load (0.9ms)[0m  SELECT "tweets".* FROM "tweets" 
+  Rendered tweets/index.html.erb within layouts/application (4.1ms)
+Completed 500 Internal Server Error in 17ms
+
+ActionView::Template::Error (Missing partial ../header with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee]}. Searched in:
+  * "/Users/michaelmuse/Documents/ga_wdi/projects/linkpuller/app/views"
+  * "/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/devise-3.2.2/app/views"
+):
+    1: <%= render "../header" %>
+    2: 
+    3: <h1>hello linkpuller</h1>
+    4: 
+  app/views/tweets/index.html.erb:1:in `_app_views_tweets_index_html_erb__2632222892368825378_70361405893480'
+
+
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-13 21:45:12 -0500
+Processing by TweetsController#index as HTML
+  [1m[36mTweet Load (1.6ms)[0m  [1mSELECT "tweets".* FROM "tweets" [0m
+  Rendered tweets/index.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 8ms
+
+ActionView::Template::Error (Missing partial /header with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee]}. Searched in:
+  * "/Users/michaelmuse/Documents/ga_wdi/projects/linkpuller/app/views"
+  * "/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/devise-3.2.2/app/views"
+):
+    1: <%= render "/header" %>
+    2: 
+    3: <h1>hello linkpuller</h1>
+    4: 
+  app/views/tweets/index.html.erb:1:in `_app_views_tweets_index_html_erb__2632222892368825378_70361396845920'
+
+
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-13 21:46:28 -0500
+Processing by TweetsController#index as HTML
+  [1m[35mTweet Load (0.9ms)[0m  SELECT "tweets".* FROM "tweets" 
+  Rendered tweets/index.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 15ms
+
+ActionView::Template::Error (Missing partial app/views/header with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee]}. Searched in:
+  * "/Users/michaelmuse/Documents/ga_wdi/projects/linkpuller/app/views"
+  * "/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/devise-3.2.2/app/views"
+):
+    1: <%= render "app/views/header" %>
+    2: 
+    3: <h1>hello linkpuller</h1>
+    4: 
+  app/views/tweets/index.html.erb:1:in `_app_views_tweets_index_html_erb__2632222892368825378_70361424059840'
+
+
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-13 21:46:42 -0500
+Processing by TweetsController#index as HTML
+  [1m[36mTweet Load (1.7ms)[0m  [1mSELECT "tweets".* FROM "tweets" [0m
+  Rendered tweets/index.html.erb within layouts/application (2.9ms)
+Completed 500 Internal Server Error in 12ms
+
+ActionView::Template::Error (Missing partial ./app/views/header with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee]}. Searched in:
+  * "/Users/michaelmuse/Documents/ga_wdi/projects/linkpuller/app/views"
+  * "/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/devise-3.2.2/app/views"
+):
+    1: <%= render "./app/views/header" %>
+    2: 
+    3: <h1>hello linkpuller</h1>
+    4: 
+  app/views/tweets/index.html.erb:1:in `_app_views_tweets_index_html_erb__2632222892368825378_70361413216660'
+
+
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (45.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-13 21:46:52 -0500
+Processing by TweetsController#index as HTML
+  [1m[35mTweet Load (0.9ms)[0m  SELECT "tweets".* FROM "tweets" 
+  Rendered tweets/index.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error (Missing partial ./header with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee]}. Searched in:
+  * "/Users/michaelmuse/Documents/ga_wdi/projects/linkpuller/app/views"
+  * "/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/devise-3.2.2/app/views"
+):
+    1: <%= render "./header" %>
+    2: 
+    3: <h1>hello linkpuller</h1>
+    4: 
+  app/views/tweets/index.html.erb:1:in `_app_views_tweets_index_html_erb__2632222892368825378_70361421716820'
+
+
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-13 21:48:50 -0500
+Processing by TweetsController#index as HTML
+  [1m[36mTweet Load (1.5ms)[0m  [1mSELECT "tweets".* FROM "tweets" [0m
+  Rendered inline template (0.2ms)
+  Rendered tweets/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 46ms (Views: 41.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-01-13 21:48:51 -0500
+Served asset /bootstrap.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-13 21:48:51 -0500
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-01-13 21:48:51 -0500
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-13 21:48:51 -0500
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-13 21:48:51 -0500
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-13 21:48:51 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-13 21:51:12 -0500
+Processing by TweetsController#index as HTML
+  [1m[35mTweet Load (15.5ms)[0m  SELECT "tweets".* FROM "tweets" 
+  Rendered tweets/index.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 23ms
+
+ActionView::Template::Error (Missing partial ../header with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee]}. Searched in:
+  * "/Users/michaelmuse/Documents/ga_wdi/projects/linkpuller/app/views"
+  * "/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/devise-3.2.2/app/views"
+):
+    1: <%= render "../header" %>
+    2: 
+    3: <h1>hello linkpuller</h1>
+    4: 
+  app/views/tweets/index.html.erb:1:in `_app_views_tweets_index_html_erb__2632222892368825378_70361423425380'
+
+
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.5ms)
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (13.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-13 21:53:13 -0500
+Processing by TweetsController#index as HTML
+  [1m[36mTweet Load (1.0ms)[0m  [1mSELECT "tweets".* FROM "tweets" [0m
+ERROR: compiling _app_views_tweets_index_html_erb__2632222892368825378_70361396910920 RAISED /Users/michaelmuse/Documents/ga_wdi/projects/linkpuller/app/views/tweets/index.html.erb:1: syntax error, unexpected tSTRING_BEG, expecting ')'
+...fer.append= ( render :partial "../header" );@output_buffer.s...
+...                               ^
+Function body:           def _app_views_tweets_index_html_erb__2632222892368825378_70361396910920(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "tweets/index";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.append= ( render :partial "../header" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('
+<h1>hello linkpuller</h1>
+
+'); @tweets.each do |tweet| 
+@output_buffer.safe_concat('  <h3>');@output_buffer.append= (tweet.text);@output_buffer.safe_concat('</h3>
+  <a href="http://');@output_buffer.append= (tweet.url);@output_buffer.safe_concat('">');@output_buffer.append= (tweet.url);@output_buffer.safe_concat('</a>
+  <hr>
+'); end ;@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_view/template.rb:297:in `module_eval'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_view/template.rb:297:in `compile'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_view/template.rb:244:in `block in compile!'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_view/template.rb:232:in `synchronize'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_view/template.rb:232:in `compile!'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_view/template.rb:144:in `block in render'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/activesupport-3.2.13/lib/active_support/notifications.rb:125:in `instrument'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_view/template.rb:143:in `render'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:47:in `block (2 levels) in render_template'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/activesupport-3.2.13/lib/active_support/notifications.rb:123:in `block in instrument'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/activesupport-3.2.13/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/activesupport-3.2.13/lib/active_support/notifications.rb:123:in `instrument'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:46:in `block in render_template'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:18:in `render'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_view/renderer/renderer.rb:17:in `render'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/abstract_controller/rendering.rb:110:in `_render_template'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/abstract_controller/rendering.rb:88:in `render'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_controller/metal/rendering.rb:16:in `render'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/activesupport-3.2.13/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/Users/michaelmuse/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/activesupport-3.2.13/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/activerecord-3.2.13/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/abstract_controller/base.rb:167:in `process_action'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:414:in `_run__1436750773405968846__process_action__4135742218704059295__callbacks'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `__run_callback'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/activesupport-3.2.13/lib/active_support/notifications.rb:123:in `block in instrument'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/activesupport-3.2.13/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/activesupport-3.2.13/lib/active_support/notifications.rb:123:in `instrument'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/activerecord-3.2.13/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/abstract_controller/base.rb:121:in `process'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/abstract_controller/rendering.rb:45:in `process'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_controller/metal.rb:203:in `dispatch'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_controller/metal.rb:246:in `block in action'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:73:in `call'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:36:in `call'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/journey-1.0.4/lib/journey/router.rb:56:in `each'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/journey-1.0.4/lib/journey/router.rb:56:in `call'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:612:in `call'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/warden-1.2.3/lib/warden/manager.rb:35:in `block in call'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/warden-1.2.3/lib/warden/manager.rb:34:in `catch'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/warden-1.2.3/lib/warden/manager.rb:34:in `call'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/rack-1.4.5/lib/rack/etag.rb:23:in `call'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/rack-1.4.5/lib/rack/conditionalget.rb:25:in `call'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/flash.rb:242:in `call'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/rack-1.4.5/lib/rack/session/abstract/id.rb:210:in `context'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/rack-1.4.5/lib/rack/session/abstract/id.rb:205:in `call'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/cookies.rb:341:in `call'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/activerecord-3.2.13/lib/active_record/query_cache.rb:64:in `call'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/activerecord-3.2.13/lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `_run__1628845484909997669__call__1178598636988062504__callbacks'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `__run_callback'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/railties-3.2.13/lib/rails/rack/logger.rb:32:in `call_app'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/railties-3.2.13/lib/rails/rack/logger.rb:16:in `block in call'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/activesupport-3.2.13/lib/active_support/tagged_logging.rb:22:in `tagged'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/railties-3.2.13/lib/rails/rack/logger.rb:16:in `call'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/rack-1.4.5/lib/rack/methodoverride.rb:21:in `call'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/rack-1.4.5/lib/rack/runtime.rb:17:in `call'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/activesupport-3.2.13/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/rack-1.4.5/lib/rack/lock.rb:15:in `call'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/static.rb:63:in `call'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/railties-3.2.13/lib/rails/engine.rb:479:in `call'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/railties-3.2.13/lib/rails/application.rb:223:in `call'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/rack-1.4.5/lib/rack/content_length.rb:14:in `call'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/railties-3.2.13/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/rack-1.4.5/lib/rack/handler/webrick.rb:59:in `service'
+/Users/michaelmuse/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+/Users/michaelmuse/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+/Users/michaelmuse/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+  Rendered tweets/index.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error (/Users/michaelmuse/Documents/ga_wdi/projects/linkpuller/app/views/tweets/index.html.erb:1: syntax error, unexpected tSTRING_BEG, expecting ')'
+...fer.append= ( render :partial "../header" );@output_buffer.s...
+...                               ^):
+    1: <%= render :partial "../header" %>
+    2: 
+    3: <h1>hello linkpuller</h1>
+    4: 
+  actionpack (3.2.13) lib/action_view/template.rb:297:in `module_eval'
+  actionpack (3.2.13) lib/action_view/template.rb:297:in `compile'
+  actionpack (3.2.13) lib/action_view/template.rb:244:in `block in compile!'
+  actionpack (3.2.13) lib/action_view/template.rb:232:in `synchronize'
+  actionpack (3.2.13) lib/action_view/template.rb:232:in `compile!'
+  actionpack (3.2.13) lib/action_view/template.rb:144:in `block in render'
+  activesupport (3.2.13) lib/active_support/notifications.rb:125:in `instrument'
+  actionpack (3.2.13) lib/action_view/template.rb:143:in `render'
+  actionpack (3.2.13) lib/action_view/renderer/template_renderer.rb:47:in `block (2 levels) in render_template'
+  actionpack (3.2.13) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (3.2.13) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.13) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.13) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.13) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (3.2.13) lib/action_view/renderer/template_renderer.rb:46:in `block in render_template'
+  actionpack (3.2.13) lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+  actionpack (3.2.13) lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+  actionpack (3.2.13) lib/action_view/renderer/template_renderer.rb:18:in `render'
+  actionpack (3.2.13) lib/action_view/renderer/renderer.rb:36:in `render_template'
+  actionpack (3.2.13) lib/action_view/renderer/renderer.rb:17:in `render'
+  actionpack (3.2.13) lib/abstract_controller/rendering.rb:110:in `_render_template'
+  actionpack (3.2.13) lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  actionpack (3.2.13) lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  actionpack (3.2.13) lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  actionpack (3.2.13) lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  actionpack (3.2.13) lib/abstract_controller/rendering.rb:88:in `render'
+  actionpack (3.2.13) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  activesupport (3.2.13) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /Users/michaelmuse/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+  activesupport (3.2.13) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  activerecord (3.2.13) lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:39:in `render'
+  actionpack (3.2.13) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (3.2.13) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (3.2.13) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.13) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:414:in `_run__1436750773405968846__process_action__4135742218704059295__callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.13) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.13) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.13) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.13) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.13) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.13) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.13) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.13) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.13) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.13) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:612:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.13) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.13) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `_run__1628845484909997669__call__1178598636988062504__callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.13) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/michaelmuse/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/michaelmuse/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/michaelmuse/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-13 21:59:23 -0500
+Processing by TweetsController#index as HTML
+  [1m[35mTweet Load (1.0ms)[0m  SELECT "tweets".* FROM "tweets" 
+  Rendered tweets/index.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 46ms
+
+ActionView::Template::Error (Missing partial ../_header with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee]}. Searched in:
+  * "/Users/michaelmuse/Documents/ga_wdi/projects/linkpuller/app/views"
+  * "/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/devise-3.2.2/app/views"
+):
+    1: <%= render "../_header" %>
+    2: 
+    3: <h1>hello linkpuller</h1>
+    4: 
+  app/views/tweets/index.html.erb:1:in `_app_views_tweets_index_html_erb__2632222892368825378_70361403259480'
+
+
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-13 22:01:10 -0500
+Processing by TweetsController#index as HTML
+  [1m[36mTweet Load (1.1ms)[0m  [1mSELECT "tweets".* FROM "tweets" [0m
+  Rendered tweets/index.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error (Missing partial tweets/_header, application/_header with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee]}. Searched in:
+  * "/Users/michaelmuse/Documents/ga_wdi/projects/linkpuller/app/views"
+  * "/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/devise-3.2.2/app/views"
+):
+    1: <%= render "_header" %>
+    2: 
+    3: <h1>hello linkpuller</h1>
+    4: 
+  app/views/tweets/index.html.erb:1:in `_app_views_tweets_index_html_erb__2632222892368825378_70361423222440'
+
+
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-13 22:01:25 -0500
+Processing by TweetsController#index as HTML
+  [1m[35mTweet Load (1.2ms)[0m  SELECT "tweets".* FROM "tweets" 
+  Rendered tweets/index.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (Missing partial ../_header with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee]}. Searched in:
+  * "/Users/michaelmuse/Documents/ga_wdi/projects/linkpuller/app/views"
+  * "/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/devise-3.2.2/app/views"
+):
+    1: <%= render "../_header" %>
+    2: 
+    3: <h1>hello linkpuller</h1>
+    4: 
+  app/views/tweets/index.html.erb:1:in `_app_views_tweets_index_html_erb__2632222892368825378_70361406220460'
+
+
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-13 22:02:33 -0500
+Processing by TweetsController#index as HTML
+  [1m[36mTweet Load (1.1ms)[0m  [1mSELECT "tweets".* FROM "tweets" [0m
+  Rendered tweets/index.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error (Missing partial ~views/_header with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee]}. Searched in:
+  * "/Users/michaelmuse/Documents/ga_wdi/projects/linkpuller/app/views"
+  * "/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/devise-3.2.2/app/views"
+):
+    1: <%= render "~views/_header" %>
+    2: 
+    3: <h1>hello linkpuller</h1>
+    4: 
+  app/views/tweets/index.html.erb:1:in `_app_views_tweets_index_html_erb__2632222892368825378_70361412978920'
+
+
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-13 22:02:42 -0500
+Processing by TweetsController#index as HTML
+  [1m[35mTweet Load (1.8ms)[0m  SELECT "tweets".* FROM "tweets" 
+  Rendered tweets/index.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error (Missing partial ~/_header with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee]}. Searched in:
+  * "/Users/michaelmuse/Documents/ga_wdi/projects/linkpuller/app/views"
+  * "/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/devise-3.2.2/app/views"
+):
+    1: <%= render "~/_header" %>
+    2: 
+    3: <h1>hello linkpuller</h1>
+    4: 
+  app/views/tweets/index.html.erb:1:in `_app_views_tweets_index_html_erb__2632222892368825378_70361397254200'
+
+
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-13 22:03:40 -0500
+Processing by TweetsController#index as HTML
+  [1m[36mTweet Load (0.9ms)[0m  [1mSELECT "tweets".* FROM "tweets" [0m
+  Rendered tweets/index.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (Missing partial app/views/_header with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee]}. Searched in:
+  * "/Users/michaelmuse/Documents/ga_wdi/projects/linkpuller/app/views"
+  * "/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/devise-3.2.2/app/views"
+):
+    1: <%= render "app/views/_header" %>
+    2: 
+    3: <h1>hello linkpuller</h1>
+    4: 
+  app/views/tweets/index.html.erb:1:in `_app_views_tweets_index_html_erb__2632222892368825378_70361407141280'
+
+
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (40.8ms)
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (47.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-13 22:05:17 -0500
+Processing by TweetsController#index as HTML
+  [1m[35mTweet Load (1.6ms)[0m  SELECT "tweets".* FROM "tweets" 
+  Rendered tweets/index.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (Missing partial tweets/_header, application/_header with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee]}. Searched in:
+  * "/Users/michaelmuse/Documents/ga_wdi/projects/linkpuller/app/views"
+  * "/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/devise-3.2.2/app/views"
+):
+    1: <%= render "_header" %>
+    2: 
+    3: <h1>hello linkpuller</h1>
+    4: 
+  app/views/tweets/index.html.erb:1:in `_app_views_tweets_index_html_erb__2632222892368825378_70361421681040'
+
+
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (13.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-13 22:06:55 -0500
+Processing by TweetsController#index as HTML
+  [1m[36mTweet Load (1.2ms)[0m  [1mSELECT "tweets".* FROM "tweets" [0m
+  Rendered tweets/_header.html.erb (2.4ms)
+  Rendered tweets/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 14ms (Views: 9.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-13 22:06:55 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-01-13 22:06:55 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-13 22:06:55 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-13 22:06:55 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-13 22:06:55 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-01-13 22:06:55 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-13 22:07:18 -0500
+Processing by TweetsController#index as HTML
+  [1m[35mTweet Load (1.2ms)[0m  SELECT "tweets".* FROM "tweets" 
+  Rendered tweets/index.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error (Missing partial ../header with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee]}. Searched in:
+  * "/Users/michaelmuse/Documents/ga_wdi/projects/linkpuller/app/views"
+  * "/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/devise-3.2.2/app/views"
+):
+    1: <%= render "../header" %>
+    2: 
+    3: <h1>hello linkpuller</h1>
+    4: 
+  app/views/tweets/index.html.erb:1:in `_app_views_tweets_index_html_erb__2632222892368825378_70361397009080'
+
+
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-13 22:07:27 -0500
+Processing by TweetsController#index as HTML
+  [1m[36mTweet Load (1.0ms)[0m  [1mSELECT "tweets".* FROM "tweets" [0m
+  Rendered tweets/index.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (Missing partial ~/header with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee]}. Searched in:
+  * "/Users/michaelmuse/Documents/ga_wdi/projects/linkpuller/app/views"
+  * "/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/devise-3.2.2/app/views"
+):
+    1: <%= render "~/header" %>
+    2: 
+    3: <h1>hello linkpuller</h1>
+    4: 
+  app/views/tweets/index.html.erb:1:in `_app_views_tweets_index_html_erb__2632222892368825378_70361406479820'
+
+
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-13 22:10:00 -0500
+Processing by TweetsController#index as HTML
+  [1m[35mTweet Load (1.2ms)[0m  SELECT "tweets".* FROM "tweets" 
+  Rendered tweets/index.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error (Missing partial tweets/header, application/header with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee]}. Searched in:
+  * "/Users/michaelmuse/Documents/ga_wdi/projects/linkpuller/app/views"
+  * "/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/devise-3.2.2/app/views"
+):
+    1: <%= render "header" %>
+    2: 
+    3: <h1>hello linkpuller</h1>
+    4: 
+  app/views/tweets/index.html.erb:1:in `_app_views_tweets_index_html_erb__2632222892368825378_70361406904740'
+
+
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-13 22:10:18 -0500
+Processing by TweetsController#index as HTML
+  [1m[36mTweet Load (0.9ms)[0m  [1mSELECT "tweets".* FROM "tweets" [0m
+  Rendered tweets/index.html.erb within layouts/application (40.2ms)
+Completed 500 Internal Server Error in 45ms
+
+ActionView::Template::Error (Missing partial ./../header with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee]}. Searched in:
+  * "/Users/michaelmuse/Documents/ga_wdi/projects/linkpuller/app/views"
+  * "/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/devise-3.2.2/app/views"
+):
+    1: <%= render "./../header" %>
+    2: 
+    3: <h1>hello linkpuller</h1>
+    4: 
+  app/views/tweets/index.html.erb:1:in `_app_views_tweets_index_html_erb__2632222892368825378_70361424863940'
+
+
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-13 22:11:55 -0500
+Processing by TweetsController#index as HTML
+  [1m[35mTweet Load (1.1ms)[0m  SELECT "tweets".* FROM "tweets" 
+  Rendered tweets/index.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 11ms
+
+ActionView::Template::Error (Missing partial tweets/header, application/header with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee]}. Searched in:
+  * "/Users/michaelmuse/Documents/ga_wdi/projects/linkpuller/app/views"
+  * "/Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/devise-3.2.2/app/views"
+):
+    13:   <!-- These are the login notifications and actions-->
+    14:   <p class="notice"><%= notice %></p>
+    15:   <p class="alert"><%= alert %></p> 
+    16:   <%= render "header" %>
+    17: 
+    18:   <%= yield %>
+    19: </div>
+  app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb___181161378740643946_70361423011220'
+
+
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/michaelmuse/.rvm/gems/ruby-2.0.0-p247@block_rails_3/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-13 22:14:27 -0500
+Processing by TweetsController#index as HTML
+  [1m[36mTweet Load (1.6ms)[0m  [1mSELECT "tweets".* FROM "tweets" [0m
+  Rendered tweets/_header.html.erb (2.2ms)
+  Rendered tweets/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 15ms (Views: 8.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-01-13 22:14:27 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-13 22:14:27 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-13 22:14:27 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-13 22:14:27 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-01-13 22:14:27 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-13 22:14:27 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-01-13 22:14:37 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (59.8ms)
+Completed 200 OK in 121ms (Views: 65.2ms | ActiveRecord: 41.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-13 22:14:37 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-13 22:14:37 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-01-13 22:14:37 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-13 22:14:37 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-01-13 22:14:37 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-13 22:14:37 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-01-13 22:15:01 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tLe9knyBZY97Zfef6jJALCoaJQ08b9QQrkz/sQp0O2w=", "user"=>{"email"=>"michaelmuse@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (6.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'michaelmuse@gmail.com' LIMIT 1
+Completed 401 Unauthorized in 18ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tLe9knyBZY97Zfef6jJALCoaJQ08b9QQrkz/sQp0O2w=", "user"=>{"email"=>"michaelmuse@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Sign in"}
+  Rendered devise/shared/_links.erb (0.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 92ms (Views: 6.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-01-13 22:15:01 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-13 22:15:01 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-13 22:15:01 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-13 22:15:01 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-01-13 22:15:01 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-13 22:15:01 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2014-01-13 22:15:06 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (0.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-01-13 22:15:06 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-13 22:15:06 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-01-13 22:15:06 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-13 22:15:06 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-13 22:15:06 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-13 22:15:06 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-01-13 22:15:17 -0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tLe9knyBZY97Zfef6jJALCoaJQ08b9QQrkz/sQp0O2w=", "user"=>{"email"=>"michaelmuse@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.6ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'michaelmuse@gmail.com' LIMIT 1
+  [1m[36mSQL (14.9ms)[0m  [1mINSERT INTO "users" ("created_at", "current_sign_in_at", "current_sign_in_ip", "email", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["created_at", Tue, 14 Jan 2014 03:15:17 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "michaelmuse@gmail.com"], ["encrypted_password", "$2a$10$oyOPLjihKi8fdJmMAkDAKOc6bPbPgrv4tzpQqcazDdHt4nW/HLDe."], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["updated_at", Tue, 14 Jan 2014 03:15:17 UTC +00:00]]
+  [1m[35m (3.0ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.8ms)[0m  UPDATE "users" SET "last_sign_in_at" = '2014-01-14 03:15:17.501477', "current_sign_in_at" = '2014-01-14 03:15:17.501477', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2014-01-14 03:15:17.502490' WHERE "users"."id" = 1
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 177ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-13 22:15:17 -0500
+Processing by TweetsController#index as HTML
+  [1m[35mTweet Load (1.0ms)[0m  SELECT "tweets".* FROM "tweets" 
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered tweets/_header.html.erb (1.9ms)
+  Rendered tweets/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 10ms (Views: 5.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-13 22:15:17 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-13 22:15:17 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-13 22:15:17 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-01-13 22:15:17 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-01-13 22:15:17 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-13 22:15:17 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-13 22:15:49 -0500
+Processing by TweetsController#index as HTML
+  [1m[35mTweet Load (1.0ms)[0m  SELECT "tweets".* FROM "tweets" 
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered tweets/_header.html.erb (2.9ms)
+  Rendered tweets/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 14ms (Views: 8.4ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-01-13 22:15:49 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-13 22:15:49 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-13 22:15:49 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-13 22:15:49 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-13 22:15:49 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-01-13 22:15:49 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-13 22:17:08 -0500
+Processing by TweetsController#index as HTML
+  [1m[35mTweet Load (1.0ms)[0m  SELECT "tweets".* FROM "tweets" 
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered tweets/_header.html.erb (1.6ms)
+  Rendered tweets/index.html.erb within layouts/application (3.1ms)
+Compiled styles.css  (0ms)  (pid 78181)
+Compiled application.css  (7ms)  (pid 78181)
+Completed 200 OK in 40ms (Views: 36.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2014-01-13 22:17:08 -0500
+Served asset /styles.css - 200 OK (5ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-01-13 22:17:08 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-01-13 22:17:08 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-13 22:17:08 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-13 22:17:08 -0500
+Served asset /application.css - 304 Not Modified (42ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-13 22:17:08 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-13 22:17:08 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-13 22:21:40 -0500
+Processing by TweetsController#index as HTML
+  [1m[35mTweet Load (1.3ms)[0m  SELECT "tweets".* FROM "tweets" 
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered tweets/_header.html.erb (1.4ms)
+  Rendered tweets/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 11ms (Views: 6.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-01-13 22:21:40 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-01-13 22:21:40 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2014-01-13 22:21:40 -0500
+Served asset /styles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-13 22:21:40 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-13 22:21:40 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-13 22:21:40 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-13 22:21:40 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-13 22:26:14 -0500
+Processing by TweetsController#index as HTML
+  [1m[35mTweet Load (1.5ms)[0m  SELECT "tweets".* FROM "tweets" 
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered tweets/_header.html.erb (1.4ms)
+  Rendered tweets/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 11ms (Views: 5.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-01-13 22:26:14 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2014-01-13 22:26:14 -0500
+Served asset /styles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-13 22:26:14 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-13 22:26:14 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-13 22:26:14 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-01-13 22:26:14 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-13 22:26:14 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2014-01-13 22:26:17 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"tLe9knyBZY97Zfef6jJALCoaJQ08b9QQrkz/sQp0O2w="}
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-13 22:26:17 -0500
+Processing by TweetsController#index as HTML
+  [1m[36mTweet Load (1.0ms)[0m  [1mSELECT "tweets".* FROM "tweets" [0m
+  Rendered tweets/_header.html.erb (0.8ms)
+  Rendered tweets/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 11ms (Views: 7.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-01-13 22:26:17 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-13 22:26:17 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2014-01-13 22:26:17 -0500
+Served asset /styles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-13 22:26:17 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-13 22:26:17 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-01-13 22:26:17 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-13 22:26:17 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-13 22:26:26 -0500
+Processing by TweetsController#index as HTML
+  [1m[35mTweet Load (1.1ms)[0m  SELECT "tweets".* FROM "tweets" 
+  Rendered tweets/_header.html.erb (0.7ms)
+  Rendered tweets/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 10ms (Views: 6.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-01-13 22:26:26 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-13 22:26:26 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-13 22:26:26 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2014-01-13 22:26:26 -0500
+Served asset /styles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-13 22:26:26 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-01-13 22:26:26 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-13 22:26:26 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-13 22:28:06 -0500
+Processing by TweetsController#index as HTML
+  [1m[36mTweet Load (1.4ms)[0m  [1mSELECT "tweets".* FROM "tweets" [0m
+  Rendered tweets/_header.html.erb (0.6ms)
+  Rendered tweets/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 53ms (Views: 5.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-01-13 22:28:06 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-01-13 22:28:06 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-13 22:28:06 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-13 22:28:06 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2014-01-13 22:28:06 -0500
+Served asset /styles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-13 22:28:06 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-13 22:28:06 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-13 22:29:50 -0500
+Processing by TweetsController#index as HTML
+  [1m[35mTweet Load (1.1ms)[0m  SELECT "tweets".* FROM "tweets" 
+  Rendered tweets/_header.html.erb (0.7ms)
+  Rendered tweets/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 12ms (Views: 7.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-01-13 22:29:50 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-13 22:29:50 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-01-13 22:29:50 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2014-01-13 22:29:50 -0500
+Served asset /styles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-13 22:29:50 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-13 22:29:50 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-13 22:29:50 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-13 22:31:07 -0500
+Processing by TweetsController#index as HTML
+  [1m[36mTweet Load (1.9ms)[0m  [1mSELECT "tweets".* FROM "tweets" [0m
+  Rendered tweets/_header.html.erb (0.6ms)
+  Rendered tweets/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 11ms (Views: 6.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-01-13 22:31:07 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2014-01-13 22:31:07 -0500
+Served asset /styles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-13 22:31:07 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-13 22:31:07 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-01-13 22:31:07 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-13 22:31:07 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-13 22:31:07 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-13 22:31:10 -0500
+Processing by TweetsController#index as HTML
+  [1m[35mTweet Load (1.0ms)[0m  SELECT "tweets".* FROM "tweets" 
+  Rendered tweets/_header.html.erb (0.5ms)
+  Rendered tweets/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 10ms (Views: 5.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-13 22:31:10 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-01-13 22:31:10 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2014-01-13 22:31:10 -0500
+Served asset /styles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-13 22:31:10 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-13 22:31:10 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-01-13 22:31:10 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-13 22:31:10 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-13 22:33:24 -0500
+Processing by TweetsController#index as HTML
+  [1m[36mTweet Load (1.0ms)[0m  [1mSELECT "tweets".* FROM "tweets" [0m
+  Rendered tweets/_header.html.erb (0.6ms)
+  Rendered tweets/index.html.erb within layouts/application (2.1ms)
+Compiled styles.css  (0ms)  (pid 78181)
+Compiled application.css  (3ms)  (pid 78181)
+Completed 200 OK in 91ms (Views: 85.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-01-13 22:33:24 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2014-01-13 22:33:24 -0500
+Served asset /styles.css - 200 OK (1ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-01-13 22:33:24 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-13 22:33:24 -0500
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-13 22:33:24 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-13 22:33:24 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-13 22:33:24 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-13 22:35:58 -0500
+Processing by TweetsController#index as HTML
+  [1m[35mTweet Load (0.9ms)[0m  SELECT "tweets".* FROM "tweets" 
+  Rendered tweets/_header.html.erb (13.2ms)
+  Rendered tweets/index.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 25ms (Views: 21.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-01-13 22:35:58 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-13 22:35:58 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-13 22:35:58 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2014-01-13 22:35:58 -0500
+Served asset /styles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-01-13 22:35:58 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-13 22:35:58 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-13 22:35:58 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-13 22:36:17 -0500
+Processing by TweetsController#index as HTML
+  [1m[36mTweet Load (1.0ms)[0m  [1mSELECT "tweets".* FROM "tweets" [0m
+  Rendered tweets/_header.html.erb (1.2ms)
+  Rendered tweets/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 10ms (Views: 6.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-01-13 22:36:18 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-13 22:36:18 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2014-01-13 22:36:18 -0500
+Served asset /styles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-13 22:36:18 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-01-13 22:36:18 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-13 22:36:18 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-13 22:36:18 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-13 22:37:04 -0500
+Processing by TweetsController#index as HTML
+  [1m[35mTweet Load (1.6ms)[0m  SELECT "tweets".* FROM "tweets" 
+  Rendered tweets/_header.html.erb (1.2ms)
+  Rendered tweets/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 11ms (Views: 6.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-13 22:37:04 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-01-13 22:37:04 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2014-01-13 22:37:04 -0500
+Served asset /styles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-13 22:37:04 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-01-13 22:37:04 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-13 22:37:04 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-13 22:37:04 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-13 22:37:06 -0500
+Processing by TweetsController#index as HTML
+  [1m[36mTweet Load (0.9ms)[0m  [1mSELECT "tweets".* FROM "tweets" [0m
+  Rendered tweets/_header.html.erb (0.8ms)
+  Rendered tweets/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 12ms (Views: 8.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-13 22:37:06 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-01-13 22:37:06 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-01-13 22:37:06 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-13 22:37:06 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-13 22:37:06 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2014-01-13 22:37:06 -0500
+Served asset /styles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-13 22:37:06 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-13 22:38:03 -0500
+Processing by TweetsController#index as HTML
+  [1m[35mTweet Load (0.9ms)[0m  SELECT "tweets".* FROM "tweets" 
+  Rendered tweets/_header.html.erb (1.3ms)
+  Rendered tweets/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 11ms (Views: 6.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-01-13 22:38:03 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-13 22:38:03 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-01-13 22:38:03 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-13 22:38:03 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-13 22:38:03 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2014-01-13 22:38:03 -0500
+Served asset /styles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-13 22:38:03 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-01-13 22:38:09 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2014-01-13 22:38:09 -0500
+Served asset /styles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-13 22:38:09 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-13 22:38:09 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-01-13 22:38:09 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-13 22:38:09 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-01-13 22:38:09 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-13 22:38:09 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-01-13 22:38:26 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"b07TREacDAPJSytQFNMj8kPusuCg17p45/YCa8QDMg0=", "user"=>{"email"=>"michaelmuse@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (2.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'michaelmuse@gmail.com' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mUPDATE "users" SET "current_sign_in_at" = '2014-01-14 03:38:26.583879', "sign_in_count" = 2, "updated_at" = '2014-01-14 03:38:26.585512' WHERE "users"."id" = 1[0m
+  [1m[35m (0.8ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 99ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-13 22:38:26 -0500
+Processing by TweetsController#index as HTML
+  [1m[36mTweet Load (0.9ms)[0m  [1mSELECT "tweets".* FROM "tweets" [0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered tweets/_header.html.erb (1.7ms)
+  Rendered tweets/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 10ms (Views: 6.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-01-13 22:38:26 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-13 22:38:26 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2014-01-13 22:38:26 -0500
+Served asset /styles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-13 22:38:26 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-13 22:38:26 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-01-13 22:38:26 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-13 22:38:26 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-13 22:42:04 -0500
+Processing by TweetsController#index as HTML
+  [1m[36mTweet Load (1.4ms)[0m  [1mSELECT "tweets".* FROM "tweets" [0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered tweets/_header.html.erb (3.4ms)
+  Rendered tweets/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 15ms (Views: 10.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-01-13 22:42:04 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-13 22:42:04 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2014-01-13 22:42:04 -0500
+Served asset /styles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-13 22:42:04 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-01-13 22:42:04 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-13 22:42:04 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-13 22:42:04 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-13 22:44:18 -0500
+Processing by TweetsController#index as HTML
+  [1m[36mTweet Load (1.1ms)[0m  [1mSELECT "tweets".* FROM "tweets" [0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered tweets/_header.html.erb (3.3ms)
+  Rendered tweets/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 15ms (Views: 9.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-13 22:44:18 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-01-13 22:44:19 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-01-13 22:44:19 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2014-01-13 22:44:19 -0500
+Served asset /styles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-13 22:44:19 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-13 22:44:19 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-13 22:44:19 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-13 22:44:20 -0500
+Processing by TweetsController#index as HTML
+  [1m[36mTweet Load (1.0ms)[0m  [1mSELECT "tweets".* FROM "tweets" [0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered tweets/_header.html.erb (1.7ms)
+  Rendered tweets/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 11ms (Views: 6.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-13 22:44:20 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-01-13 22:44:20 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2014-01-13 22:44:20 -0500
+Served asset /styles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-01-13 22:44:20 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-13 22:44:20 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-13 22:44:20 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-13 22:44:20 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-13 22:44:20 -0500
+Processing by TweetsController#index as HTML
+  [1m[36mTweet Load (2.0ms)[0m  [1mSELECT "tweets".* FROM "tweets" [0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered tweets/_header.html.erb (1.8ms)
+  Rendered tweets/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 14ms (Views: 6.5ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-13 22:44:20 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-01-13 22:44:20 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-01-13 22:44:20 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2014-01-13 22:44:20 -0500
+Served asset /styles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-13 22:44:20 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-13 22:44:20 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-13 22:44:20 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-14 08:50:50 -0500
+Processing by TweetsController#index as HTML
+  [1m[36mTweet Load (11.3ms)[0m  [1mSELECT "tweets".* FROM "tweets" [0m
+  [1m[35mUser Load (7.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered tweets/_header.html.erb (22.3ms)
+  Rendered tweets/index.html.erb within layouts/application (40.7ms)
+Completed 200 OK in 87ms (Views: 54.0ms | ActiveRecord: 18.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-14 08:50:50 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-01-14 08:50:50 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-01-14 08:50:50 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2014-01-14 08:50:50 -0500
+Served asset /styles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-14 08:50:50 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-14 08:50:50 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-14 08:50:50 -0500
+Served asset /application.js - 304 Not Modified (0ms)
