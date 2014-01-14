@@ -23,7 +23,6 @@ namespace :db do
       count: 200,
     }
     @tweets = client.user_timeline("michaelmuse", options) 
-
     # a.uris.first.attrs[:display_url]
 
     # def collect_with_max_id(collection=[], max_id=nil, &block)
@@ -42,19 +41,21 @@ namespace :db do
 
     # get_all_tweets("sferik")
 
-    # @tweets.each do |tweet|
-    #   curr_url = tweet.uris
-    #   unless curr_url == []
-    #     t = Tweet.new
-    #     tn = TwitterName.new
-    #     t.twitter_tweet_id = tweet.attrs[:id]
-    #     t.url = curr_url.first.attrs[:display_url]
-    #     t.tweet_date = tweet.attrs[:created_at]
-    #     t.twitter_name_id = tweet.attrs[:user][:id]
-    #     t.text = tweet.attrs[:text]
-    #     tn.twitter_name_id = tweet.attrs[:user][:id]
-    #     tn.username = tweet.attrs[:user][:screen_name]        
-    #   end
-    # end
+    @tweets.each do |tweet|
+      curr_url = tweet.uris
+      unless curr_url == []
+        t = Tweet.create
+        tn = TwitterName.create
+        t.twitter_tweet_id = tweet.attrs[:id]
+        t.url = curr_url.first.attrs[:display_url]
+        t.tweet_date = tweet.attrs[:created_at]
+        t.twitter_name_id = tweet.attrs[:user][:id]
+        t.text = tweet.attrs[:text]
+        tn.twitter_name_id = tweet.attrs[:user][:id]
+        tn.username = tweet.attrs[:user][:screen_name]
+        t.save
+        tn.save
+      end
+    end
   end
 end
