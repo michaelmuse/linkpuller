@@ -1,6 +1,8 @@
 Linkpuller::Application.routes.draw do
 
-get '/' => 'tweets#index'
+  devise_for :users
+
+root :to => 'tweets#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -5,3 +5,56 @@
 require File.expand_path('../config/application', __FILE__)
 
 Linkpuller::Application.load_tasks
+
+
+namespace :db do 
+
+  desc "Seed my database"
+  task :seed do   
+    client = Twitter::REST::Client.new do |config|
+      config.consumer_key        = ENV['TWITTER_CONSUMER_KEY']
+      config.consumer_secret     = ENV['TWITTER_CONSUMER_SECRET']
+      config.access_token        = ENV['TWITTER_ACCESS_TOKEN']
+      config.access_token_secret = ENV['TWITTER_ACCESS_TOKEN_SECRET']
+    end
+    options = {
+      exclude_replies: true,
+      include_rts: false,
+      count: 200,
+    }
+    @tweets = client.user_timeline("michaelmuse", options) 
+
+    # a.uris.first.attrs[:display_url]
+
+    # def collect_with_max_id(collection=[], max_id=nil, &block)
+    #   response = yield max_id
+    #   collection += response
+    #   response.empty? ? collection.flatten : collect_with_max_id(collection, response.last.id - 1, &block)
+    # end
+
+    # def get_all_tweets(user)
+    #   collect_with_max_id do |max_id|
+    #     options = {:count => 200, :include_rts => true}
+    #     options[:max_id] = max_id unless max_id.nil?
+    #     @client.user_timeline(user, options)
+    #   end
+    # end
+
+    # get_all_tweets("sferik")
+
+    # @tweets.each do |tweet|
+    #   curr_url = tweet.uris
+    #   unless curr_url == []
+    #     t = Tweet.new
+    #     tn = TwitterName.new
+    #     t.twitter_tweet_id = tweet.attrs[:id]
+    #     t.url = curr_url.first.attrs[:display_url]
+    #     t.tweet_date = tweet.attrs[:created_at]
+    #     t.twitter_name_id = tweet.attrs[:user][:id]
+    #     t.text = tweet.attrs[:text]
+    #     tn.twitter_name_id = tweet.attrs[:user][:id]
+    #     tn.username = tweet.attrs[:user][:screen_name]        
+    #   end
+    # end
+  end
+end
