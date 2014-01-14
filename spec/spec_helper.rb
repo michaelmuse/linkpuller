@@ -4,11 +4,6 @@ require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
 require 'rspec/autorun'
 
-#
-  #           #           ####ASK CHUCK
-    #       #   #       #  # include Warden::Test::Helpers 
-      #   #       #   #    # Warden.test_mode!
-        #           #      # login_as(@user)
 
 
 # Requires supporting ruby files with custom matchers and macros, etc,
