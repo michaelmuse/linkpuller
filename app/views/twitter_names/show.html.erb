@@ -1,13 +1,4 @@
 <h1><%=@username.username%></h1>
 <h3>Here are <%=@username.tweets_collected%> of their tweets:</h3>
-<table>
-  <% @username_tweets.each do |tweet| %>
-  <tr>
-    <td><%= tweet.text %></td>
-    <td>
-      <a href="<%= tweet.url %>"><%= tweet.url %></a>
-    </td>
-  </tr>
 
-  <% end %>
-</table>
+  <%= render partial: 'partials/tweets_table' %>

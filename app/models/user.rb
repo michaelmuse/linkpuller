@@ -25,13 +25,13 @@ class User < ActiveRecord::Base
       if curr_url 
         t = Tweet.new
         tn = TwitterName.new
-        t.twitter_tweet_id = tweet.attrs[:id]
+        t.twitter_tweet_id = tweet.attrs[:id].to_s
         t.url = curr_url[:expanded_url]
         t.build_domain
         t.tweet_date = tweet.attrs[:created_at]
-        t.twitter_name_id = tweet.attrs[:user][:id]
+        t.twitter_name_id = tweet.attrs[:user][:id].to_s
         t.text = tweet.attrs[:text]
-        tn.twitter_name_id = tweet.attrs[:user][:id]
+        tn.twitter_name_id = tweet.attrs[:user][:id].to_s
         tn.username = tweet.attrs[:user][:screen_name]
         t.save
         tn.save

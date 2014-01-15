@@ -11,15 +11,27 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140115192220) do
+ActiveRecord::Schema.define(:version => 20140115215600) do
+
+  create_table "links", :force => true do |t|
+    t.string   "domain"
+    t.string   "url"
+    t.string   "twitter_tweet_id"
+    t.string   "author"
+    t.string   "title"
+    t.datetime "authored_date"
+    t.string   "url_type"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
 
   create_table "tweets", :force => true do |t|
-    t.datetime "created_at",                    :null => false
-    t.datetime "updated_at",                    :null => false
-    t.integer  "twitter_tweet_id", :limit => 8
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+    t.string   "twitter_tweet_id"
     t.string   "url"
     t.datetime "tweet_date"
-    t.integer  "twitter_name_id"
+    t.string   "twitter_name_id"
     t.string   "text"
     t.string   "domain"
   end
@@ -28,7 +40,7 @@ ActiveRecord::Schema.define(:version => 20140115192220) do
 
   create_table "twitter_names", :force => true do |t|
     t.string   "username"
-    t.integer  "twitter_name_id"
+    t.string   "twitter_name_id"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
     t.string   "tweets_collected"

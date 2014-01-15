@@ -30,6 +30,10 @@ class TwitterNamesController < ApplicationController
 
   def show
     @username = TwitterName.find(params[:id])
-    @username_tweets = Tweet.where(twitter_name_id: @username.twitter_name_id)
+    @tweets = Tweet.where(twitter_name_id: @username.twitter_name_id).order(:domain)
+    @domain_counts = {}
+    @tweets.each do |tweet|
+      @domain_counts[tweet.domain] ? @domain_counts[tweet.domain] += 1 : @domain_counts[tweet.domain] = 1
+    end
   end
 end
