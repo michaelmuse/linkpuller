@@ -12,11 +12,14 @@ describe Tweet do
     describe "and given the tweet ids are unique" do
       before do
         @t1.twitter_tweet_id = 1
+        @t1.build_domain
         @t1.save
         @t2.twitter_tweet_id = 2
+        @t2.build_domain
         @t2.save
       end
       it "should have the tweets saved and return the right values" do
+        @domain_counts = {}
         @tweets = Tweet.all
         @tweets.count.should == 2
         @tweets.each do |tweet|
@@ -24,6 +27,8 @@ describe Tweet do
           tweet.tweet_date.should == @options[:tweet_date]
           tweet.twitter_name_id.should == @options[:twitter_name_id]
           tweet.domain.should == "www.theatlantic.com"
+          @domain_counts[tweet.url] ? @domain_counts[tweet.url] += 1 : @domain_counts[tweet.url] = 1
+          @domain_counts[tweet.url].should be > 0
         end
       end
     end
