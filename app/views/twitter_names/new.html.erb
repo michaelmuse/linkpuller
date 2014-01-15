@@ -1,0 +1,10 @@
+<form action="<%=twitter_names_path%>" method="post">
+  <h3>Whose tweets should we get?</h3>
+  <input type="text" id="username" name="username" placeholder="username">
+  <h3>How many of this user's tweets do you want to collect?</h3>
+  <select id="tweet_amount" name="tweets_collected" class="tweet_amount">
+    <option value="some" id="some">Some</option>
+    <option value="all" id="all">ALL (warning: this may be a lot)</option>
+  </select>
+  <button class="submit" id="submit">Fetch Tweets</button>
+</form>

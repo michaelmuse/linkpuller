@@ -10,6 +10,7 @@ gem 'rspec-rails'
 gem 'twitter'
 gem 'pry'
 gem 'devise'
+gem 'capybara'
 
 
 # Gems used only for assets and not required
