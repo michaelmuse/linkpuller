@@ -2,17 +2,20 @@
 
 <h1>linkpuller: All links</h1>
 
-<table>
+<table class="table table-hover table-bordered table-condensed">
+<% @last_tweet_domain = "" %>
 <% @tweets.each do |tweet| %>  
-  <tr>
+  <tr >
+    <% if @last_tweet_domain != tweet.domain %>
+      <td rowspan="<%= @domain_counts[tweet.domain] %>"><%= tweet.domain %></a></td>    
+    <% end %>
+    <td><a href="<%= tweet.domain %>"><%= @domain_counts[tweet.domain] %></td>
+    <td><a href="<%= tweet.url %>"><%= tweet.url %></a></td>
     <td><%= tweet.text %></td>
-    <td><%= tweet.url %></td>
-    <td><%= tweet.domain %></td>
-    <td><%= @domain_counts[tweet.domain] %></td>    
     <td><%= tweet.tweet_date.strftime("%m/%d/%Y") %></td>
     <td><%= TwitterName.find_by_twitter_name_id(tweet.twitter_name_id).username %></td>
   </tr>
-
+<% @last_tweet_domain = tweet.domain %>
  <!--  <h3><%=tweet.text%></h3>
   <a href="http://<%=tweet.url%>"><%=tweet.url%></a>
   <hr> -->
