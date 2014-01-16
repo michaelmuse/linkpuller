@@ -40,6 +40,7 @@ class User < ActiveRecord::Base
           tn.save
           #Store a new link
           l = Link.new(url: t.url)
+          l.tweet_id = t.id
           l.build_attributes
           l.twitter_tweet_id = t.twitter_tweet_id
           l.save
@@ -48,13 +49,32 @@ class User < ActiveRecord::Base
     end
   end
 
+  def get_a_few_twittername_tweets_helper(twittername, client)
+  #HERE WE PULL IN A SMALL AMOUNT OF TWEETS PROVIDED A TWITTERNAME OBJECT HASNT ALREADY RUN THIS QUERY
+    begin
+    current_tn_in_db_before_action = TwitterName.find(twittername.twitter_name_id)
+    rescue
+    end
+    unless current_tn_in_db_before_action && Tweet.where(twitter_name_id: twittername.twitter_name_id).count > 30
+      options = {
+        exclude_replies: true,
+        include_rts: false,
+        count: 30,
+      }
+
+      tweets = client.user_timeline(twittername.username, options) 
+
+    end      
+
+  end
+
   def get_some_twittername_tweets_helper(twittername, client)
   #HERE WE PULL IN A SMALL AMOUNT OF TWEETS PROVIDED A TWITTERNAME OBJECT HASNT ALREADY RUN THIS QUERY
     begin
     current_tn_in_db_before_action = TwitterName.find(twittername.twitter_name_id)
     rescue
     end
-    unless current_tn_in_db_before_action && current_tn_in_db_before_action.tweets_collected == "some"
+    unless current_tn_in_db_before_action && Tweet.where(twitter_name_id: twittername.twitter_name_id).count > 200
       options = {
         exclude_replies: true,
         include_rts: false,
@@ -72,7 +92,7 @@ class User < ActiveRecord::Base
     current_tn_in_db_before_action = TwitterName.find(twittername.twitter_name_id)
     rescue
     end
-    unless current_tn_in_db_before_action && current_tn_in_db_before_action.tweets_collected == "all"
+    unless current_tn_in_db_before_action && Tweet.where(twitter_name_id: twittername.twitter_name_id) > 1000
       def collect_with_max_id(collection=[], max_id=nil, &block)
         response = yield max_id
         collection += response
@@ -104,6 +124,11 @@ class User < ActiveRecord::Base
     save_tweets(tweets)
   end
 
+  def get_a_few_twittername_tweets(twittername)
+    client = auth_twitter
+    tweets = get_a_few_twittername_tweets_helper(twittername, client)
+    save_tweets(tweets)
+  end
 
 end
 

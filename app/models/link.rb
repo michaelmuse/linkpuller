@@ -1,5 +1,5 @@
 class Link < ActiveRecord::Base
-  attr_accessible :author, :authored_date, :domain, :title, :twitter_tweet_id, :kind_of_url, :url
+  attr_accessible :author, :authored_date, :domain, :title, :twitter_tweet_id, :kind_of_url, :url, :tweet_id
   validates :url, uniqueness: true
 
   def build_attributes
