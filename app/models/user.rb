@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me
   # attr_accessible :title, :body
 
-    def auth_twitter
+  def auth_twitter
     client = Twitter::REST::Client.new do |config|
       config.consumer_key        = ENV['TWITTER_CONSUMER_KEY']
       config.consumer_secret     = ENV['TWITTER_CONSUMER_SECRET']
@@ -24,18 +24,25 @@ class User < ActiveRecord::Base
         rescue 
         end
         if curr_url 
+          #Store a new tweet
           t = Tweet.new
-          tn = TwitterName.new
           t.twitter_tweet_id = tweet.attrs[:id].to_s
           t.url = curr_url[:expanded_url]
           t.build_domain
           t.tweet_date = tweet.attrs[:created_at]
           t.twitter_name_id = tweet.attrs[:user][:id].to_s
           t.text = tweet.attrs[:text]
-          tn.twitter_name_id = tweet.attrs[:user][:id].to_s
-          tn.username = tweet.attrs[:user][:screen_name]
           t.save
+          #Store a new TwitterName
+          tn = TwitterName.new
+          tn.twitter_name_id = tweet.attrs[:user][:id].to_s #if this already exists, the user is not remade
+          tn.username = tweet.attrs[:user][:screen_name]
           tn.save
+          #Store a new link
+          l = Link.new(url: t.url)
+          l.build_attributes
+          l.twitter_tweet_id = t.twitter_tweet_id
+          l.save
         end
       end
     end

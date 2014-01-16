@@ -1,11 +1,21 @@
 class Link < ActiveRecord::Base
-  attr_accessible :author, :authored_date, :domain, :title, :twitter_tweet_id, :url_type, :url
+  attr_accessible :author, :authored_date, :domain, :title, :twitter_tweet_id, :kind_of_url, :url
   validates :url, uniqueness: true
 
   def build_attributes
     unless self.domain
       self.domain = URI.parse(self.url).host
       self.save
+    end
+    social_domains = ["4sq.com", "yfrog.com", "i.imgur.com", "imgur.com", "instagr.am", "Instagram.com", "kck.st", "livestream.com", "linkd.in", "lnkd.in", "lockerz.com", "path.com", "pinterest.com", "qr.ae", "songza.com", "tinyurl.com", "tumblr.com", "twitpic.com", "twitter.com", "www.eventbrite.com", "www.facebook.com", "www.giltcity.com", "www.grouponworks.com", "www.groupon.com", "www.linkedin.com", "www.quora.com", "youtu.be"]
+    if social_domains.include?(self.domain)
+      self.kind_of_url = "social"
+    else
+      json = HTTParty.get("http://api.diffbot.com/v2/article?token=#{ENV['DIFFBOT_TOKEN']}&url=#{self.url}")
+      self.author = json["author"] unless (!self.author.nil? || json["author"].nil?)
+      self.authored_date = json["date"] unless (!self.authored_date.nil? || json["date"].nil?)
+      self.title = json["title"] unless (!self.title.nil? || json["title"].nil?)
+      self.kind_of_url = json["type"] unless (!self.kind_of_url.nil? || json["type"].nil?)
     end
     #lots more
   end

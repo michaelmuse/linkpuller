@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140115215600) do
+ActiveRecord::Schema.define(:version => 20140116021334) do
 
   create_table "links", :force => true do |t|
     t.string   "domain"
@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(:version => 20140115215600) do
     t.string   "author"
     t.string   "title"
     t.datetime "authored_date"
-    t.string   "url_type"
+    t.string   "kind_of_url"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
   end

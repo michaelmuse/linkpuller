@@ -28114,3 +28114,1321 @@ Processing by TwitterNamesController#show as HTML
   Rendered partials/_header.html.erb (0.8ms)
 Completed 200 OK in 10ms (Views: 6.8ms | ActiveRecord: 0.9ms)
   [1m[35m (0.2ms)[0m  ROLLBACK
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTweet Exists (2.4ms)[0m  [1mSELECT 1 AS one FROM "tweets" WHERE "tweets"."twitter_tweet_id" = '1' LIMIT 1[0m
+  [1m[35mSQL (4.6ms)[0m  INSERT INTO "tweets" ("created_at", "domain", "text", "tweet_date", "twitter_name_id", "twitter_tweet_id", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Thu, 16 Jan 2014 01:47:16 UTC +00:00], ["domain", nil], ["text", nil], ["tweet_date", Tue, 07 Jan 2014 18:06:21 UTC +00:00], ["twitter_name_id", "14129087"], ["twitter_tweet_id", 1], ["updated_at", Thu, 16 Jan 2014 01:47:16 UTC +00:00], ["url", "http://www.theatlantic.com/technology/archive/2014/01/him-love-in-the-time-of-operating-systems/283062/"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTweet Exists (0.7ms)[0m  [1mSELECT 1 AS one FROM "tweets" WHERE "tweets"."twitter_tweet_id" = '1' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36mTweet Load (0.4ms)[0m  [1mSELECT "tweets".* FROM "tweets" [0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTweet Exists (0.7ms)[0m  [1mSELECT 1 AS one FROM "tweets" WHERE "tweets"."twitter_tweet_id" = '1' LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "tweets" ("created_at", "domain", "text", "tweet_date", "twitter_name_id", "twitter_tweet_id", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Thu, 16 Jan 2014 01:47:16 UTC +00:00], ["domain", "www.theatlantic.com"], ["text", nil], ["tweet_date", Tue, 07 Jan 2014 18:06:21 UTC +00:00], ["twitter_name_id", "14129087"], ["twitter_tweet_id", 1], ["updated_at", Thu, 16 Jan 2014 01:47:16 UTC +00:00], ["url", "http://www.theatlantic.com/technology/archive/2014/01/him-love-in-the-time-of-operating-systems/283062/"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTweet Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "tweets" WHERE ("tweets"."twitter_tweet_id" = '1' AND "tweets"."id" != 2) LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTweet Exists (0.4ms)[0m  SELECT 1 AS one FROM "tweets" WHERE "tweets"."twitter_tweet_id" = '2' LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "tweets" ("created_at", "domain", "text", "tweet_date", "twitter_name_id", "twitter_tweet_id", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Thu, 16 Jan 2014 01:47:16 UTC +00:00], ["domain", "www.theatlantic.com"], ["text", nil], ["tweet_date", Tue, 07 Jan 2014 18:06:21 UTC +00:00], ["twitter_name_id", "14129087"], ["twitter_tweet_id", 2], ["updated_at", Thu, 16 Jan 2014 01:47:16 UTC +00:00], ["url", "http://www.theatlantic.com/technology/archive/2014/01/him-love-in-the-time-of-operating-systems/283062/"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTweet Exists (0.4ms)[0m  SELECT 1 AS one FROM "tweets" WHERE ("tweets"."twitter_tweet_id" = '2' AND "tweets"."id" != 3) LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mTweet Load (0.3ms)[0m  SELECT "tweets".* FROM "tweets" 
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Exists (0.9ms)[0m  SELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" = '14129087' LIMIT 1
+  [1m[36mSQL (1.4ms)[0m  [1mINSERT INTO "twitter_names" ("created_at", "tweets_collected", "twitter_name_id", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Thu, 16 Jan 2014 01:47:16 UTC +00:00], ["tweets_collected", "some"], ["twitter_name_id", "14129087"], ["updated_at", Thu, 16 Jan 2014 01:47:16 UTC +00:00], ["username", "hashceratops"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/twitter_names/1" for 127.0.0.1 at 2014-01-15 20:47:16 -0500
+Processing by TwitterNamesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTwitterName Load (1.1ms)[0m  [1mSELECT "twitter_names".* FROM "twitter_names" WHERE "twitter_names"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mTweet Load (1.0ms)[0m  SELECT "tweets".* FROM "tweets" WHERE "tweets"."twitter_name_id" = '14129087' ORDER BY domain
+  Rendered partials/_tweets_table.html.erb (0.9ms)
+  Rendered twitter_names/show.html.erb within layouts/application (6.7ms)
+  Rendered partials/_header.html.erb (1.7ms)
+Completed 200 OK in 26ms (Views: 19.6ms | ActiveRecord: 2.1ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Exists (0.5ms)[0m  SELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" IS NULL LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "twitter_names" ("created_at", "tweets_collected", "twitter_name_id", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Thu, 16 Jan 2014 01:47:16 UTC +00:00], ["tweets_collected", nil], ["twitter_name_id", nil], ["updated_at", Thu, 16 Jan 2014 01:47:16 UTC +00:00], ["username", "Bill"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Exists (0.4ms)[0m  SELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTwitterName Exists (0.6ms)[0m  [1mSELECT 1 AS one FROM "twitter_names" WHERE ("twitter_names"."twitter_name_id" = '1' AND "twitter_names"."id" != 2) LIMIT 1[0m
+  [1m[35m (1.5ms)[0m  UPDATE "twitter_names" SET "twitter_name_id" = 1, "updated_at" = '2014-01-16 01:47:16.498750' WHERE "twitter_names"."id" = 2
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTwitterName Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" = '1' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36mTwitterName Load (0.3ms)[0m  [1mSELECT "twitter_names".* FROM "twitter_names" [0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTwitterName Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" IS NULL LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "twitter_names" ("created_at", "tweets_collected", "twitter_name_id", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Thu, 16 Jan 2014 01:47:16 UTC +00:00], ["tweets_collected", nil], ["twitter_name_id", nil], ["updated_at", Thu, 16 Jan 2014 01:47:16 UTC +00:00], ["username", "Bill"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTwitterName Exists (0.6ms)[0m  [1mSELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Exists (0.5ms)[0m  SELECT 1 AS one FROM "twitter_names" WHERE ("twitter_names"."twitter_name_id" = '1' AND "twitter_names"."id" != 3) LIMIT 1
+  [1m[36m (0.6ms)[0m  [1mUPDATE "twitter_names" SET "twitter_name_id" = 1, "updated_at" = '2014-01-16 01:47:16.516202' WHERE "twitter_names"."id" = 3[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Exists (0.3ms)[0m  SELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" = '2' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "twitter_names" ("created_at", "tweets_collected", "twitter_name_id", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Thu, 16 Jan 2014 01:47:16 UTC +00:00], ["tweets_collected", nil], ["twitter_name_id", 2], ["updated_at", Thu, 16 Jan 2014 01:47:16 UTC +00:00], ["username", "Sarah"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mTwitterName Load (0.2ms)[0m  [1mSELECT "twitter_names".* FROM "twitter_names" [0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mLink Exists (0.6ms)[0m  [1mSELECT 1 AS one FROM "links" WHERE "links"."url" = 'http://4sq.com/1kdpgzr' LIMIT 1[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "links" ("author", "authored_date", "created_at", "domain", "title", "twitter_tweet_id", "updated_at", "url", "url_type") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["author", "jim"], ["authored_date", Tue, 07 Jan 2014 18:06:21 UTC +00:00], ["created_at", Thu, 16 Jan 2014 01:47:16 UTC +00:00], ["domain", "4sq.com"], ["title", "title"], ["twitter_tweet_id", "141290871412908714129087"], ["updated_at", Thu, 16 Jan 2014 01:47:16 UTC +00:00], ["url", "http://4sq.com/1kdpgzr"], ["url_type", "article"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mLink Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "links" WHERE ("links"."url" = 'http://4sq.com/1kdpgzr' AND "links"."id" != 1) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mLink Exists (0.4ms)[0m  SELECT 1 AS one FROM "links" WHERE "links"."url" = 'http://4sq.com/1kdpgzr' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mLink Exists (0.6ms)[0m  [1mSELECT 1 AS one FROM "links" WHERE "links"."url" = 'http://4sq.com/1kdpgzr' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36mLink Load (0.4ms)[0m  [1mSELECT "links".* FROM "links" [0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mLink Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "links" WHERE "links"."url" = 'http://www.theatlantic.com/technology/archive/2014/01/him-love-in-the-time-of-operating-systems/283062/' LIMIT 1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "links" ("author", "authored_date", "created_at", "domain", "title", "twitter_tweet_id", "updated_at", "url", "url_type") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["author", "jim"], ["authored_date", Tue, 07 Jan 2014 18:06:21 UTC +00:00], ["created_at", Thu, 16 Jan 2014 01:47:16 UTC +00:00], ["domain", "www.theatlantic.com"], ["title", "title"], ["twitter_tweet_id", "141290871412908714129087"], ["updated_at", Thu, 16 Jan 2014 01:47:16 UTC +00:00], ["url", "http://www.theatlantic.com/technology/archive/2014/01/him-love-in-the-time-of-operating-systems/283062/"], ["url_type", "article"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mLink Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "links" WHERE ("links"."url" = 'http://www.theatlantic.com/technology/archive/2014/01/him-love-in-the-time-of-operating-systems/283062/' AND "links"."id" != 2) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mLink Exists (0.4ms)[0m  SELECT 1 AS one FROM "links" WHERE "links"."url" = 'http://www.theatlantic.com/business/archive/2013/07/the-economic-cost-of-hangovers/277546/' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "links" ("author", "authored_date", "created_at", "domain", "title", "twitter_tweet_id", "updated_at", "url", "url_type") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["author", "jim"], ["authored_date", Tue, 07 Jan 2014 18:06:21 UTC +00:00], ["created_at", Thu, 16 Jan 2014 01:47:16 UTC +00:00], ["domain", "www.theatlantic.com"], ["title", "title"], ["twitter_tweet_id", "141290871412908714129087"], ["updated_at", Thu, 16 Jan 2014 01:47:16 UTC +00:00], ["url", "http://www.theatlantic.com/business/archive/2013/07/the-economic-cost-of-hangovers/277546/"], ["url_type", "article"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mLink Exists (0.4ms)[0m  SELECT 1 AS one FROM "links" WHERE ("links"."url" = 'http://www.theatlantic.com/business/archive/2013/07/the-economic-cost-of-hangovers/277546/' AND "links"."id" != 3) LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mLink Load (0.3ms)[0m  SELECT "links".* FROM "links" 
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/twitter_names/new" for 127.0.0.1 at 2014-01-15 20:47:16 -0500
+Processing by TwitterNamesController#new as HTML
+  Rendered twitter_names/new.html.erb within layouts/application (1.1ms)
+  Rendered partials/_header.html.erb (0.8ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+Started POST "/twitter_names" for 127.0.0.1 at 2014-01-15 20:47:16 -0500
+Processing by TwitterNamesController#create as HTML
+  Parameters: {"username"=>"hashceratops", "tweets_collected"=>"some"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Exists (0.4ms)[0m  SELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" = '74778865' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "twitter_names" ("created_at", "tweets_collected", "twitter_name_id", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Thu, 16 Jan 2014 01:47:16 UTC +00:00], ["tweets_collected", "some"], ["twitter_name_id", "74778865"], ["updated_at", Thu, 16 Jan 2014 01:47:16 UTC +00:00], ["username", "hashceratops"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mTwitterName Load (0.4ms)[0m  [1mSELECT "twitter_names".* FROM "twitter_names" WHERE "twitter_names"."id" = $1 LIMIT 1[0m  [["id", "74778865"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTweet Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "tweets" WHERE "tweets"."twitter_tweet_id" = '180058271732875266' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "tweets" ("created_at", "domain", "text", "tweet_date", "twitter_name_id", "twitter_tweet_id", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Thu, 16 Jan 2014 01:47:17 UTC +00:00], ["domain", "bit.ly"], ["text", nil], ["tweet_date", nil], ["twitter_name_id", nil], ["twitter_tweet_id", "180058271732875266"], ["updated_at", Thu, 16 Jan 2014 01:47:17 UTC +00:00], ["url", "http://bit.ly/zbuwoS"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTweet Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "tweets" WHERE ("tweets"."twitter_tweet_id" = '180058271732875266' AND "tweets"."id" != 4) LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  UPDATE "tweets" SET "tweet_date" = '2012-03-14 22:30:11.000000', "twitter_name_id" = '74778865', "text" = 'Recipe: i love Mango Lassi - The Atlantic http://t.co/000F1BxQ', "updated_at" = '2014-01-16 01:47:17.091683' WHERE "tweets"."id" = 4
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTwitterName Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" = '74778865' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTweet Exists (0.4ms)[0m  SELECT 1 AS one FROM "tweets" WHERE "tweets"."twitter_tweet_id" = '180052787256758272' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "tweets" ("created_at", "domain", "text", "tweet_date", "twitter_name_id", "twitter_tweet_id", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Thu, 16 Jan 2014 01:47:17 UTC +00:00], ["domain", "bit.ly"], ["text", nil], ["tweet_date", nil], ["twitter_name_id", nil], ["twitter_tweet_id", "180052787256758272"], ["updated_at", Thu, 16 Jan 2014 01:47:17 UTC +00:00], ["url", "http://bit.ly/xaTrX0"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTweet Exists (0.4ms)[0m  SELECT 1 AS one FROM "tweets" WHERE ("tweets"."twitter_tweet_id" = '180052787256758272' AND "tweets"."id" != 5) LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mUPDATE "tweets" SET "tweet_date" = '2012-03-14 22:08:24.000000', "twitter_name_id" = '74778865', "text" = 'Recipe: I love Mango Lassi - The Atlantic http://t.co/sVc6sxqz via @AddThis', "updated_at" = '2014-01-16 01:47:17.099464' WHERE "tweets"."id" = 5[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Exists (0.3ms)[0m  SELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" = '74778865' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/twitter_names
+Completed 302 Found in 523ms (ActiveRecord: 11.1ms)
+Started GET "/twitter_names" for 127.0.0.1 at 2014-01-15 20:47:17 -0500
+Processing by TwitterNamesController#index as HTML
+  [1m[35mTwitterName Load (0.4ms)[0m  SELECT "twitter_names".* FROM "twitter_names" 
+  Rendered twitter_names/index.html.erb within layouts/application (1.5ms)
+  Rendered partials/_header.html.erb (0.9ms)
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 0.4ms)
+  [1m[36mTweet Load (0.6ms)[0m  [1mSELECT "tweets".* FROM "tweets" WHERE "tweets"."twitter_name_id" = '74778865' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Processing by TweetsController#index as HTML
+  [1m[35mTweet Load (0.5ms)[0m  SELECT "tweets".* FROM "tweets" ORDER BY domain
+  Rendered tweets/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.5ms)
+  [1m[36mTweet Load (0.6ms)[0m  [1mSELECT "tweets".* FROM "tweets" [0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTwitterName Exists (1.1ms)[0m  [1mSELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" IS NULL LIMIT 1[0m
+  [1m[35mSQL (6.5ms)[0m  INSERT INTO "twitter_names" ("created_at", "tweets_collected", "twitter_name_id", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Thu, 16 Jan 2014 01:48:24 UTC +00:00], ["tweets_collected", nil], ["twitter_name_id", nil], ["updated_at", Thu, 16 Jan 2014 01:48:24 UTC +00:00], ["username", "Bill"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTwitterName Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" IS NULL LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Exists (1.2ms)[0m  SELECT 1 AS one FROM "twitter_names" WHERE ("twitter_names"."twitter_name_id" = '1' AND "twitter_names"."id" != 1) LIMIT 1
+  [1m[36m (2.0ms)[0m  [1mUPDATE "twitter_names" SET "twitter_name_id" = 1, "updated_at" = '2014-01-16 01:48:24.375023' WHERE "twitter_names"."id" = 1[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Exists (0.4ms)[0m  SELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" = '1' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Load (0.3ms)[0m  SELECT "twitter_names".* FROM "twitter_names" 
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Exists (0.7ms)[0m  SELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" IS NULL LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "twitter_names" ("created_at", "tweets_collected", "twitter_name_id", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Thu, 16 Jan 2014 01:48:24 UTC +00:00], ["tweets_collected", nil], ["twitter_name_id", nil], ["updated_at", Thu, 16 Jan 2014 01:48:24 UTC +00:00], ["username", "Bill"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Exists (0.3ms)[0m  SELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTwitterName Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "twitter_names" WHERE ("twitter_names"."twitter_name_id" = '1' AND "twitter_names"."id" != 2) LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  UPDATE "twitter_names" SET "twitter_name_id" = 1, "updated_at" = '2014-01-16 01:48:24.392362' WHERE "twitter_names"."id" = 2
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTwitterName Exists (0.6ms)[0m  [1mSELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" = '2' LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "twitter_names" ("created_at", "tweets_collected", "twitter_name_id", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Thu, 16 Jan 2014 01:48:24 UTC +00:00], ["tweets_collected", nil], ["twitter_name_id", 2], ["updated_at", Thu, 16 Jan 2014 01:48:24 UTC +00:00], ["username", "Sarah"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Load (0.3ms)[0m  SELECT "twitter_names".* FROM "twitter_names" 
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mLink Exists (0.6ms)[0m  SELECT 1 AS one FROM "links" WHERE "links"."url" = 'http://4sq.com/1kdpgzr' LIMIT 1
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "links" ("author", "authored_date", "created_at", "domain", "title", "twitter_tweet_id", "updated_at", "url", "url_type") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["author", "jim"], ["authored_date", Tue, 07 Jan 2014 18:06:21 UTC +00:00], ["created_at", Thu, 16 Jan 2014 01:48:24 UTC +00:00], ["domain", "4sq.com"], ["title", "title"], ["twitter_tweet_id", "141290871412908714129087"], ["updated_at", Thu, 16 Jan 2014 01:48:24 UTC +00:00], ["url", "http://4sq.com/1kdpgzr"], ["url_type", nil]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mLink Exists (0.4ms)[0m  SELECT 1 AS one FROM "links" WHERE ("links"."url" = 'http://4sq.com/1kdpgzr' AND "links"."id" != 1) LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mLink Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "links" WHERE "links"."url" = 'http://4sq.com/1kdpgzr' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mLink Exists (0.3ms)[0m  SELECT 1 AS one FROM "links" WHERE "links"."url" = 'http://4sq.com/1kdpgzr' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35mLink Load (0.5ms)[0m  SELECT "links".* FROM "links" 
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mLink Exists (0.4ms)[0m  SELECT 1 AS one FROM "links" WHERE "links"."url" = 'http://www.theatlantic.com/technology/archive/2014/01/him-love-in-the-time-of-operating-systems/283062/' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "links" ("author", "authored_date", "created_at", "domain", "title", "twitter_tweet_id", "updated_at", "url", "url_type") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["author", "jim"], ["authored_date", Tue, 07 Jan 2014 18:06:21 UTC +00:00], ["created_at", Thu, 16 Jan 2014 01:48:24 UTC +00:00], ["domain", "www.theatlantic.com"], ["title", "title"], ["twitter_tweet_id", "141290871412908714129087"], ["updated_at", Thu, 16 Jan 2014 01:48:24 UTC +00:00], ["url", "http://www.theatlantic.com/technology/archive/2014/01/him-love-in-the-time-of-operating-systems/283062/"], ["url_type", nil]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mLink Exists (0.3ms)[0m  SELECT 1 AS one FROM "links" WHERE ("links"."url" = 'http://www.theatlantic.com/technology/archive/2014/01/him-love-in-the-time-of-operating-systems/283062/' AND "links"."id" != 2) LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mUPDATE "links" SET "url_type" = 'article', "updated_at" = '2014-01-16 01:48:24.480513' WHERE "links"."id" = 2[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mLink Exists (0.3ms)[0m  SELECT 1 AS one FROM "links" WHERE "links"."url" = 'http://www.theatlantic.com/business/archive/2013/07/the-economic-cost-of-hangovers/277546/' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "links" ("author", "authored_date", "created_at", "domain", "title", "twitter_tweet_id", "updated_at", "url", "url_type") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["author", "jim"], ["authored_date", Tue, 07 Jan 2014 18:06:21 UTC +00:00], ["created_at", Thu, 16 Jan 2014 01:48:24 UTC +00:00], ["domain", "www.theatlantic.com"], ["title", "title"], ["twitter_tweet_id", "141290871412908714129087"], ["updated_at", Thu, 16 Jan 2014 01:48:24 UTC +00:00], ["url", "http://www.theatlantic.com/business/archive/2013/07/the-economic-cost-of-hangovers/277546/"], ["url_type", nil]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mLink Exists (0.3ms)[0m  SELECT 1 AS one FROM "links" WHERE ("links"."url" = 'http://www.theatlantic.com/business/archive/2013/07/the-economic-cost-of-hangovers/277546/' AND "links"."id" != 3) LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mUPDATE "links" SET "url_type" = 'article', "updated_at" = '2014-01-16 01:48:24.484951' WHERE "links"."id" = 3[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mLink Load (0.4ms)[0m  [1mSELECT "links".* FROM "links" [0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/twitter_names/new" for 127.0.0.1 at 2014-01-15 20:48:24 -0500
+Processing by TwitterNamesController#new as HTML
+  Rendered twitter_names/new.html.erb within layouts/application (2.1ms)
+  Rendered partials/_header.html.erb (1.6ms)
+Completed 200 OK in 20ms (Views: 19.1ms | ActiveRecord: 0.0ms)
+Started POST "/twitter_names" for 127.0.0.1 at 2014-01-15 20:48:24 -0500
+Processing by TwitterNamesController#create as HTML
+  Parameters: {"username"=>"hashceratops", "tweets_collected"=>"some"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTwitterName Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" = '74778865' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "twitter_names" ("created_at", "tweets_collected", "twitter_name_id", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Thu, 16 Jan 2014 01:48:25 UTC +00:00], ["tweets_collected", "some"], ["twitter_name_id", "74778865"], ["updated_at", Thu, 16 Jan 2014 01:48:25 UTC +00:00], ["username", "hashceratops"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Load (0.4ms)[0m  SELECT "twitter_names".* FROM "twitter_names" WHERE "twitter_names"."id" = $1 LIMIT 1  [["id", "74778865"]]
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTweet Exists (0.7ms)[0m  SELECT 1 AS one FROM "tweets" WHERE "tweets"."twitter_tweet_id" = '180058271732875266' LIMIT 1
+  [1m[36mSQL (1.6ms)[0m  [1mINSERT INTO "tweets" ("created_at", "domain", "text", "tweet_date", "twitter_name_id", "twitter_tweet_id", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Thu, 16 Jan 2014 01:48:25 UTC +00:00], ["domain", "bit.ly"], ["text", nil], ["tweet_date", nil], ["twitter_name_id", nil], ["twitter_tweet_id", "180058271732875266"], ["updated_at", Thu, 16 Jan 2014 01:48:25 UTC +00:00], ["url", "http://bit.ly/zbuwoS"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTweet Exists (0.5ms)[0m  SELECT 1 AS one FROM "tweets" WHERE ("tweets"."twitter_tweet_id" = '180058271732875266' AND "tweets"."id" != 1) LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mUPDATE "tweets" SET "tweet_date" = '2012-03-14 22:30:11.000000', "twitter_name_id" = '74778865', "text" = 'Recipe: i love Mango Lassi - The Atlantic http://t.co/000F1BxQ', "updated_at" = '2014-01-16 01:48:25.459315' WHERE "tweets"."id" = 1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Exists (0.4ms)[0m  SELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" = '74778865' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTweet Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "tweets" WHERE "tweets"."twitter_tweet_id" = '180052787256758272' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "tweets" ("created_at", "domain", "text", "tweet_date", "twitter_name_id", "twitter_tweet_id", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Thu, 16 Jan 2014 01:48:25 UTC +00:00], ["domain", "bit.ly"], ["text", nil], ["tweet_date", nil], ["twitter_name_id", nil], ["twitter_tweet_id", "180052787256758272"], ["updated_at", Thu, 16 Jan 2014 01:48:25 UTC +00:00], ["url", "http://bit.ly/xaTrX0"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTweet Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "tweets" WHERE ("tweets"."twitter_tweet_id" = '180052787256758272' AND "tweets"."id" != 2) LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  UPDATE "tweets" SET "tweet_date" = '2012-03-14 22:08:24.000000', "twitter_name_id" = '74778865', "text" = 'Recipe: I love Mango Lassi - The Atlantic http://t.co/sVc6sxqz via @AddThis', "updated_at" = '2014-01-16 01:48:25.470900' WHERE "tweets"."id" = 2
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTwitterName Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" = '74778865' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Redirected to http://www.example.com/twitter_names
+Completed 302 Found in 933ms (ActiveRecord: 15.0ms)
+Started GET "/twitter_names" for 127.0.0.1 at 2014-01-15 20:48:25 -0500
+Processing by TwitterNamesController#index as HTML
+  [1m[36mTwitterName Load (0.3ms)[0m  [1mSELECT "twitter_names".* FROM "twitter_names" [0m
+  Rendered twitter_names/index.html.erb within layouts/application (1.3ms)
+  Rendered partials/_header.html.erb (0.7ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.3ms)
+  [1m[35mTweet Load (0.5ms)[0m  SELECT "tweets".* FROM "tweets" WHERE "tweets"."twitter_name_id" = '74778865' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Exists (0.3ms)[0m  SELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" = '14129087' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "twitter_names" ("created_at", "tweets_collected", "twitter_name_id", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Thu, 16 Jan 2014 01:48:25 UTC +00:00], ["tweets_collected", "some"], ["twitter_name_id", "14129087"], ["updated_at", Thu, 16 Jan 2014 01:48:25 UTC +00:00], ["username", "hashceratops"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/twitter_names/5" for 127.0.0.1 at 2014-01-15 20:48:25 -0500
+Processing by TwitterNamesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mTwitterName Load (0.4ms)[0m  [1mSELECT "twitter_names".* FROM "twitter_names" WHERE "twitter_names"."id" = $1 LIMIT 1[0m  [["id", "5"]]
+  [1m[35mTweet Load (0.9ms)[0m  SELECT "tweets".* FROM "tweets" WHERE "tweets"."twitter_name_id" = '14129087' ORDER BY domain
+  Rendered partials/_tweets_table.html.erb (1.8ms)
+  Rendered twitter_names/show.html.erb within layouts/application (4.0ms)
+  Rendered partials/_header.html.erb (1.8ms)
+Completed 200 OK in 13ms (Views: 10.0ms | ActiveRecord: 1.3ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTweet Exists (0.5ms)[0m  SELECT 1 AS one FROM "tweets" WHERE "tweets"."twitter_tweet_id" = '1' LIMIT 1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "tweets" ("created_at", "domain", "text", "tweet_date", "twitter_name_id", "twitter_tweet_id", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Thu, 16 Jan 2014 01:48:25 UTC +00:00], ["domain", nil], ["text", nil], ["tweet_date", Tue, 07 Jan 2014 18:06:21 UTC +00:00], ["twitter_name_id", "14129087"], ["twitter_tweet_id", 1], ["updated_at", Thu, 16 Jan 2014 01:48:25 UTC +00:00], ["url", "http://www.theatlantic.com/technology/archive/2014/01/him-love-in-the-time-of-operating-systems/283062/"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTweet Exists (0.4ms)[0m  SELECT 1 AS one FROM "tweets" WHERE "tweets"."twitter_tweet_id" = '1' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35mTweet Load (0.3ms)[0m  SELECT "tweets".* FROM "tweets" 
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTweet Exists (0.5ms)[0m  SELECT 1 AS one FROM "tweets" WHERE "tweets"."twitter_tweet_id" = '1' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "tweets" ("created_at", "domain", "text", "tweet_date", "twitter_name_id", "twitter_tweet_id", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Thu, 16 Jan 2014 01:48:25 UTC +00:00], ["domain", "www.theatlantic.com"], ["text", nil], ["tweet_date", Tue, 07 Jan 2014 18:06:21 UTC +00:00], ["twitter_name_id", "14129087"], ["twitter_tweet_id", 1], ["updated_at", Thu, 16 Jan 2014 01:48:25 UTC +00:00], ["url", "http://www.theatlantic.com/technology/archive/2014/01/him-love-in-the-time-of-operating-systems/283062/"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTweet Exists (0.4ms)[0m  SELECT 1 AS one FROM "tweets" WHERE ("tweets"."twitter_tweet_id" = '1' AND "tweets"."id" != 4) LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTweet Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "tweets" WHERE "tweets"."twitter_tweet_id" = '2' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "tweets" ("created_at", "domain", "text", "tweet_date", "twitter_name_id", "twitter_tweet_id", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Thu, 16 Jan 2014 01:48:25 UTC +00:00], ["domain", "www.theatlantic.com"], ["text", nil], ["tweet_date", Tue, 07 Jan 2014 18:06:21 UTC +00:00], ["twitter_name_id", "14129087"], ["twitter_tweet_id", 2], ["updated_at", Thu, 16 Jan 2014 01:48:25 UTC +00:00], ["url", "http://www.theatlantic.com/technology/archive/2014/01/him-love-in-the-time-of-operating-systems/283062/"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTweet Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "tweets" WHERE ("tweets"."twitter_tweet_id" = '2' AND "tweets"."id" != 5) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mTweet Load (0.3ms)[0m  [1mSELECT "tweets".* FROM "tweets" [0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by TweetsController#index as HTML
+  [1m[35mTweet Load (0.5ms)[0m  SELECT "tweets".* FROM "tweets" ORDER BY domain
+  Rendered tweets/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.5ms)
+  [1m[36mTweet Load (0.4ms)[0m  [1mSELECT "tweets".* FROM "tweets" [0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTwitterName Exists (1.0ms)[0m  [1mSELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" IS NULL LIMIT 1[0m
+  [1m[35mSQL (5.1ms)[0m  INSERT INTO "twitter_names" ("created_at", "tweets_collected", "twitter_name_id", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Thu, 16 Jan 2014 01:48:54 UTC +00:00], ["tweets_collected", nil], ["twitter_name_id", nil], ["updated_at", Thu, 16 Jan 2014 01:48:54 UTC +00:00], ["username", "Bill"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTwitterName Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Exists (1.5ms)[0m  SELECT 1 AS one FROM "twitter_names" WHERE ("twitter_names"."twitter_name_id" = '1' AND "twitter_names"."id" != 1) LIMIT 1
+  [1m[36m (0.7ms)[0m  [1mUPDATE "twitter_names" SET "twitter_name_id" = 1, "updated_at" = '2014-01-16 01:48:54.750511' WHERE "twitter_names"."id" = 1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Exists (0.3ms)[0m  SELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" = '2' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "twitter_names" ("created_at", "tweets_collected", "twitter_name_id", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Thu, 16 Jan 2014 01:48:54 UTC +00:00], ["tweets_collected", nil], ["twitter_name_id", 2], ["updated_at", Thu, 16 Jan 2014 01:48:54 UTC +00:00], ["username", "Sarah"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mTwitterName Load (0.3ms)[0m  [1mSELECT "twitter_names".* FROM "twitter_names" [0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTwitterName Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" IS NULL LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "twitter_names" ("created_at", "tweets_collected", "twitter_name_id", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Thu, 16 Jan 2014 01:48:54 UTC +00:00], ["tweets_collected", nil], ["twitter_name_id", nil], ["updated_at", Thu, 16 Jan 2014 01:48:54 UTC +00:00], ["username", "Bill"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTwitterName Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Exists (0.3ms)[0m  SELECT 1 AS one FROM "twitter_names" WHERE ("twitter_names"."twitter_name_id" = '1' AND "twitter_names"."id" != 3) LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mUPDATE "twitter_names" SET "twitter_name_id" = 1, "updated_at" = '2014-01-16 01:48:54.763929' WHERE "twitter_names"."id" = 3[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Exists (0.3ms)[0m  SELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" = '1' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Load (0.3ms)[0m  SELECT "twitter_names".* FROM "twitter_names" 
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mLink Exists (0.6ms)[0m  SELECT 1 AS one FROM "links" WHERE "links"."url" = 'http://www.theatlantic.com/technology/archive/2014/01/him-love-in-the-time-of-operating-systems/283062/' LIMIT 1
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "links" ("author", "authored_date", "created_at", "domain", "title", "twitter_tweet_id", "updated_at", "url", "url_type") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["author", "jim"], ["authored_date", Tue, 07 Jan 2014 18:06:21 UTC +00:00], ["created_at", Thu, 16 Jan 2014 01:48:54 UTC +00:00], ["domain", "www.theatlantic.com"], ["title", "title"], ["twitter_tweet_id", "141290871412908714129087"], ["updated_at", Thu, 16 Jan 2014 01:48:54 UTC +00:00], ["url", "http://www.theatlantic.com/technology/archive/2014/01/him-love-in-the-time-of-operating-systems/283062/"], ["url_type", nil]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mLink Exists (0.4ms)[0m  SELECT 1 AS one FROM "links" WHERE ("links"."url" = 'http://www.theatlantic.com/technology/archive/2014/01/him-love-in-the-time-of-operating-systems/283062/' AND "links"."id" != 1) LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mUPDATE "links" SET "url_type" = 'article', "updated_at" = '2014-01-16 01:48:54.836431' WHERE "links"."id" = 1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mLink Exists (0.3ms)[0m  SELECT 1 AS one FROM "links" WHERE "links"."url" = 'http://www.theatlantic.com/business/archive/2013/07/the-economic-cost-of-hangovers/277546/' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "links" ("author", "authored_date", "created_at", "domain", "title", "twitter_tweet_id", "updated_at", "url", "url_type") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["author", "jim"], ["authored_date", Tue, 07 Jan 2014 18:06:21 UTC +00:00], ["created_at", Thu, 16 Jan 2014 01:48:54 UTC +00:00], ["domain", "www.theatlantic.com"], ["title", "title"], ["twitter_tweet_id", "141290871412908714129087"], ["updated_at", Thu, 16 Jan 2014 01:48:54 UTC +00:00], ["url", "http://www.theatlantic.com/business/archive/2013/07/the-economic-cost-of-hangovers/277546/"], ["url_type", nil]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mLink Exists (0.3ms)[0m  SELECT 1 AS one FROM "links" WHERE ("links"."url" = 'http://www.theatlantic.com/business/archive/2013/07/the-economic-cost-of-hangovers/277546/' AND "links"."id" != 2) LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mUPDATE "links" SET "url_type" = 'article', "updated_at" = '2014-01-16 01:48:54.841330' WHERE "links"."id" = 2[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mLink Load (0.2ms)[0m  [1mSELECT "links".* FROM "links" [0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mLink Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "links" WHERE "links"."url" = 'http://4sq.com/1kdpgzr' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "links" ("author", "authored_date", "created_at", "domain", "title", "twitter_tweet_id", "updated_at", "url", "url_type") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["author", "jim"], ["authored_date", Tue, 07 Jan 2014 18:06:21 UTC +00:00], ["created_at", Thu, 16 Jan 2014 01:48:54 UTC +00:00], ["domain", "4sq.com"], ["title", "title"], ["twitter_tweet_id", "141290871412908714129087"], ["updated_at", Thu, 16 Jan 2014 01:48:54 UTC +00:00], ["url", "http://4sq.com/1kdpgzr"], ["url_type", nil]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mLink Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "links" WHERE ("links"."url" = 'http://4sq.com/1kdpgzr' AND "links"."id" != 3) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mLink Exists (0.3ms)[0m  SELECT 1 AS one FROM "links" WHERE "links"."url" = 'http://4sq.com/1kdpgzr' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mLink Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "links" WHERE "links"."url" = 'http://4sq.com/1kdpgzr' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36mLink Load (0.2ms)[0m  [1mSELECT "links".* FROM "links" [0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTwitterName Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" = '14129087' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "twitter_names" ("created_at", "tweets_collected", "twitter_name_id", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Thu, 16 Jan 2014 01:48:54 UTC +00:00], ["tweets_collected", "some"], ["twitter_name_id", "14129087"], ["updated_at", Thu, 16 Jan 2014 01:48:54 UTC +00:00], ["username", "hashceratops"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/twitter_names/4" for 127.0.0.1 at 2014-01-15 20:48:54 -0500
+Processing by TwitterNamesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mTwitterName Load (1.2ms)[0m  SELECT "twitter_names".* FROM "twitter_names" WHERE "twitter_names"."id" = $1 LIMIT 1  [["id", "4"]]
+  [1m[36mTweet Load (0.9ms)[0m  [1mSELECT "tweets".* FROM "tweets" WHERE "tweets"."twitter_name_id" = '14129087' ORDER BY domain[0m
+  Rendered partials/_tweets_table.html.erb (1.3ms)
+  Rendered twitter_names/show.html.erb within layouts/application (8.2ms)
+  Rendered partials/_header.html.erb (2.3ms)
+Completed 200 OK in 35ms (Views: 24.5ms | ActiveRecord: 4.8ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by TweetsController#index as HTML
+  [1m[35mTweet Load (0.4ms)[0m  SELECT "tweets".* FROM "tweets" ORDER BY domain
+  Rendered tweets/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.4ms)
+  [1m[36mTweet Load (0.3ms)[0m  [1mSELECT "tweets".* FROM "tweets" [0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/twitter_names/new" for 127.0.0.1 at 2014-01-15 20:48:54 -0500
+Processing by TwitterNamesController#new as HTML
+  Rendered partials/_header.html.erb (0.6ms)
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+Started POST "/twitter_names" for 127.0.0.1 at 2014-01-15 20:48:54 -0500
+Processing by TwitterNamesController#create as HTML
+  Parameters: {"username"=>"hashceratops", "tweets_collected"=>"some"}
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTwitterName Exists (0.6ms)[0m  [1mSELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" = '74778865' LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "twitter_names" ("created_at", "tweets_collected", "twitter_name_id", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Thu, 16 Jan 2014 01:48:55 UTC +00:00], ["tweets_collected", "some"], ["twitter_name_id", "74778865"], ["updated_at", Thu, 16 Jan 2014 01:48:55 UTC +00:00], ["username", "hashceratops"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Load (0.4ms)[0m  SELECT "twitter_names".* FROM "twitter_names" WHERE "twitter_names"."id" = $1 LIMIT 1  [["id", "74778865"]]
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTweet Exists (0.4ms)[0m  SELECT 1 AS one FROM "tweets" WHERE "tweets"."twitter_tweet_id" = '180058271732875266' LIMIT 1
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "tweets" ("created_at", "domain", "text", "tweet_date", "twitter_name_id", "twitter_tweet_id", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Thu, 16 Jan 2014 01:48:55 UTC +00:00], ["domain", "bit.ly"], ["text", nil], ["tweet_date", nil], ["twitter_name_id", nil], ["twitter_tweet_id", "180058271732875266"], ["updated_at", Thu, 16 Jan 2014 01:48:55 UTC +00:00], ["url", "http://bit.ly/zbuwoS"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTweet Exists (0.5ms)[0m  SELECT 1 AS one FROM "tweets" WHERE ("tweets"."twitter_tweet_id" = '180058271732875266' AND "tweets"."id" != 1) LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mUPDATE "tweets" SET "tweet_date" = '2012-03-14 22:30:11.000000', "twitter_name_id" = '74778865', "text" = 'Recipe: i love Mango Lassi - The Atlantic http://t.co/000F1BxQ', "updated_at" = '2014-01-16 01:48:55.851495' WHERE "tweets"."id" = 1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Exists (0.3ms)[0m  SELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" = '74778865' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTweet Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "tweets" WHERE "tweets"."twitter_tweet_id" = '180052787256758272' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "tweets" ("created_at", "domain", "text", "tweet_date", "twitter_name_id", "twitter_tweet_id", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Thu, 16 Jan 2014 01:48:55 UTC +00:00], ["domain", "bit.ly"], ["text", nil], ["tweet_date", nil], ["twitter_name_id", nil], ["twitter_tweet_id", "180052787256758272"], ["updated_at", Thu, 16 Jan 2014 01:48:55 UTC +00:00], ["url", "http://bit.ly/xaTrX0"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTweet Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "tweets" WHERE ("tweets"."twitter_tweet_id" = '180052787256758272' AND "tweets"."id" != 2) LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  UPDATE "tweets" SET "tweet_date" = '2012-03-14 22:08:24.000000', "twitter_name_id" = '74778865', "text" = 'Recipe: I love Mango Lassi - The Atlantic http://t.co/sVc6sxqz via @AddThis', "updated_at" = '2014-01-16 01:48:55.859228' WHERE "tweets"."id" = 2
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTwitterName Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" = '74778865' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Redirected to http://www.example.com/twitter_names
+Completed 302 Found in 968ms (ActiveRecord: 11.5ms)
+Started GET "/twitter_names" for 127.0.0.1 at 2014-01-15 20:48:55 -0500
+Processing by TwitterNamesController#index as HTML
+  [1m[36mTwitterName Load (0.4ms)[0m  [1mSELECT "twitter_names".* FROM "twitter_names" [0m
+  Rendered partials/_header.html.erb (0.8ms)
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 0.4ms)
+  [1m[35mTweet Load (0.4ms)[0m  SELECT "tweets".* FROM "tweets" WHERE "tweets"."twitter_name_id" = '74778865' LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTweet Exists (0.5ms)[0m  SELECT 1 AS one FROM "tweets" WHERE "tweets"."twitter_tweet_id" = '1' LIMIT 1
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "tweets" ("created_at", "domain", "text", "tweet_date", "twitter_name_id", "twitter_tweet_id", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Thu, 16 Jan 2014 01:48:55 UTC +00:00], ["domain", "www.theatlantic.com"], ["text", nil], ["tweet_date", Tue, 07 Jan 2014 18:06:21 UTC +00:00], ["twitter_name_id", "14129087"], ["twitter_tweet_id", 1], ["updated_at", Thu, 16 Jan 2014 01:48:55 UTC +00:00], ["url", "http://www.theatlantic.com/technology/archive/2014/01/him-love-in-the-time-of-operating-systems/283062/"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTweet Exists (0.5ms)[0m  SELECT 1 AS one FROM "tweets" WHERE ("tweets"."twitter_tweet_id" = '1' AND "tweets"."id" != 3) LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTweet Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "tweets" WHERE "tweets"."twitter_tweet_id" = '2' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "tweets" ("created_at", "domain", "text", "tweet_date", "twitter_name_id", "twitter_tweet_id", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Thu, 16 Jan 2014 01:48:55 UTC +00:00], ["domain", "www.theatlantic.com"], ["text", nil], ["tweet_date", Tue, 07 Jan 2014 18:06:21 UTC +00:00], ["twitter_name_id", "14129087"], ["twitter_tweet_id", 2], ["updated_at", Thu, 16 Jan 2014 01:48:55 UTC +00:00], ["url", "http://www.theatlantic.com/technology/archive/2014/01/him-love-in-the-time-of-operating-systems/283062/"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTweet Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "tweets" WHERE ("tweets"."twitter_tweet_id" = '2' AND "tweets"."id" != 4) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mTweet Load (0.2ms)[0m  [1mSELECT "tweets".* FROM "tweets" [0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTweet Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "tweets" WHERE "tweets"."twitter_tweet_id" = '1' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "tweets" ("created_at", "domain", "text", "tweet_date", "twitter_name_id", "twitter_tweet_id", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Thu, 16 Jan 2014 01:48:55 UTC +00:00], ["domain", nil], ["text", nil], ["tweet_date", Tue, 07 Jan 2014 18:06:21 UTC +00:00], ["twitter_name_id", "14129087"], ["twitter_tweet_id", 1], ["updated_at", Thu, 16 Jan 2014 01:48:55 UTC +00:00], ["url", "http://www.theatlantic.com/technology/archive/2014/01/him-love-in-the-time-of-operating-systems/283062/"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTweet Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "tweets" WHERE "tweets"."twitter_tweet_id" = '1' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36mTweet Load (0.4ms)[0m  [1mSELECT "tweets".* FROM "tweets" [0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTwitterName Exists (1.7ms)[0m  [1mSELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" = '14129087' LIMIT 1[0m
+  [1m[35mSQL (3.1ms)[0m  INSERT INTO "twitter_names" ("created_at", "tweets_collected", "twitter_name_id", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Thu, 16 Jan 2014 01:49:12 UTC +00:00], ["tweets_collected", "some"], ["twitter_name_id", "14129087"], ["updated_at", Thu, 16 Jan 2014 01:49:12 UTC +00:00], ["username", "hashceratops"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/twitter_names/1" for 127.0.0.1 at 2014-01-15 20:49:12 -0500
+Processing by TwitterNamesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTwitterName Load (1.0ms)[0m  SELECT "twitter_names".* FROM "twitter_names" WHERE "twitter_names"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mTweet Load (0.9ms)[0m  [1mSELECT "tweets".* FROM "tweets" WHERE "tweets"."twitter_name_id" = '14129087' ORDER BY domain[0m
+  Rendered partials/_tweets_table.html.erb (0.8ms)
+  Rendered twitter_names/show.html.erb within layouts/application (53.0ms)
+  Rendered partials/_header.html.erb (1.5ms)
+Completed 200 OK in 80ms (Views: 67.8ms | ActiveRecord: 5.8ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/twitter_names/new" for 127.0.0.1 at 2014-01-15 20:49:12 -0500
+Processing by TwitterNamesController#new as HTML
+  Rendered twitter_names/new.html.erb within layouts/application (1.0ms)
+  Rendered partials/_header.html.erb (0.8ms)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+Started POST "/twitter_names" for 127.0.0.1 at 2014-01-15 20:49:12 -0500
+Processing by TwitterNamesController#create as HTML
+  Parameters: {"username"=>"hashceratops", "tweets_collected"=>"some"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTwitterName Exists (0.6ms)[0m  [1mSELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" = '74778865' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "twitter_names" ("created_at", "tweets_collected", "twitter_name_id", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Thu, 16 Jan 2014 01:49:13 UTC +00:00], ["tweets_collected", "some"], ["twitter_name_id", "74778865"], ["updated_at", Thu, 16 Jan 2014 01:49:13 UTC +00:00], ["username", "hashceratops"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Load (0.3ms)[0m  SELECT "twitter_names".* FROM "twitter_names" WHERE "twitter_names"."id" = $1 LIMIT 1  [["id", "74778865"]]
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTweet Exists (0.6ms)[0m  SELECT 1 AS one FROM "tweets" WHERE "tweets"."twitter_tweet_id" = '180058271732875266' LIMIT 1
+  [1m[36mSQL (1.7ms)[0m  [1mINSERT INTO "tweets" ("created_at", "domain", "text", "tweet_date", "twitter_name_id", "twitter_tweet_id", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Thu, 16 Jan 2014 01:49:13 UTC +00:00], ["domain", "bit.ly"], ["text", nil], ["tweet_date", nil], ["twitter_name_id", nil], ["twitter_tweet_id", "180058271732875266"], ["updated_at", Thu, 16 Jan 2014 01:49:13 UTC +00:00], ["url", "http://bit.ly/zbuwoS"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTweet Exists (0.7ms)[0m  SELECT 1 AS one FROM "tweets" WHERE ("tweets"."twitter_tweet_id" = '180058271732875266' AND "tweets"."id" != 1) LIMIT 1
+  [1m[36m (0.6ms)[0m  [1mUPDATE "tweets" SET "tweet_date" = '2012-03-14 22:30:11.000000', "twitter_name_id" = '74778865', "text" = 'Recipe: i love Mango Lassi - The Atlantic http://t.co/000F1BxQ', "updated_at" = '2014-01-16 01:49:13.846154' WHERE "tweets"."id" = 1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Exists (0.3ms)[0m  SELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" = '74778865' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTweet Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "tweets" WHERE "tweets"."twitter_tweet_id" = '180052787256758272' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "tweets" ("created_at", "domain", "text", "tweet_date", "twitter_name_id", "twitter_tweet_id", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Thu, 16 Jan 2014 01:49:13 UTC +00:00], ["domain", "bit.ly"], ["text", nil], ["tweet_date", nil], ["twitter_name_id", nil], ["twitter_tweet_id", "180052787256758272"], ["updated_at", Thu, 16 Jan 2014 01:49:13 UTC +00:00], ["url", "http://bit.ly/xaTrX0"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTweet Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "tweets" WHERE ("tweets"."twitter_tweet_id" = '180052787256758272' AND "tweets"."id" != 2) LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  UPDATE "tweets" SET "tweet_date" = '2012-03-14 22:08:24.000000', "twitter_name_id" = '74778865', "text" = 'Recipe: I love Mango Lassi - The Atlantic http://t.co/sVc6sxqz via @AddThis', "updated_at" = '2014-01-16 01:49:13.865214' WHERE "tweets"."id" = 2
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTwitterName Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" = '74778865' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Redirected to http://www.example.com/twitter_names
+Completed 302 Found in 1068ms (ActiveRecord: 11.5ms)
+Started GET "/twitter_names" for 127.0.0.1 at 2014-01-15 20:49:13 -0500
+Processing by TwitterNamesController#index as HTML
+  [1m[36mTwitterName Load (0.4ms)[0m  [1mSELECT "twitter_names".* FROM "twitter_names" [0m
+  Rendered twitter_names/index.html.erb within layouts/application (1.2ms)
+  Rendered partials/_header.html.erb (0.6ms)
+Completed 200 OK in 7ms (Views: 4.9ms | ActiveRecord: 0.4ms)
+  [1m[35mTweet Load (0.4ms)[0m  SELECT "tweets".* FROM "tweets" WHERE "tweets"."twitter_name_id" = '74778865' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by TweetsController#index as HTML
+  [1m[36mTweet Load (0.7ms)[0m  [1mSELECT "tweets".* FROM "tweets" ORDER BY domain[0m
+  Rendered tweets/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.7ms)
+  [1m[35mTweet Load (0.6ms)[0m  SELECT "tweets".* FROM "tweets" 
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTweet Exists (0.5ms)[0m  SELECT 1 AS one FROM "tweets" WHERE "tweets"."twitter_tweet_id" = '1' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "tweets" ("created_at", "domain", "text", "tweet_date", "twitter_name_id", "twitter_tweet_id", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Thu, 16 Jan 2014 01:49:13 UTC +00:00], ["domain", nil], ["text", nil], ["tweet_date", Tue, 07 Jan 2014 18:06:21 UTC +00:00], ["twitter_name_id", "14129087"], ["twitter_tweet_id", 1], ["updated_at", Thu, 16 Jan 2014 01:49:13 UTC +00:00], ["url", "http://www.theatlantic.com/technology/archive/2014/01/him-love-in-the-time-of-operating-systems/283062/"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTweet Exists (0.3ms)[0m  SELECT 1 AS one FROM "tweets" WHERE "tweets"."twitter_tweet_id" = '1' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35mTweet Load (0.3ms)[0m  SELECT "tweets".* FROM "tweets" 
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTweet Exists (0.3ms)[0m  SELECT 1 AS one FROM "tweets" WHERE "tweets"."twitter_tweet_id" = '1' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "tweets" ("created_at", "domain", "text", "tweet_date", "twitter_name_id", "twitter_tweet_id", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Thu, 16 Jan 2014 01:49:13 UTC +00:00], ["domain", "www.theatlantic.com"], ["text", nil], ["tweet_date", Tue, 07 Jan 2014 18:06:21 UTC +00:00], ["twitter_name_id", "14129087"], ["twitter_tweet_id", 1], ["updated_at", Thu, 16 Jan 2014 01:49:13 UTC +00:00], ["url", "http://www.theatlantic.com/technology/archive/2014/01/him-love-in-the-time-of-operating-systems/283062/"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTweet Exists (0.3ms)[0m  SELECT 1 AS one FROM "tweets" WHERE ("tweets"."twitter_tweet_id" = '1' AND "tweets"."id" != 4) LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTweet Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "tweets" WHERE "tweets"."twitter_tweet_id" = '2' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "tweets" ("created_at", "domain", "text", "tweet_date", "twitter_name_id", "twitter_tweet_id", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Thu, 16 Jan 2014 01:49:13 UTC +00:00], ["domain", "www.theatlantic.com"], ["text", nil], ["tweet_date", Tue, 07 Jan 2014 18:06:21 UTC +00:00], ["twitter_name_id", "14129087"], ["twitter_tweet_id", 2], ["updated_at", Thu, 16 Jan 2014 01:49:13 UTC +00:00], ["url", "http://www.theatlantic.com/technology/archive/2014/01/him-love-in-the-time-of-operating-systems/283062/"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTweet Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "tweets" WHERE ("tweets"."twitter_tweet_id" = '2' AND "tweets"."id" != 5) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mTweet Load (0.3ms)[0m  [1mSELECT "tweets".* FROM "tweets" [0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mLink Exists (0.6ms)[0m  [1mSELECT 1 AS one FROM "links" WHERE "links"."url" = 'http://4sq.com/1kdpgzr' LIMIT 1[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "links" ("author", "authored_date", "created_at", "domain", "title", "twitter_tweet_id", "updated_at", "url", "url_type") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["author", "jim"], ["authored_date", Tue, 07 Jan 2014 18:06:21 UTC +00:00], ["created_at", Thu, 16 Jan 2014 01:49:14 UTC +00:00], ["domain", "4sq.com"], ["title", "title"], ["twitter_tweet_id", "141290871412908714129087"], ["updated_at", Thu, 16 Jan 2014 01:49:14 UTC +00:00], ["url", "http://4sq.com/1kdpgzr"], ["url_type", nil]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mLink Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "links" WHERE ("links"."url" = 'http://4sq.com/1kdpgzr' AND "links"."id" != 1) LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  UPDATE "links" SET "url_type" = 'social', "updated_at" = '2014-01-16 01:49:14.013193' WHERE "links"."id" = 1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mLink Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "links" WHERE "links"."url" = 'http://4sq.com/1kdpgzr' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mLink Exists (0.5ms)[0m  SELECT 1 AS one FROM "links" WHERE "links"."url" = 'http://4sq.com/1kdpgzr' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35mLink Load (0.3ms)[0m  SELECT "links".* FROM "links" 
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mLink Exists (0.4ms)[0m  SELECT 1 AS one FROM "links" WHERE "links"."url" = 'http://www.theatlantic.com/technology/archive/2014/01/him-love-in-the-time-of-operating-systems/283062/' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "links" ("author", "authored_date", "created_at", "domain", "title", "twitter_tweet_id", "updated_at", "url", "url_type") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["author", "jim"], ["authored_date", Tue, 07 Jan 2014 18:06:21 UTC +00:00], ["created_at", Thu, 16 Jan 2014 01:49:14 UTC +00:00], ["domain", "www.theatlantic.com"], ["title", "title"], ["twitter_tweet_id", "141290871412908714129087"], ["updated_at", Thu, 16 Jan 2014 01:49:14 UTC +00:00], ["url", "http://www.theatlantic.com/technology/archive/2014/01/him-love-in-the-time-of-operating-systems/283062/"], ["url_type", nil]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mLink Exists (0.5ms)[0m  SELECT 1 AS one FROM "links" WHERE ("links"."url" = 'http://www.theatlantic.com/technology/archive/2014/01/him-love-in-the-time-of-operating-systems/283062/' AND "links"."id" != 2) LIMIT 1
+  [1m[36m (0.6ms)[0m  [1mUPDATE "links" SET "url_type" = 'article', "updated_at" = '2014-01-16 01:49:14.030213' WHERE "links"."id" = 2[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mLink Exists (0.3ms)[0m  SELECT 1 AS one FROM "links" WHERE "links"."url" = 'http://www.theatlantic.com/business/archive/2013/07/the-economic-cost-of-hangovers/277546/' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "links" ("author", "authored_date", "created_at", "domain", "title", "twitter_tweet_id", "updated_at", "url", "url_type") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["author", "jim"], ["authored_date", Tue, 07 Jan 2014 18:06:21 UTC +00:00], ["created_at", Thu, 16 Jan 2014 01:49:14 UTC +00:00], ["domain", "www.theatlantic.com"], ["title", "title"], ["twitter_tweet_id", "141290871412908714129087"], ["updated_at", Thu, 16 Jan 2014 01:49:14 UTC +00:00], ["url", "http://www.theatlantic.com/business/archive/2013/07/the-economic-cost-of-hangovers/277546/"], ["url_type", nil]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mLink Exists (0.3ms)[0m  SELECT 1 AS one FROM "links" WHERE ("links"."url" = 'http://www.theatlantic.com/business/archive/2013/07/the-economic-cost-of-hangovers/277546/' AND "links"."id" != 3) LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mUPDATE "links" SET "url_type" = 'article', "updated_at" = '2014-01-16 01:49:14.035923' WHERE "links"."id" = 3[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mLink Load (0.2ms)[0m  [1mSELECT "links".* FROM "links" [0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTwitterName Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" IS NULL LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "twitter_names" ("created_at", "tweets_collected", "twitter_name_id", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Thu, 16 Jan 2014 01:49:14 UTC +00:00], ["tweets_collected", nil], ["twitter_name_id", nil], ["updated_at", Thu, 16 Jan 2014 01:49:14 UTC +00:00], ["username", "Bill"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTwitterName Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" IS NULL LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Exists (0.4ms)[0m  SELECT 1 AS one FROM "twitter_names" WHERE ("twitter_names"."twitter_name_id" = '1' AND "twitter_names"."id" != 3) LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mUPDATE "twitter_names" SET "twitter_name_id" = 1, "updated_at" = '2014-01-16 01:49:14.049111' WHERE "twitter_names"."id" = 3[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Exists (0.4ms)[0m  SELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" = '1' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Load (0.3ms)[0m  SELECT "twitter_names".* FROM "twitter_names" 
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Exists (0.5ms)[0m  SELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" IS NULL LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "twitter_names" ("created_at", "tweets_collected", "twitter_name_id", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Thu, 16 Jan 2014 01:49:14 UTC +00:00], ["tweets_collected", nil], ["twitter_name_id", nil], ["updated_at", Thu, 16 Jan 2014 01:49:14 UTC +00:00], ["username", "Bill"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Exists (0.3ms)[0m  SELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTwitterName Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "twitter_names" WHERE ("twitter_names"."twitter_name_id" = '1' AND "twitter_names"."id" != 4) LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  UPDATE "twitter_names" SET "twitter_name_id" = 1, "updated_at" = '2014-01-16 01:49:14.063303' WHERE "twitter_names"."id" = 4
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTwitterName Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" = '2' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "twitter_names" ("created_at", "tweets_collected", "twitter_name_id", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Thu, 16 Jan 2014 01:49:14 UTC +00:00], ["tweets_collected", nil], ["twitter_name_id", 2], ["updated_at", Thu, 16 Jan 2014 01:49:14 UTC +00:00], ["username", "Sarah"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Load (0.7ms)[0m  SELECT "twitter_names".* FROM "twitter_names" 
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTwitterName Exists (0.8ms)[0m  [1mSELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" IS NULL LIMIT 1[0m
+  [1m[35mSQL (6.0ms)[0m  INSERT INTO "twitter_names" ("created_at", "tweets_collected", "twitter_name_id", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Thu, 16 Jan 2014 02:19:38 UTC +00:00], ["tweets_collected", nil], ["twitter_name_id", nil], ["updated_at", Thu, 16 Jan 2014 02:19:38 UTC +00:00], ["username", "Bill"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTwitterName Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" IS NULL LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Exists (1.3ms)[0m  SELECT 1 AS one FROM "twitter_names" WHERE ("twitter_names"."twitter_name_id" = '1' AND "twitter_names"."id" != 1) LIMIT 1
+  [1m[36m (0.9ms)[0m  [1mUPDATE "twitter_names" SET "twitter_name_id" = 1, "updated_at" = '2014-01-16 02:19:38.865956' WHERE "twitter_names"."id" = 1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Exists (0.4ms)[0m  SELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" = '1' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Load (0.3ms)[0m  SELECT "twitter_names".* FROM "twitter_names" 
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Exists (0.5ms)[0m  SELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" IS NULL LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "twitter_names" ("created_at", "tweets_collected", "twitter_name_id", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Thu, 16 Jan 2014 02:19:38 UTC +00:00], ["tweets_collected", nil], ["twitter_name_id", nil], ["updated_at", Thu, 16 Jan 2014 02:19:38 UTC +00:00], ["username", "Bill"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Exists (0.3ms)[0m  SELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTwitterName Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "twitter_names" WHERE ("twitter_names"."twitter_name_id" = '1' AND "twitter_names"."id" != 2) LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  UPDATE "twitter_names" SET "twitter_name_id" = 1, "updated_at" = '2014-01-16 02:19:38.882199' WHERE "twitter_names"."id" = 2
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTwitterName Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" = '2' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "twitter_names" ("created_at", "tweets_collected", "twitter_name_id", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Thu, 16 Jan 2014 02:19:38 UTC +00:00], ["tweets_collected", nil], ["twitter_name_id", 2], ["updated_at", Thu, 16 Jan 2014 02:19:38 UTC +00:00], ["username", "Sarah"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Load (0.3ms)[0m  SELECT "twitter_names".* FROM "twitter_names" 
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/twitter_names/new" for 127.0.0.1 at 2014-01-15 21:19:38 -0500
+Processing by TwitterNamesController#new as HTML
+  Rendered twitter_names/new.html.erb within layouts/application (2.3ms)
+  Rendered partials/_header.html.erb (1.7ms)
+Completed 200 OK in 20ms (Views: 19.5ms | ActiveRecord: 0.0ms)
+Started POST "/twitter_names" for 127.0.0.1 at 2014-01-15 21:19:38 -0500
+Processing by TwitterNamesController#create as HTML
+  Parameters: {"username"=>"hashceratops", "tweets_collected"=>"some"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Exists (1.0ms)[0m  SELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" = '74778865' LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "twitter_names" ("created_at", "tweets_collected", "twitter_name_id", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Thu, 16 Jan 2014 02:19:39 UTC +00:00], ["tweets_collected", "some"], ["twitter_name_id", "74778865"], ["updated_at", Thu, 16 Jan 2014 02:19:39 UTC +00:00], ["username", "hashceratops"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mTwitterName Load (0.6ms)[0m  [1mSELECT "twitter_names".* FROM "twitter_names" WHERE "twitter_names"."id" = $1 LIMIT 1[0m  [["id", "74778865"]]
+  [1m[35m (2.6ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTweet Exists (0.9ms)[0m  [1mSELECT 1 AS one FROM "tweets" WHERE "tweets"."twitter_tweet_id" = '180058271732875266' LIMIT 1[0m
+  [1m[35mSQL (1.6ms)[0m  INSERT INTO "tweets" ("created_at", "domain", "text", "tweet_date", "twitter_name_id", "twitter_tweet_id", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Thu, 16 Jan 2014 02:19:39 UTC +00:00], ["domain", "bit.ly"], ["text", nil], ["tweet_date", nil], ["twitter_name_id", nil], ["twitter_tweet_id", "180058271732875266"], ["updated_at", Thu, 16 Jan 2014 02:19:39 UTC +00:00], ["url", "http://bit.ly/zbuwoS"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTweet Exists (0.6ms)[0m  [1mSELECT 1 AS one FROM "tweets" WHERE ("tweets"."twitter_tweet_id" = '180058271732875266' AND "tweets"."id" != 1) LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  UPDATE "tweets" SET "tweet_date" = '2012-03-14 22:30:11.000000', "twitter_name_id" = '74778865', "text" = 'Recipe: i love Mango Lassi - The Atlantic http://t.co/000F1BxQ', "updated_at" = '2014-01-16 02:19:39.514821' WHERE "tweets"."id" = 1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTwitterName Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" = '74778865' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTweet Exists (0.4ms)[0m  SELECT 1 AS one FROM "tweets" WHERE "tweets"."twitter_tweet_id" = '180052787256758272' LIMIT 1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "tweets" ("created_at", "domain", "text", "tweet_date", "twitter_name_id", "twitter_tweet_id", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Thu, 16 Jan 2014 02:19:39 UTC +00:00], ["domain", "bit.ly"], ["text", nil], ["tweet_date", nil], ["twitter_name_id", nil], ["twitter_tweet_id", "180052787256758272"], ["updated_at", Thu, 16 Jan 2014 02:19:39 UTC +00:00], ["url", "http://bit.ly/xaTrX0"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTweet Exists (0.5ms)[0m  SELECT 1 AS one FROM "tweets" WHERE ("tweets"."twitter_tweet_id" = '180052787256758272' AND "tweets"."id" != 2) LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mUPDATE "tweets" SET "tweet_date" = '2012-03-14 22:08:24.000000', "twitter_name_id" = '74778865', "text" = 'Recipe: I love Mango Lassi - The Atlantic http://t.co/sVc6sxqz via @AddThis', "updated_at" = '2014-01-16 02:19:39.525832' WHERE "tweets"."id" = 2[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Exists (0.5ms)[0m  SELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" = '74778865' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/twitter_names
+Completed 302 Found in 556ms (ActiveRecord: 19.3ms)
+Started GET "/twitter_names" for 127.0.0.1 at 2014-01-15 21:19:39 -0500
+Processing by TwitterNamesController#index as HTML
+  [1m[35mTwitterName Load (0.3ms)[0m  SELECT "twitter_names".* FROM "twitter_names" 
+  Rendered twitter_names/index.html.erb within layouts/application (1.5ms)
+  Rendered partials/_header.html.erb (0.9ms)
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 0.3ms)
+  [1m[36mTweet Load (0.5ms)[0m  [1mSELECT "tweets".* FROM "tweets" WHERE "tweets"."twitter_name_id" = '74778865' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTwitterName Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" = '14129087' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "twitter_names" ("created_at", "tweets_collected", "twitter_name_id", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Thu, 16 Jan 2014 02:19:39 UTC +00:00], ["tweets_collected", "some"], ["twitter_name_id", "14129087"], ["updated_at", Thu, 16 Jan 2014 02:19:39 UTC +00:00], ["username", "hashceratops"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/twitter_names/5" for 127.0.0.1 at 2014-01-15 21:19:39 -0500
+Processing by TwitterNamesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mTwitterName Load (0.4ms)[0m  SELECT "twitter_names".* FROM "twitter_names" WHERE "twitter_names"."id" = $1 LIMIT 1  [["id", "5"]]
+  [1m[36mTweet Load (1.0ms)[0m  [1mSELECT "tweets".* FROM "tweets" WHERE "tweets"."twitter_name_id" = '14129087' ORDER BY domain[0m
+  Rendered partials/_tweets_table.html.erb (0.8ms)
+  Rendered twitter_names/show.html.erb within layouts/application (2.4ms)
+  Rendered partials/_header.html.erb (1.2ms)
+Completed 200 OK in 10ms (Views: 6.8ms | ActiveRecord: 1.4ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTweet Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "tweets" WHERE "tweets"."twitter_tweet_id" = '1' LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "tweets" ("created_at", "domain", "text", "tweet_date", "twitter_name_id", "twitter_tweet_id", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Thu, 16 Jan 2014 02:19:39 UTC +00:00], ["domain", nil], ["text", nil], ["tweet_date", Tue, 07 Jan 2014 18:06:21 UTC +00:00], ["twitter_name_id", "14129087"], ["twitter_tweet_id", 1], ["updated_at", Thu, 16 Jan 2014 02:19:39 UTC +00:00], ["url", "http://www.theatlantic.com/technology/archive/2014/01/him-love-in-the-time-of-operating-systems/283062/"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTweet Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "tweets" WHERE "tweets"."twitter_tweet_id" = '1' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36mTweet Load (0.5ms)[0m  [1mSELECT "tweets".* FROM "tweets" [0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTweet Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "tweets" WHERE "tweets"."twitter_tweet_id" = '1' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "tweets" ("created_at", "domain", "text", "tweet_date", "twitter_name_id", "twitter_tweet_id", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Thu, 16 Jan 2014 02:19:39 UTC +00:00], ["domain", "www.theatlantic.com"], ["text", nil], ["tweet_date", Tue, 07 Jan 2014 18:06:21 UTC +00:00], ["twitter_name_id", "14129087"], ["twitter_tweet_id", 1], ["updated_at", Thu, 16 Jan 2014 02:19:39 UTC +00:00], ["url", "http://www.theatlantic.com/technology/archive/2014/01/him-love-in-the-time-of-operating-systems/283062/"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTweet Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "tweets" WHERE ("tweets"."twitter_tweet_id" = '1' AND "tweets"."id" != 4) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTweet Exists (0.3ms)[0m  SELECT 1 AS one FROM "tweets" WHERE "tweets"."twitter_tweet_id" = '2' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "tweets" ("created_at", "domain", "text", "tweet_date", "twitter_name_id", "twitter_tweet_id", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Thu, 16 Jan 2014 02:19:39 UTC +00:00], ["domain", "www.theatlantic.com"], ["text", nil], ["tweet_date", Tue, 07 Jan 2014 18:06:21 UTC +00:00], ["twitter_name_id", "14129087"], ["twitter_tweet_id", 2], ["updated_at", Thu, 16 Jan 2014 02:19:39 UTC +00:00], ["url", "http://www.theatlantic.com/technology/archive/2014/01/him-love-in-the-time-of-operating-systems/283062/"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTweet Exists (0.4ms)[0m  SELECT 1 AS one FROM "tweets" WHERE ("tweets"."twitter_tweet_id" = '2' AND "tweets"."id" != 5) LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mTweet Load (0.3ms)[0m  SELECT "tweets".* FROM "tweets" 
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mLink Exists (0.9ms)[0m  SELECT 1 AS one FROM "links" WHERE "links"."url" = 'http://4sq.com/1kdpgzr' LIMIT 1
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "links" ("author", "authored_date", "created_at", "domain", "kind_of_url", "title", "twitter_tweet_id", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["author", "jim"], ["authored_date", Tue, 07 Jan 2014 18:06:21 UTC +00:00], ["created_at", Thu, 16 Jan 2014 02:19:39 UTC +00:00], ["domain", "4sq.com"], ["kind_of_url", nil], ["title", "title"], ["twitter_tweet_id", "141290871412908714129087"], ["updated_at", Thu, 16 Jan 2014 02:19:39 UTC +00:00], ["url", "http://4sq.com/1kdpgzr"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mLink Exists (0.4ms)[0m  SELECT 1 AS one FROM "links" WHERE ("links"."url" = 'http://4sq.com/1kdpgzr' AND "links"."id" != 1) LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mUPDATE "links" SET "kind_of_url" = 'social', "updated_at" = '2014-01-16 02:19:39.727276' WHERE "links"."id" = 1[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mLink Exists (0.5ms)[0m  SELECT 1 AS one FROM "links" WHERE "links"."url" = 'http://4sq.com/1kdpgzr' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mLink Exists (0.9ms)[0m  [1mSELECT 1 AS one FROM "links" WHERE "links"."url" = 'http://4sq.com/1kdpgzr' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36mLink Load (0.4ms)[0m  [1mSELECT "links".* FROM "links" [0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mLink Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "links" WHERE "links"."url" = 'http://www.theatlantic.com/technology/archive/2014/01/him-love-in-the-time-of-operating-systems/283062/' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "links" ("author", "authored_date", "created_at", "domain", "kind_of_url", "title", "twitter_tweet_id", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["author", "jim"], ["authored_date", Tue, 07 Jan 2014 18:06:21 UTC +00:00], ["created_at", Thu, 16 Jan 2014 02:19:39 UTC +00:00], ["domain", "www.theatlantic.com"], ["kind_of_url", nil], ["title", "title"], ["twitter_tweet_id", "141290871412908714129087"], ["updated_at", Thu, 16 Jan 2014 02:19:39 UTC +00:00], ["url", "http://www.theatlantic.com/technology/archive/2014/01/him-love-in-the-time-of-operating-systems/283062/"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mLink Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "links" WHERE ("links"."url" = 'http://www.theatlantic.com/technology/archive/2014/01/him-love-in-the-time-of-operating-systems/283062/' AND "links"."id" != 2) LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  UPDATE "links" SET "kind_of_url" = 'article', "updated_at" = '2014-01-16 02:19:39.747250' WHERE "links"."id" = 2
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mLink Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "links" WHERE "links"."url" = 'http://www.theatlantic.com/business/archive/2013/07/the-economic-cost-of-hangovers/277546/' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "links" ("author", "authored_date", "created_at", "domain", "kind_of_url", "title", "twitter_tweet_id", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["author", "jim"], ["authored_date", Tue, 07 Jan 2014 18:06:21 UTC +00:00], ["created_at", Thu, 16 Jan 2014 02:19:39 UTC +00:00], ["domain", "www.theatlantic.com"], ["kind_of_url", nil], ["title", "title"], ["twitter_tweet_id", "141290871412908714129087"], ["updated_at", Thu, 16 Jan 2014 02:19:39 UTC +00:00], ["url", "http://www.theatlantic.com/business/archive/2013/07/the-economic-cost-of-hangovers/277546/"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mLink Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "links" WHERE ("links"."url" = 'http://www.theatlantic.com/business/archive/2013/07/the-economic-cost-of-hangovers/277546/' AND "links"."id" != 3) LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  UPDATE "links" SET "kind_of_url" = 'article', "updated_at" = '2014-01-16 02:19:39.753632' WHERE "links"."id" = 3
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mLink Load (0.3ms)[0m  SELECT "links".* FROM "links" 
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by TweetsController#index as HTML
+  [1m[36mTweet Load (0.4ms)[0m  [1mSELECT "tweets".* FROM "tweets" ORDER BY domain[0m
+  Rendered tweets/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 5ms (Views: 3.1ms | ActiveRecord: 0.4ms)
+  [1m[35mTweet Load (0.3ms)[0m  SELECT "tweets".* FROM "tweets" 
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTwitterName Exists (1.3ms)[0m  [1mSELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" IS NULL LIMIT 1[0m
+  [1m[35mSQL (6.5ms)[0m  INSERT INTO "twitter_names" ("created_at", "tweets_collected", "twitter_name_id", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Thu, 16 Jan 2014 02:47:23 UTC +00:00], ["tweets_collected", nil], ["twitter_name_id", nil], ["updated_at", Thu, 16 Jan 2014 02:47:23 UTC +00:00], ["username", "Bill"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTwitterName Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" IS NULL LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Exists (1.4ms)[0m  SELECT 1 AS one FROM "twitter_names" WHERE ("twitter_names"."twitter_name_id" = '1' AND "twitter_names"."id" != 1) LIMIT 1
+  [1m[36m (0.7ms)[0m  [1mUPDATE "twitter_names" SET "twitter_name_id" = 1, "updated_at" = '2014-01-16 02:47:23.878079' WHERE "twitter_names"."id" = 1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Exists (0.6ms)[0m  SELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" = '2' LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "twitter_names" ("created_at", "tweets_collected", "twitter_name_id", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Thu, 16 Jan 2014 02:47:23 UTC +00:00], ["tweets_collected", nil], ["twitter_name_id", 2], ["updated_at", Thu, 16 Jan 2014 02:47:23 UTC +00:00], ["username", "Sarah"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mTwitterName Load (0.3ms)[0m  [1mSELECT "twitter_names".* FROM "twitter_names" [0m
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTwitterName Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" IS NULL LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "twitter_names" ("created_at", "tweets_collected", "twitter_name_id", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Thu, 16 Jan 2014 02:47:23 UTC +00:00], ["tweets_collected", nil], ["twitter_name_id", nil], ["updated_at", Thu, 16 Jan 2014 02:47:23 UTC +00:00], ["username", "Bill"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTwitterName Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Exists (0.4ms)[0m  SELECT 1 AS one FROM "twitter_names" WHERE ("twitter_names"."twitter_name_id" = '1' AND "twitter_names"."id" != 3) LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mUPDATE "twitter_names" SET "twitter_name_id" = 1, "updated_at" = '2014-01-16 02:47:23.895795' WHERE "twitter_names"."id" = 3[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Exists (0.4ms)[0m  SELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" = '1' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Load (0.3ms)[0m  SELECT "twitter_names".* FROM "twitter_names" 
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mLink Exists (0.6ms)[0m  SELECT 1 AS one FROM "links" WHERE "links"."url" = 'http://www.theatlantic.com/technology/archive/2014/01/him-love-in-the-time-of-operating-systems/283062/' LIMIT 1
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "links" ("author", "authored_date", "created_at", "domain", "kind_of_url", "title", "twitter_tweet_id", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["author", "jim"], ["authored_date", Tue, 07 Jan 2014 18:06:21 UTC +00:00], ["created_at", Thu, 16 Jan 2014 02:47:23 UTC +00:00], ["domain", "www.theatlantic.com"], ["kind_of_url", nil], ["title", "title"], ["twitter_tweet_id", "141290871412908714129087"], ["updated_at", Thu, 16 Jan 2014 02:47:23 UTC +00:00], ["url", "http://www.theatlantic.com/technology/archive/2014/01/him-love-in-the-time-of-operating-systems/283062/"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mLink Exists (0.4ms)[0m  SELECT 1 AS one FROM "links" WHERE ("links"."url" = 'http://www.theatlantic.com/technology/archive/2014/01/him-love-in-the-time-of-operating-systems/283062/' AND "links"."id" != 1) LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mUPDATE "links" SET "author" = 'Leah Reich', "authored_date" = '2014-01-14 16:07:00.000000', "title" = 'Him: Love in the Time of Operating Systems', "kind_of_url" = 'article', "updated_at" = '2014-01-16 02:47:26.720121' WHERE "links"."id" = 1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mLink Exists (0.3ms)[0m  SELECT 1 AS one FROM "links" WHERE "links"."url" = 'http://www.theatlantic.com/business/archive/2013/07/the-economic-cost-of-hangovers/277546/' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "links" ("author", "authored_date", "created_at", "domain", "kind_of_url", "title", "twitter_tweet_id", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["author", "jim"], ["authored_date", Tue, 07 Jan 2014 18:06:21 UTC +00:00], ["created_at", Thu, 16 Jan 2014 02:47:26 UTC +00:00], ["domain", "www.theatlantic.com"], ["kind_of_url", nil], ["title", "title"], ["twitter_tweet_id", "141290871412908714129087"], ["updated_at", Thu, 16 Jan 2014 02:47:26 UTC +00:00], ["url", "http://www.theatlantic.com/business/archive/2013/07/the-economic-cost-of-hangovers/277546/"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mLink Exists (0.7ms)[0m  SELECT 1 AS one FROM "links" WHERE ("links"."url" = 'http://www.theatlantic.com/business/archive/2013/07/the-economic-cost-of-hangovers/277546/' AND "links"."id" != 2) LIMIT 1
+  [1m[36m (0.6ms)[0m  [1mUPDATE "links" SET "author" = 'Derek Thompson', "authored_date" = '2013-07-05 14:53:00.000000', "title" = 'The Economic Cost of Hangovers', "kind_of_url" = 'article', "updated_at" = '2014-01-16 02:47:29.062047' WHERE "links"."id" = 2[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mLink Load (0.5ms)[0m  [1mSELECT "links".* FROM "links" [0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mLink Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "links" WHERE "links"."url" = 'http://4sq.com/1kdpgzr' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "links" ("author", "authored_date", "created_at", "domain", "kind_of_url", "title", "twitter_tweet_id", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["author", "jim"], ["authored_date", Tue, 07 Jan 2014 18:06:21 UTC +00:00], ["created_at", Thu, 16 Jan 2014 02:47:29 UTC +00:00], ["domain", "4sq.com"], ["kind_of_url", nil], ["title", "title"], ["twitter_tweet_id", "141290871412908714129087"], ["updated_at", Thu, 16 Jan 2014 02:47:29 UTC +00:00], ["url", "http://4sq.com/1kdpgzr"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mLink Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "links" WHERE ("links"."url" = 'http://4sq.com/1kdpgzr' AND "links"."id" != 3) LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  UPDATE "links" SET "kind_of_url" = 'social', "updated_at" = '2014-01-16 02:47:29.073286' WHERE "links"."id" = 3
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mLink Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "links" WHERE "links"."url" = 'http://4sq.com/1kdpgzr' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mLink Exists (0.3ms)[0m  SELECT 1 AS one FROM "links" WHERE "links"."url" = 'http://4sq.com/1kdpgzr' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35mLink Load (0.3ms)[0m  SELECT "links".* FROM "links" 
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Exists (0.3ms)[0m  SELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" = '14129087' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "twitter_names" ("created_at", "tweets_collected", "twitter_name_id", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Thu, 16 Jan 2014 02:47:29 UTC +00:00], ["tweets_collected", "some"], ["twitter_name_id", "14129087"], ["updated_at", Thu, 16 Jan 2014 02:47:29 UTC +00:00], ["username", "hashceratops"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/twitter_names/4" for 127.0.0.1 at 2014-01-15 21:47:29 -0500
+Processing by TwitterNamesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTwitterName Load (0.7ms)[0m  [1mSELECT "twitter_names".* FROM "twitter_names" WHERE "twitter_names"."id" = $1 LIMIT 1[0m  [["id", "4"]]
+  [1m[35mTweet Load (1.1ms)[0m  SELECT "tweets".* FROM "tweets" WHERE "tweets"."twitter_name_id" = '14129087' ORDER BY domain
+  Rendered partials/_tweets_table.html.erb (1.1ms)
+  Rendered twitter_names/show.html.erb within layouts/application (8.1ms)
+  Rendered partials/_header.html.erb (1.8ms)
+Completed 200 OK in 35ms (Views: 24.9ms | ActiveRecord: 5.1ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/twitter_names/new" for 127.0.0.1 at 2014-01-15 21:47:29 -0500
+Processing by TwitterNamesController#new as HTML
+  Rendered twitter_names/new.html.erb within layouts/application (0.8ms)
+  Rendered partials/_header.html.erb (0.6ms)
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+Started POST "/twitter_names" for 127.0.0.1 at 2014-01-15 21:47:29 -0500
+Processing by TwitterNamesController#create as HTML
+  Parameters: {"username"=>"hashceratops", "tweets_collected"=>"some"}
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Exists (0.6ms)[0m  SELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" = '74778865' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "twitter_names" ("created_at", "tweets_collected", "twitter_name_id", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Thu, 16 Jan 2014 02:47:29 UTC +00:00], ["tweets_collected", "some"], ["twitter_name_id", "74778865"], ["updated_at", Thu, 16 Jan 2014 02:47:29 UTC +00:00], ["username", "hashceratops"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mTwitterName Load (0.4ms)[0m  [1mSELECT "twitter_names".* FROM "twitter_names" WHERE "twitter_names"."id" = $1 LIMIT 1[0m  [["id", "74778865"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTweet Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "tweets" WHERE "tweets"."twitter_tweet_id" = '180058271732875266' LIMIT 1[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "tweets" ("created_at", "domain", "text", "tweet_date", "twitter_name_id", "twitter_tweet_id", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Thu, 16 Jan 2014 02:47:29 UTC +00:00], ["domain", "bit.ly"], ["text", nil], ["tweet_date", nil], ["twitter_name_id", nil], ["twitter_tweet_id", "180058271732875266"], ["updated_at", Thu, 16 Jan 2014 02:47:29 UTC +00:00], ["url", "http://bit.ly/zbuwoS"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTweet Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "tweets" WHERE ("tweets"."twitter_tweet_id" = '180058271732875266' AND "tweets"."id" != 1) LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  UPDATE "tweets" SET "tweet_date" = '2012-03-14 22:30:11.000000', "twitter_name_id" = '74778865', "text" = 'Recipe: i love Mango Lassi - The Atlantic http://t.co/000F1BxQ', "updated_at" = '2014-01-16 02:47:29.715916' WHERE "tweets"."id" = 1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTwitterName Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" = '74778865' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Completed 500 Internal Server Error in 548ms
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTweet Exists (0.6ms)[0m  SELECT 1 AS one FROM "tweets" WHERE "tweets"."twitter_tweet_id" = '1' LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "tweets" ("created_at", "domain", "text", "tweet_date", "twitter_name_id", "twitter_tweet_id", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Thu, 16 Jan 2014 02:47:29 UTC +00:00], ["domain", "www.theatlantic.com"], ["text", nil], ["tweet_date", Tue, 07 Jan 2014 18:06:21 UTC +00:00], ["twitter_name_id", "14129087"], ["twitter_tweet_id", 1], ["updated_at", Thu, 16 Jan 2014 02:47:29 UTC +00:00], ["url", "http://www.theatlantic.com/technology/archive/2014/01/him-love-in-the-time-of-operating-systems/283062/"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTweet Exists (0.4ms)[0m  SELECT 1 AS one FROM "tweets" WHERE ("tweets"."twitter_tweet_id" = '1' AND "tweets"."id" != 2) LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTweet Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "tweets" WHERE "tweets"."twitter_tweet_id" = '2' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "tweets" ("created_at", "domain", "text", "tweet_date", "twitter_name_id", "twitter_tweet_id", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Thu, 16 Jan 2014 02:47:29 UTC +00:00], ["domain", "www.theatlantic.com"], ["text", nil], ["tweet_date", Tue, 07 Jan 2014 18:06:21 UTC +00:00], ["twitter_name_id", "14129087"], ["twitter_tweet_id", 2], ["updated_at", Thu, 16 Jan 2014 02:47:29 UTC +00:00], ["url", "http://www.theatlantic.com/technology/archive/2014/01/him-love-in-the-time-of-operating-systems/283062/"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTweet Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "tweets" WHERE ("tweets"."twitter_tweet_id" = '2' AND "tweets"."id" != 3) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mTweet Load (0.3ms)[0m  [1mSELECT "tweets".* FROM "tweets" [0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTweet Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "tweets" WHERE "tweets"."twitter_tweet_id" = '1' LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "tweets" ("created_at", "domain", "text", "tweet_date", "twitter_name_id", "twitter_tweet_id", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Thu, 16 Jan 2014 02:47:29 UTC +00:00], ["domain", nil], ["text", nil], ["tweet_date", Tue, 07 Jan 2014 18:06:21 UTC +00:00], ["twitter_name_id", "14129087"], ["twitter_tweet_id", 1], ["updated_at", Thu, 16 Jan 2014 02:47:29 UTC +00:00], ["url", "http://www.theatlantic.com/technology/archive/2014/01/him-love-in-the-time-of-operating-systems/283062/"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTweet Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "tweets" WHERE "tweets"."twitter_tweet_id" = '1' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36mTweet Load (0.3ms)[0m  [1mSELECT "tweets".* FROM "tweets" [0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by TweetsController#index as HTML
+  [1m[35mTweet Load (0.6ms)[0m  SELECT "tweets".* FROM "tweets" ORDER BY domain
+  Rendered tweets/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 6ms (Views: 3.8ms | ActiveRecord: 0.6ms)
+  [1m[36mTweet Load (0.4ms)[0m  [1mSELECT "tweets".* FROM "tweets" [0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+Connecting to database specified by database.yml
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.5ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTwitterName Exists (2.9ms)[0m  [1mSELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" = '14129087' LIMIT 1[0m
+  [1m[35mSQL (11.5ms)[0m  INSERT INTO "twitter_names" ("created_at", "tweets_collected", "twitter_name_id", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Thu, 16 Jan 2014 03:16:05 UTC +00:00], ["tweets_collected", "some"], ["twitter_name_id", "14129087"], ["updated_at", Thu, 16 Jan 2014 03:16:05 UTC +00:00], ["username", "hashceratops"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/twitter_names/1" for 127.0.0.1 at 2014-01-15 22:16:05 -0500
+Processing by TwitterNamesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTwitterName Load (1.3ms)[0m  SELECT "twitter_names".* FROM "twitter_names" WHERE "twitter_names"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mTweet Load (1.7ms)[0m  [1mSELECT "tweets".* FROM "tweets" WHERE "tweets"."twitter_name_id" = '14129087' ORDER BY domain[0m
+  Rendered partials/_tweets_table.html.erb (0.9ms)
+  Rendered twitter_names/show.html.erb within layouts/application (60.0ms)
+  Rendered partials/_header.html.erb (2.0ms)
+Completed 200 OK in 87ms (Views: 73.9ms | ActiveRecord: 5.9ms)
+  [1m[35m (22.8ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Started GET "/twitter_names/new" for 127.0.0.1 at 2014-01-15 22:16:05 -0500
+Processing by TwitterNamesController#new as HTML
+  Rendered twitter_names/new.html.erb within layouts/application (0.7ms)
+  Rendered partials/_header.html.erb (0.6ms)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+Started POST "/twitter_names" for 127.0.0.1 at 2014-01-15 22:16:05 -0500
+Processing by TwitterNamesController#create as HTML
+  Parameters: {"username"=>"hashceratops", "tweets_collected"=>"some"}
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTwitterName Exists (1.7ms)[0m  [1mSELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" = '74778865' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "twitter_names" ("created_at", "tweets_collected", "twitter_name_id", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Thu, 16 Jan 2014 03:16:05 UTC +00:00], ["tweets_collected", "some"], ["twitter_name_id", "74778865"], ["updated_at", Thu, 16 Jan 2014 03:16:05 UTC +00:00], ["username", "hashceratops"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Load (0.4ms)[0m  SELECT "twitter_names".* FROM "twitter_names" WHERE "twitter_names"."id" = $1 LIMIT 1  [["id", "74778865"]]
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTweet Exists (0.4ms)[0m  SELECT 1 AS one FROM "tweets" WHERE "tweets"."twitter_tweet_id" = '180058271732875266' LIMIT 1
+  [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO "tweets" ("created_at", "domain", "text", "tweet_date", "twitter_name_id", "twitter_tweet_id", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Thu, 16 Jan 2014 03:16:05 UTC +00:00], ["domain", "bit.ly"], ["text", nil], ["tweet_date", nil], ["twitter_name_id", nil], ["twitter_tweet_id", "180058271732875266"], ["updated_at", Thu, 16 Jan 2014 03:16:05 UTC +00:00], ["url", "http://bit.ly/zbuwoS"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTweet Exists (0.8ms)[0m  SELECT 1 AS one FROM "tweets" WHERE ("tweets"."twitter_tweet_id" = '180058271732875266' AND "tweets"."id" != 1) LIMIT 1
+  [1m[36m (0.6ms)[0m  [1mUPDATE "tweets" SET "tweet_date" = '2012-03-14 22:30:11.000000', "twitter_name_id" = '74778865', "text" = 'Recipe: i love Mango Lassi - The Atlantic http://t.co/000F1BxQ', "updated_at" = '2014-01-16 03:16:05.860350' WHERE "tweets"."id" = 1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Exists (2.7ms)[0m  SELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" = '74778865' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 500 Internal Server Error in 591ms
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mLink Exists (0.6ms)[0m  [1mSELECT 1 AS one FROM "links" WHERE "links"."url" = 'http://www.theatlantic.com/technology/archive/2014/01/him-love-in-the-time-of-operating-systems/283062/' LIMIT 1[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "links" ("author", "authored_date", "created_at", "domain", "kind_of_url", "title", "twitter_tweet_id", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["author", "jim"], ["authored_date", Tue, 07 Jan 2014 18:06:21 UTC +00:00], ["created_at", Thu, 16 Jan 2014 03:16:05 UTC +00:00], ["domain", "www.theatlantic.com"], ["kind_of_url", nil], ["title", "title"], ["twitter_tweet_id", "141290871412908714129087"], ["updated_at", Thu, 16 Jan 2014 03:16:05 UTC +00:00], ["url", "http://www.theatlantic.com/technology/archive/2014/01/him-love-in-the-time-of-operating-systems/283062/"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mLink Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "links" WHERE ("links"."url" = 'http://www.theatlantic.com/technology/archive/2014/01/him-love-in-the-time-of-operating-systems/283062/' AND "links"."id" != 1) LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  UPDATE "links" SET "kind_of_url" = 'article', "updated_at" = '2014-01-16 03:16:08.774483' WHERE "links"."id" = 1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mLink Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "links" WHERE "links"."url" = 'http://www.theatlantic.com/business/archive/2013/07/the-economic-cost-of-hangovers/277546/' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "links" ("author", "authored_date", "created_at", "domain", "kind_of_url", "title", "twitter_tweet_id", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["author", "jim"], ["authored_date", Tue, 07 Jan 2014 18:06:21 UTC +00:00], ["created_at", Thu, 16 Jan 2014 03:16:08 UTC +00:00], ["domain", "www.theatlantic.com"], ["kind_of_url", nil], ["title", "title"], ["twitter_tweet_id", "141290871412908714129087"], ["updated_at", Thu, 16 Jan 2014 03:16:08 UTC +00:00], ["url", "http://www.theatlantic.com/business/archive/2013/07/the-economic-cost-of-hangovers/277546/"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mLink Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "links" WHERE ("links"."url" = 'http://www.theatlantic.com/business/archive/2013/07/the-economic-cost-of-hangovers/277546/' AND "links"."id" != 2) LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  UPDATE "links" SET "kind_of_url" = 'article', "updated_at" = '2014-01-16 03:16:11.343768' WHERE "links"."id" = 2
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mLink Load (0.3ms)[0m  SELECT "links".* FROM "links" 
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mLink Exists (0.5ms)[0m  SELECT 1 AS one FROM "links" WHERE "links"."url" = 'http://4sq.com/1kdpgzr' LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "links" ("author", "authored_date", "created_at", "domain", "kind_of_url", "title", "twitter_tweet_id", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["author", "jim"], ["authored_date", Tue, 07 Jan 2014 18:06:21 UTC +00:00], ["created_at", Thu, 16 Jan 2014 03:16:11 UTC +00:00], ["domain", "4sq.com"], ["kind_of_url", nil], ["title", "title"], ["twitter_tweet_id", "141290871412908714129087"], ["updated_at", Thu, 16 Jan 2014 03:16:11 UTC +00:00], ["url", "http://4sq.com/1kdpgzr"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mLink Exists (0.3ms)[0m  SELECT 1 AS one FROM "links" WHERE ("links"."url" = 'http://4sq.com/1kdpgzr' AND "links"."id" != 3) LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mUPDATE "links" SET "kind_of_url" = 'social', "updated_at" = '2014-01-16 03:16:11.357448' WHERE "links"."id" = 3[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mLink Exists (0.3ms)[0m  SELECT 1 AS one FROM "links" WHERE "links"."url" = 'http://4sq.com/1kdpgzr' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mLink Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "links" WHERE "links"."url" = 'http://4sq.com/1kdpgzr' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36mLink Load (0.3ms)[0m  [1mSELECT "links".* FROM "links" [0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mLink Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "links" WHERE "links"."url" = 'http://gawker.com/5624387/new-york-city-restaurants-surprisingly-not-disgusting' LIMIT 1[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "links" ("author", "authored_date", "created_at", "domain", "kind_of_url", "title", "twitter_tweet_id", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["author", "test author"], ["authored_date", Tue, 07 Jan 2014 18:06:21 UTC +00:00], ["created_at", Thu, 16 Jan 2014 03:16:11 UTC +00:00], ["domain", nil], ["kind_of_url", "Test kind"], ["title", "Test title"], ["twitter_tweet_id", nil], ["updated_at", Thu, 16 Jan 2014 03:16:11 UTC +00:00], ["url", "http://gawker.com/5624387/new-york-city-restaurants-surprisingly-not-disgusting"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mLink Load (0.7ms)[0m  SELECT "links".* FROM "links" WHERE "links"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by TweetsController#index as HTML
+  [1m[36mTweet Load (0.5ms)[0m  [1mSELECT "tweets".* FROM "tweets" ORDER BY domain[0m
+  Rendered tweets/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.5ms)
+  [1m[35mTweet Load (0.5ms)[0m  SELECT "tweets".* FROM "tweets" 
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Exists (0.4ms)[0m  SELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" IS NULL LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "twitter_names" ("created_at", "tweets_collected", "twitter_name_id", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Thu, 16 Jan 2014 03:16:11 UTC +00:00], ["tweets_collected", nil], ["twitter_name_id", nil], ["updated_at", Thu, 16 Jan 2014 03:16:11 UTC +00:00], ["username", "Bill"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Exists (0.4ms)[0m  SELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" IS NULL LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTwitterName Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "twitter_names" WHERE ("twitter_names"."twitter_name_id" = '1' AND "twitter_names"."id" != 3) LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  UPDATE "twitter_names" SET "twitter_name_id" = 1, "updated_at" = '2014-01-16 03:16:11.396530' WHERE "twitter_names"."id" = 3
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTwitterName Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" = '2' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "twitter_names" ("created_at", "tweets_collected", "twitter_name_id", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Thu, 16 Jan 2014 03:16:11 UTC +00:00], ["tweets_collected", nil], ["twitter_name_id", 2], ["updated_at", Thu, 16 Jan 2014 03:16:11 UTC +00:00], ["username", "Sarah"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Load (0.3ms)[0m  SELECT "twitter_names".* FROM "twitter_names" 
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Exists (0.3ms)[0m  SELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" IS NULL LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "twitter_names" ("created_at", "tweets_collected", "twitter_name_id", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Thu, 16 Jan 2014 03:16:11 UTC +00:00], ["tweets_collected", nil], ["twitter_name_id", nil], ["updated_at", Thu, 16 Jan 2014 03:16:11 UTC +00:00], ["username", "Bill"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Exists (0.3ms)[0m  SELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTwitterName Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "twitter_names" WHERE ("twitter_names"."twitter_name_id" = '1' AND "twitter_names"."id" != 5) LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  UPDATE "twitter_names" SET "twitter_name_id" = 1, "updated_at" = '2014-01-16 03:16:11.410778' WHERE "twitter_names"."id" = 5
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTwitterName Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" = '1' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36mTwitterName Load (0.2ms)[0m  [1mSELECT "twitter_names".* FROM "twitter_names" [0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTweet Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "tweets" WHERE "tweets"."twitter_tweet_id" = '1' LIMIT 1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "tweets" ("created_at", "domain", "text", "tweet_date", "twitter_name_id", "twitter_tweet_id", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Thu, 16 Jan 2014 03:16:11 UTC +00:00], ["domain", "www.theatlantic.com"], ["text", nil], ["tweet_date", Tue, 07 Jan 2014 18:06:21 UTC +00:00], ["twitter_name_id", "14129087"], ["twitter_tweet_id", 1], ["updated_at", Thu, 16 Jan 2014 03:16:11 UTC +00:00], ["url", "http://www.theatlantic.com/technology/archive/2014/01/him-love-in-the-time-of-operating-systems/283062/"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTweet Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "tweets" WHERE ("tweets"."twitter_tweet_id" = '1' AND "tweets"."id" != 2) LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTweet Exists (0.8ms)[0m  SELECT 1 AS one FROM "tweets" WHERE "tweets"."twitter_tweet_id" = '2' LIMIT 1
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "tweets" ("created_at", "domain", "text", "tweet_date", "twitter_name_id", "twitter_tweet_id", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Thu, 16 Jan 2014 03:16:11 UTC +00:00], ["domain", "www.theatlantic.com"], ["text", nil], ["tweet_date", Tue, 07 Jan 2014 18:06:21 UTC +00:00], ["twitter_name_id", "14129087"], ["twitter_tweet_id", 2], ["updated_at", Thu, 16 Jan 2014 03:16:11 UTC +00:00], ["url", "http://www.theatlantic.com/technology/archive/2014/01/him-love-in-the-time-of-operating-systems/283062/"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTweet Exists (0.5ms)[0m  SELECT 1 AS one FROM "tweets" WHERE ("tweets"."twitter_tweet_id" = '2' AND "tweets"."id" != 3) LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mTweet Load (0.3ms)[0m  SELECT "tweets".* FROM "tweets" 
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTweet Exists (0.5ms)[0m  SELECT 1 AS one FROM "tweets" WHERE "tweets"."twitter_tweet_id" = '1' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "tweets" ("created_at", "domain", "text", "tweet_date", "twitter_name_id", "twitter_tweet_id", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Thu, 16 Jan 2014 03:16:11 UTC +00:00], ["domain", nil], ["text", nil], ["tweet_date", Tue, 07 Jan 2014 18:06:21 UTC +00:00], ["twitter_name_id", "14129087"], ["twitter_tweet_id", 1], ["updated_at", Thu, 16 Jan 2014 03:16:11 UTC +00:00], ["url", "http://www.theatlantic.com/technology/archive/2014/01/him-love-in-the-time-of-operating-systems/283062/"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTweet Exists (0.4ms)[0m  SELECT 1 AS one FROM "tweets" WHERE "tweets"."twitter_tweet_id" = '1' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35mTweet Load (0.3ms)[0m  SELECT "tweets".* FROM "tweets" 
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Processing by TweetsController#index as HTML
+  [1m[35mTweet Load (1.1ms)[0m  SELECT "tweets".* FROM "tweets" ORDER BY domain
+  Rendered tweets/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 28ms (Views: 11.8ms | ActiveRecord: 13.2ms)
+  [1m[36mTweet Load (0.4ms)[0m  [1mSELECT "tweets".* FROM "tweets" [0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/twitter_names/new" for 127.0.0.1 at 2014-01-15 22:19:04 -0500
+Processing by TwitterNamesController#new as HTML
+  Rendered partials/_header.html.erb (2.1ms)
+Completed 200 OK in 16ms (Views: 15.4ms | ActiveRecord: 0.0ms)
+Started POST "/twitter_names" for 127.0.0.1 at 2014-01-15 22:19:04 -0500
+Processing by TwitterNamesController#create as HTML
+  Parameters: {"username"=>"hashceratops", "tweets_collected"=>"some"}
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTwitterName Exists (1.3ms)[0m  [1mSELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" = '74778865' LIMIT 1[0m
+  [1m[35mSQL (3.2ms)[0m  INSERT INTO "twitter_names" ("created_at", "tweets_collected", "twitter_name_id", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Thu, 16 Jan 2014 03:19:04 UTC +00:00], ["tweets_collected", "some"], ["twitter_name_id", "74778865"], ["updated_at", Thu, 16 Jan 2014 03:19:04 UTC +00:00], ["username", "hashceratops"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Load (0.8ms)[0m  SELECT "twitter_names".* FROM "twitter_names" WHERE "twitter_names"."id" = $1 LIMIT 1  [["id", "74778865"]]
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTweet Exists (0.6ms)[0m  SELECT 1 AS one FROM "tweets" WHERE "tweets"."twitter_tweet_id" = '180058271732875266' LIMIT 1
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "tweets" ("created_at", "domain", "text", "tweet_date", "twitter_name_id", "twitter_tweet_id", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Thu, 16 Jan 2014 03:19:04 UTC +00:00], ["domain", "bit.ly"], ["text", nil], ["tweet_date", nil], ["twitter_name_id", nil], ["twitter_tweet_id", "180058271732875266"], ["updated_at", Thu, 16 Jan 2014 03:19:04 UTC +00:00], ["url", "http://bit.ly/zbuwoS"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTweet Exists (0.8ms)[0m  SELECT 1 AS one FROM "tweets" WHERE ("tweets"."twitter_tweet_id" = '180058271732875266' AND "tweets"."id" != 1) LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mUPDATE "tweets" SET "tweet_date" = '2012-03-14 22:30:11.000000', "twitter_name_id" = '74778865', "text" = 'Recipe: i love Mango Lassi - The Atlantic http://t.co/000F1BxQ', "updated_at" = '2014-01-16 03:19:04.990495' WHERE "tweets"."id" = 1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Exists (0.4ms)[0m  SELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" = '74778865' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mLink Exists (0.6ms)[0m  [1mSELECT 1 AS one FROM "links" WHERE "links"."url" = 'http://bit.ly/zbuwoS' LIMIT 1[0m
+  [1m[35mSQL (1.4ms)[0m  INSERT INTO "links" ("author", "authored_date", "created_at", "domain", "kind_of_url", "title", "twitter_tweet_id", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["author", nil], ["authored_date", nil], ["created_at", Thu, 16 Jan 2014 03:19:05 UTC +00:00], ["domain", "bit.ly"], ["kind_of_url", nil], ["title", nil], ["twitter_tweet_id", nil], ["updated_at", Thu, 16 Jan 2014 03:19:05 UTC +00:00], ["url", "http://bit.ly/zbuwoS"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mLink Exists (0.8ms)[0m  [1mSELECT 1 AS one FROM "links" WHERE ("links"."url" = 'http://bit.ly/zbuwoS' AND "links"."id" != 1) LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  UPDATE "links" SET "authored_date" = '2010-04-11 10:45:00.000000', "title" = 'Recipe: Mango Lassi', "kind_of_url" = 'article', "twitter_tweet_id" = '180058271732875266', "updated_at" = '2014-01-16 03:19:06.144659' WHERE "links"."id" = 1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTweet Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "tweets" WHERE "tweets"."twitter_tweet_id" = '180052787256758272' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "tweets" ("created_at", "domain", "text", "tweet_date", "twitter_name_id", "twitter_tweet_id", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Thu, 16 Jan 2014 03:19:06 UTC +00:00], ["domain", "bit.ly"], ["text", nil], ["tweet_date", nil], ["twitter_name_id", nil], ["twitter_tweet_id", "180052787256758272"], ["updated_at", Thu, 16 Jan 2014 03:19:06 UTC +00:00], ["url", "http://bit.ly/xaTrX0"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTweet Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "tweets" WHERE ("tweets"."twitter_tweet_id" = '180052787256758272' AND "tweets"."id" != 2) LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  UPDATE "tweets" SET "tweet_date" = '2012-03-14 22:08:24.000000', "twitter_name_id" = '74778865', "text" = 'Recipe: I love Mango Lassi - The Atlantic http://t.co/sVc6sxqz via @AddThis', "updated_at" = '2014-01-16 03:19:06.153271' WHERE "tweets"."id" = 2
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTwitterName Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" = '74778865' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mLink Exists (0.4ms)[0m  SELECT 1 AS one FROM "links" WHERE "links"."url" = 'http://bit.ly/xaTrX0' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "links" ("author", "authored_date", "created_at", "domain", "kind_of_url", "title", "twitter_tweet_id", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["author", nil], ["authored_date", nil], ["created_at", Thu, 16 Jan 2014 03:19:06 UTC +00:00], ["domain", "bit.ly"], ["kind_of_url", nil], ["title", nil], ["twitter_tweet_id", nil], ["updated_at", Thu, 16 Jan 2014 03:19:06 UTC +00:00], ["url", "http://bit.ly/xaTrX0"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mLink Exists (0.5ms)[0m  SELECT 1 AS one FROM "links" WHERE ("links"."url" = 'http://bit.ly/xaTrX0' AND "links"."id" != 2) LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mUPDATE "links" SET "authored_date" = '2010-04-11 10:45:00.000000', "title" = 'Recipe: Mango Lassi', "kind_of_url" = 'article', "twitter_tweet_id" = '180052787256758272', "updated_at" = '2014-01-16 03:19:06.962536' WHERE "links"."id" = 2[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/twitter_names
+Completed 302 Found in 2561ms (ActiveRecord: 27.8ms)
+Started GET "/twitter_names" for 127.0.0.1 at 2014-01-15 22:19:07 -0500
+Processing by TwitterNamesController#index as HTML
+  [1m[36mTwitterName Load (0.5ms)[0m  [1mSELECT "twitter_names".* FROM "twitter_names" [0m
+  Rendered partials/_header.html.erb (0.7ms)
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 0.5ms)
+  [1m[35mTweet Load (0.7ms)[0m  SELECT "tweets".* FROM "tweets" WHERE "tweets"."twitter_name_id" = '74778865' LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mLink Exists (1.1ms)[0m  SELECT 1 AS one FROM "links" WHERE "links"."url" = 'http://www.theatlantic.com/technology/archive/2014/01/him-love-in-the-time-of-operating-systems/283062/' LIMIT 1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "links" ("author", "authored_date", "created_at", "domain", "kind_of_url", "title", "twitter_tweet_id", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["author", "jim"], ["authored_date", Tue, 07 Jan 2014 18:06:21 UTC +00:00], ["created_at", Thu, 16 Jan 2014 03:19:07 UTC +00:00], ["domain", "www.theatlantic.com"], ["kind_of_url", nil], ["title", "title"], ["twitter_tweet_id", "141290871412908714129087"], ["updated_at", Thu, 16 Jan 2014 03:19:07 UTC +00:00], ["url", "http://www.theatlantic.com/technology/archive/2014/01/him-love-in-the-time-of-operating-systems/283062/"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mLink Exists (0.6ms)[0m  SELECT 1 AS one FROM "links" WHERE ("links"."url" = 'http://www.theatlantic.com/technology/archive/2014/01/him-love-in-the-time-of-operating-systems/283062/' AND "links"."id" != 3) LIMIT 1
+  [1m[36m (0.6ms)[0m  [1mUPDATE "links" SET "kind_of_url" = 'article', "updated_at" = '2014-01-16 03:19:09.608448' WHERE "links"."id" = 3[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mLink Exists (0.4ms)[0m  SELECT 1 AS one FROM "links" WHERE "links"."url" = 'http://www.theatlantic.com/business/archive/2013/07/the-economic-cost-of-hangovers/277546/' LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "links" ("author", "authored_date", "created_at", "domain", "kind_of_url", "title", "twitter_tweet_id", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["author", "jim"], ["authored_date", Tue, 07 Jan 2014 18:06:21 UTC +00:00], ["created_at", Thu, 16 Jan 2014 03:19:09 UTC +00:00], ["domain", "www.theatlantic.com"], ["kind_of_url", nil], ["title", "title"], ["twitter_tweet_id", "141290871412908714129087"], ["updated_at", Thu, 16 Jan 2014 03:19:09 UTC +00:00], ["url", "http://www.theatlantic.com/business/archive/2013/07/the-economic-cost-of-hangovers/277546/"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mLink Exists (0.6ms)[0m  SELECT 1 AS one FROM "links" WHERE ("links"."url" = 'http://www.theatlantic.com/business/archive/2013/07/the-economic-cost-of-hangovers/277546/' AND "links"."id" != 4) LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mUPDATE "links" SET "kind_of_url" = 'article', "updated_at" = '2014-01-16 03:19:11.569583' WHERE "links"."id" = 4[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mLink Load (0.5ms)[0m  [1mSELECT "links".* FROM "links" [0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mLink Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "links" WHERE "links"."url" = 'http://4sq.com/1kdpgzr' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "links" ("author", "authored_date", "created_at", "domain", "kind_of_url", "title", "twitter_tweet_id", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["author", "jim"], ["authored_date", Tue, 07 Jan 2014 18:06:21 UTC +00:00], ["created_at", Thu, 16 Jan 2014 03:19:11 UTC +00:00], ["domain", "4sq.com"], ["kind_of_url", nil], ["title", "title"], ["twitter_tweet_id", "141290871412908714129087"], ["updated_at", Thu, 16 Jan 2014 03:19:11 UTC +00:00], ["url", "http://4sq.com/1kdpgzr"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mLink Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "links" WHERE ("links"."url" = 'http://4sq.com/1kdpgzr' AND "links"."id" != 5) LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  UPDATE "links" SET "kind_of_url" = 'social', "updated_at" = '2014-01-16 03:19:11.580727' WHERE "links"."id" = 5
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mLink Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "links" WHERE "links"."url" = 'http://4sq.com/1kdpgzr' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mLink Exists (0.3ms)[0m  SELECT 1 AS one FROM "links" WHERE "links"."url" = 'http://4sq.com/1kdpgzr' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35mLink Load (0.3ms)[0m  SELECT "links".* FROM "links" 
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mLink Exists (0.3ms)[0m  SELECT 1 AS one FROM "links" WHERE "links"."url" = 'http://gawker.com/5624387/new-york-city-restaurants-surprisingly-not-disgusting' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "links" ("author", "authored_date", "created_at", "domain", "kind_of_url", "title", "twitter_tweet_id", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["author", "test author"], ["authored_date", Tue, 07 Jan 2014 18:06:21 UTC +00:00], ["created_at", Thu, 16 Jan 2014 03:19:11 UTC +00:00], ["domain", nil], ["kind_of_url", "Test kind"], ["title", "Test title"], ["twitter_tweet_id", nil], ["updated_at", Thu, 16 Jan 2014 03:19:11 UTC +00:00], ["url", "http://gawker.com/5624387/new-york-city-restaurants-surprisingly-not-disgusting"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mLink Load (0.6ms)[0m  [1mSELECT "links".* FROM "links" WHERE "links"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTweet Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "tweets" WHERE "tweets"."twitter_tweet_id" = '1' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "tweets" ("created_at", "domain", "text", "tweet_date", "twitter_name_id", "twitter_tweet_id", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Thu, 16 Jan 2014 03:19:11 UTC +00:00], ["domain", "www.theatlantic.com"], ["text", nil], ["tweet_date", Tue, 07 Jan 2014 18:06:21 UTC +00:00], ["twitter_name_id", "14129087"], ["twitter_tweet_id", 1], ["updated_at", Thu, 16 Jan 2014 03:19:11 UTC +00:00], ["url", "http://www.theatlantic.com/technology/archive/2014/01/him-love-in-the-time-of-operating-systems/283062/"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTweet Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "tweets" WHERE ("tweets"."twitter_tweet_id" = '1' AND "tweets"."id" != 3) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTweet Exists (0.3ms)[0m  SELECT 1 AS one FROM "tweets" WHERE "tweets"."twitter_tweet_id" = '2' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "tweets" ("created_at", "domain", "text", "tweet_date", "twitter_name_id", "twitter_tweet_id", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Thu, 16 Jan 2014 03:19:11 UTC +00:00], ["domain", "www.theatlantic.com"], ["text", nil], ["tweet_date", Tue, 07 Jan 2014 18:06:21 UTC +00:00], ["twitter_name_id", "14129087"], ["twitter_tweet_id", 2], ["updated_at", Thu, 16 Jan 2014 03:19:11 UTC +00:00], ["url", "http://www.theatlantic.com/technology/archive/2014/01/him-love-in-the-time-of-operating-systems/283062/"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTweet Exists (0.3ms)[0m  SELECT 1 AS one FROM "tweets" WHERE ("tweets"."twitter_tweet_id" = '2' AND "tweets"."id" != 4) LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mTweet Load (0.3ms)[0m  SELECT "tweets".* FROM "tweets" 
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTweet Exists (0.6ms)[0m  SELECT 1 AS one FROM "tweets" WHERE "tweets"."twitter_tweet_id" = '1' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "tweets" ("created_at", "domain", "text", "tweet_date", "twitter_name_id", "twitter_tweet_id", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Thu, 16 Jan 2014 03:19:11 UTC +00:00], ["domain", nil], ["text", nil], ["tweet_date", Tue, 07 Jan 2014 18:06:21 UTC +00:00], ["twitter_name_id", "14129087"], ["twitter_tweet_id", 1], ["updated_at", Thu, 16 Jan 2014 03:19:11 UTC +00:00], ["url", "http://www.theatlantic.com/technology/archive/2014/01/him-love-in-the-time-of-operating-systems/283062/"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTweet Exists (0.5ms)[0m  SELECT 1 AS one FROM "tweets" WHERE "tweets"."twitter_tweet_id" = '1' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35mTweet Load (0.5ms)[0m  SELECT "tweets".* FROM "tweets" 
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Exists (0.5ms)[0m  SELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" = '14129087' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "twitter_names" ("created_at", "tweets_collected", "twitter_name_id", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Thu, 16 Jan 2014 03:19:11 UTC +00:00], ["tweets_collected", "some"], ["twitter_name_id", "14129087"], ["updated_at", Thu, 16 Jan 2014 03:19:11 UTC +00:00], ["username", "hashceratops"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/twitter_names/2" for 127.0.0.1 at 2014-01-15 22:19:11 -0500
+Processing by TwitterNamesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTwitterName Load (0.4ms)[0m  [1mSELECT "twitter_names".* FROM "twitter_names" WHERE "twitter_names"."id" = $1 LIMIT 1[0m  [["id", "2"]]
+  [1m[35mTweet Load (0.4ms)[0m  SELECT "tweets".* FROM "tweets" WHERE "tweets"."twitter_name_id" = '14129087' ORDER BY domain
+  Rendered partials/_tweets_table.html.erb (1.2ms)
+  Rendered partials/_header.html.erb (0.9ms)
+Completed 200 OK in 10ms (Views: 7.4ms | ActiveRecord: 0.7ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Exists (0.3ms)[0m  SELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" IS NULL LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "twitter_names" ("created_at", "tweets_collected", "twitter_name_id", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Thu, 16 Jan 2014 03:19:11 UTC +00:00], ["tweets_collected", nil], ["twitter_name_id", nil], ["updated_at", Thu, 16 Jan 2014 03:19:11 UTC +00:00], ["username", "Bill"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Exists (0.3ms)[0m  SELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTwitterName Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "twitter_names" WHERE ("twitter_names"."twitter_name_id" = '1' AND "twitter_names"."id" != 3) LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  UPDATE "twitter_names" SET "twitter_name_id" = 1, "updated_at" = '2014-01-16 03:19:11.712821' WHERE "twitter_names"."id" = 3
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTwitterName Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" = '2' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "twitter_names" ("created_at", "tweets_collected", "twitter_name_id", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Thu, 16 Jan 2014 03:19:11 UTC +00:00], ["tweets_collected", nil], ["twitter_name_id", 2], ["updated_at", Thu, 16 Jan 2014 03:19:11 UTC +00:00], ["username", "Sarah"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Load (0.3ms)[0m  SELECT "twitter_names".* FROM "twitter_names" 
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Exists (0.3ms)[0m  SELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" IS NULL LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "twitter_names" ("created_at", "tweets_collected", "twitter_name_id", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Thu, 16 Jan 2014 03:19:11 UTC +00:00], ["tweets_collected", nil], ["twitter_name_id", nil], ["updated_at", Thu, 16 Jan 2014 03:19:11 UTC +00:00], ["username", "Bill"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTwitterName Exists (0.4ms)[0m  SELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTwitterName Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "twitter_names" WHERE ("twitter_names"."twitter_name_id" = '1' AND "twitter_names"."id" != 5) LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  UPDATE "twitter_names" SET "twitter_name_id" = 1, "updated_at" = '2014-01-16 03:19:11.726700' WHERE "twitter_names"."id" = 5
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTwitterName Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "twitter_names" WHERE "twitter_names"."twitter_name_id" = '1' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36mTwitterName Load (0.2ms)[0m  [1mSELECT "twitter_names".* FROM "twitter_names" [0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
