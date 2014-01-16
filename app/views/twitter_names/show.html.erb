@@ -1,4 +1,4 @@
-<h1><%=@username.username%></h1>
-<h3>Here are <%=@username.tweets_collected%> of their tweets:</h3>
 
+<h1><%=@data.first[1].first.username%></h1>
+<h3>Here are <%=@data.first[1].first.tweets_collected%> of their tweets:</h3>
   <%= render partial: 'partials/tweets_table' %>

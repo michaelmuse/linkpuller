@@ -1,15 +1,30 @@
 <table class="table table-hover table-bordered table-condensed">
+<!-- the last tweet domain variable helps create the merged domain cells -->
 <% @last_tweet_domain = "" %>
-<% @tweets.each do |tweet| %>  
-  <tr >
+  <tr class="row">
+    <th class="col-md-1">Domain</td>
+    <th class="col-md-1"># links</td>
+    <th class="col-md-2">URL</td>
+    <th class="col-md-3">Title</td>
+    <th class="col-md-1">Author</td>
+    <th class="col-md-1">Written</td>
+    <th class="col-md-1">Tweeted</td>
+    <th class="col-md-1">Type</td>
+    <th class="col-md-1">Tweet Author</td>
+  </tr>
+<% @data.each do |tweet, uNameAndLinks| %>  
+  <tr class="row">
     <% if @last_tweet_domain != tweet.domain %>
-      <td rowspan="<%= @domain_counts[tweet.domain] %>"><a href="<%= tweet.domain %>"><%= tweet.domain %></a></td>    
-      <td rowspan="<%= @domain_counts[tweet.domain] %>"><%= @domain_counts[tweet.domain] %></td>
+      <td class="col-md-1" rowspan="<%= @domain_counts[tweet.domain] %>"><a href="<%= tweet.domain %>"><%= tweet.domain %></a></td>    
+      <td class="col-md-1" rowspan="<%= @domain_counts[tweet.domain] %>"><%= @domain_counts[tweet.domain] %></td>
     <% end %>
-    <td><a href="<%= tweet.url %>"><%= tweet.url %></a></td>
-    <td><%= tweet.text %></td>
-    <td><%= tweet.tweet_date.strftime("%m/%d/%Y") %></td>
-    <td><%= TwitterName.find_by_twitter_name_id(tweet.twitter_name_id).username %></td>
+    <td class="col-md-2"><a href="<%= tweet.url %>"style="word-wrap: break-word"><%= tweet.url.truncate(50) %></a></td>
+    <td class="col-md-3"><%= uNameAndLinks[1][0] ? uNameAndLinks[1][0].title : "" %></td>
+    <td class="col-md-1"><%= uNameAndLinks[1][0] ? uNameAndLinks[1][0].author : "" %></td>
+    <td class="col-md-1"><%= uNameAndLinks[1][0] ? uNameAndLinks[1][0].authored_date : "" %></td>
+    <td class="col-md-1"><%= tweet.tweet_date.strftime("%m/%d/%Y") %></td>
+    <td class="col-md-1"><%= uNameAndLinks[1][0] ? uNameAndLinks[1][0].kind_of_url : "" %></td>
+    <td class="col-md-1"><%= uNameAndLinks[0] ? uNameAndLinks[0].username : "" %></td>
   </tr>
 <% @last_tweet_domain = tweet.domain %>
 <% end %>

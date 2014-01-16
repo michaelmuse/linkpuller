@@ -1,9 +1,6 @@
 class TweetsController < ApplicationController
   def index
-    @tweets = Tweet.order(:domain)
-    @domain_counts = {}
-    @tweets.each do |tweet|
-      @domain_counts[tweet.domain] ? @domain_counts[tweet.domain] += 1 : @domain_counts[tweet.domain] = 1
-    end
+    @data = get_all_tweet_info_for_table(nil) #nil means we dont have a specific twittername
+    @domain_counts = get_domain_info_for_table_columns(@data.keys) #this method takes just the tweets
   end
 end

@@ -31,11 +31,7 @@ class TwitterNamesController < ApplicationController
   end
 
   def show
-    @username = TwitterName.find(params[:id])
-    @tweets = Tweet.where(twitter_name_id: @username.twitter_name_id).order(:domain)
-    @domain_counts = {}
-    @tweets.each do |tweet|
-      @domain_counts[tweet.domain] ? @domain_counts[tweet.domain] += 1 : @domain_counts[tweet.domain] = 1
-    end
+    @data = get_all_tweet_info_for_table(params[:id])
+    @domain_counts = get_domain_info_for_table_columns(@data.keys) #this method takes just the tweets
   end
 end
