@@ -3,9 +3,9 @@
 <% @tweets.each do |tweet| %>  
   <tr >
     <% if @last_tweet_domain != tweet.domain %>
-      <td rowspan="<%= @domain_counts[tweet.domain] %>"><%= tweet.domain %></a></td>    
+      <td rowspan="<%= @domain_counts[tweet.domain] %>"><a href="<%= tweet.domain %>"><%= tweet.domain %></a></td>    
+      <td rowspan="<%= @domain_counts[tweet.domain] %>"><%= @domain_counts[tweet.domain] %></td>
     <% end %>
-    <td><a href="<%= tweet.domain %>"><%= @domain_counts[tweet.domain] %></td>
     <td><a href="<%= tweet.url %>"><%= tweet.url %></a></td>
     <td><%= tweet.text %></td>
     <td><%= tweet.tweet_date.strftime("%m/%d/%Y") %></td>
