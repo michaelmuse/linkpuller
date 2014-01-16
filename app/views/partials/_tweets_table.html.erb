@@ -1,23 +1,23 @@
 <table class="table table-hover table-bordered table-condensed">
-<!-- the last tweet domain variable helps create the merged domain cells -->
-<% @last_tweet_domain = "" %>
-  <tr class="row">
-    <th class="col-md-1">Domain</td>
-    <th class="col-md-1"># links</td>
-    <th class="col-md-2">URL</td>
-    <th class="col-md-3">Title</td>
-    <th class="col-md-1">Author</td>
-    <th class="col-md-1">Written</td>
-    <th class="col-md-1">Tweeted</td>
-    <th class="col-md-1">Type</td>
-    <th class="col-md-1">Tweet Author</td>
+      <!-- the last tweet domain variable helps create the merged domain cells -->
+<!----><% @last_tweet_domain = "" %>
+  <tr class="row row-header">
+    <th class="col-md-1">Domain</th>
+    <th class="col-md-1"># links</th>
+    <th class="col-md-2">URL</th>
+    <th class="col-md-3">Title</th>
+    <th class="col-md-1">Author</th>
+    <th class="col-md-1">Written</th>
+    <th class="col-md-1">Tweeted</th>
+    <th class="col-md-1">Type</th>
+    <th class="col-md-1">Tweet Author</th>
   </tr>
-<% @data.each do |tweet, uNameAndLinks| %>  
+<!----><% @data.each do |tweet, uNameAndLinks| %>
   <tr class="row">
-    <% if @last_tweet_domain != tweet.domain %>
-      <td class="col-md-1" rowspan="<%= @domain_counts[tweet.domain] %>"><a href="<%= tweet.domain %>"><%= tweet.domain %></a></td>    
-      <td class="col-md-1" rowspan="<%= @domain_counts[tweet.domain] %>"><%= @domain_counts[tweet.domain] %></td>
-    <% end %>
+<!----><% if @last_tweet_domain != tweet.domain %>
+    <td class="col-md-1" rowspan="<%= @domain_counts[tweet.domain] %>"><a href="<%= tweet.domain %>"><%= tweet.domain %></a></td>    
+    <td class="col-md-1" rowspan="<%= @domain_counts[tweet.domain] %>"><%= @domain_counts[tweet.domain] %></td>
+<!----><% end %>
     <td class="col-md-2"><a href="<%= tweet.url %>"style="word-wrap: break-word"><%= tweet.url.truncate(50) %></a></td>
     <td class="col-md-3"><%= uNameAndLinks[1][0] ? uNameAndLinks[1][0].title : "" %></td>
     <td class="col-md-1"><%= uNameAndLinks[1][0] ? uNameAndLinks[1][0].author : "" %></td>
@@ -26,6 +26,6 @@
     <td class="col-md-1"><%= uNameAndLinks[1][0] ? uNameAndLinks[1][0].kind_of_url : "" %></td>
     <td class="col-md-1"><%= uNameAndLinks[0] ? uNameAndLinks[0].username : "" %></td>
   </tr>
-<% @last_tweet_domain = tweet.domain %>
-<% end %>
+<!----><% @last_tweet_domain = tweet.domain %>
+<!----><% end %>
 </table>

@@ -1,6 +1,16 @@
-/*.header {
-  background: blue;
-}*/
+.submit {
+  margin-top: 30px;
+}
+
+.header {
+  margin-top: 10px;
+}
+
+.row-header {
+  background-color: rgb(31,73,125);
+  color: white;
+}
+
 /* User sign in and sign forms. */
 .border-form-div {
   max-width: 500px;
@@ -26,4 +36,8 @@
   height: auto;
   margin-bottom: 15px;
   padding: 7px 9px;
+}
+.btn {
+  box-shadow: 3px 3px 4px #ccc;
+  border: 1px solid black;
 }

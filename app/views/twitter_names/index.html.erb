@@ -1,12 +1,17 @@
-<a href="<%=new_twitter_name_path%>"><button><h1>Find tweets for a new @username</h1></button></a>
+<a href="<%=new_twitter_name_path%>"><button class="btn btn-success btn-lg"><h1>Find tweets for a new @username</h1></button></a>
 <hr>
 <h3>Or look at tweets for an existing @username:</h3>
-<% @twitternames.each do |tn| %>
-  <table>
-    <tr>
-      <td><a href="<%= twitter_name_path(tn.id)%>"><%= tn.username %></a></td>
-      <td><%= tn.twitter_name_id %></td>
-      <td><%= tn.tweets_collected %></td>
+  <table class="table">
+    <tr class="row">
+      <th class="col-md-4">@username</th>
+      <th class="col-md-4">Twitter ID</th>
+      <th class="col-md-4"># of their tweets we have</th>
     </tr>
+<!----><% @twitternames.each do |tn| %>
+    <tr class="row">
+      <td class="col-md-4"><a href="<%= twitter_name_path(tn.id)%>"><%= tn.username %></a></td>
+      <td class="col-md-4"><%= tn.twitter_name_id %></td>
+      <td class="col-md-4"><%= tn.tweets_collected %></td>
+    </tr>
+<!----><% end %>
   </table>
-<% end %>
