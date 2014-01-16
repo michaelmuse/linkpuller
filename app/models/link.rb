@@ -7,6 +7,6 @@ class Link < ActiveRecord::Base
       self.domain = URI.parse(self.url).host
       self.save
     end
-
+    #lots more
   end
 end

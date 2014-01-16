@@ -13,7 +13,7 @@ class TwitterNamesController < ApplicationController
     #make a twitter client so I can lookup the twitter_user_id
     twitter_client = @curr_user.auth_twitter
     twitter_person = twitter_client.user(@new_tname.username)
-    @new_tname.twitter_name_id = twitter_person.attrs[:id]
+    @new_tname.twitter_name_id = twitter_person.attrs[:id].to_s
     @new_tname.save
     #import the requested amount of tweets via the corresponding User class method
     if @new_tname.tweets_collected == "some"

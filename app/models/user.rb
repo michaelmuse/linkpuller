@@ -17,55 +17,72 @@ class User < ActiveRecord::Base
     end
   end
   def save_tweets(tweets)
-    tweets.each do |tweet|
-      begin 
-        curr_url = tweet.uris.first.attrs
-      rescue 
-      end
-      if curr_url 
-        t = Tweet.new
-        tn = TwitterName.new
-        t.twitter_tweet_id = tweet.attrs[:id].to_s
-        t.url = curr_url[:expanded_url]
-        t.build_domain
-        t.tweet_date = tweet.attrs[:created_at]
-        t.twitter_name_id = tweet.attrs[:user][:id].to_s
-        t.text = tweet.attrs[:text]
-        tn.twitter_name_id = tweet.attrs[:user][:id].to_s
-        tn.username = tweet.attrs[:user][:screen_name]
-        t.save
-        tn.save
+    if tweets != nil
+      tweets.each do |tweet|
+        begin 
+          curr_url = tweet.uris.first.attrs
+        rescue 
+        end
+        if curr_url 
+          t = Tweet.new
+          tn = TwitterName.new
+          t.twitter_tweet_id = tweet.attrs[:id].to_s
+          t.url = curr_url[:expanded_url]
+          t.build_domain
+          t.tweet_date = tweet.attrs[:created_at]
+          t.twitter_name_id = tweet.attrs[:user][:id].to_s
+          t.text = tweet.attrs[:text]
+          tn.twitter_name_id = tweet.attrs[:user][:id].to_s
+          tn.username = tweet.attrs[:user][:screen_name]
+          t.save
+          tn.save
+        end
       end
     end
   end
 
   def get_some_twittername_tweets_helper(twittername, client)
-  #HERE WE PULL IN A SMALL AMOUNT OF TWEETS PROVIDED A TWITTERNAME OBJECT
-    options = {
-      exclude_replies: true,
-      include_rts: false,
-      count: 200,
-    }
-    tweets = client.user_timeline(twittername.username, options)       
+  #HERE WE PULL IN A SMALL AMOUNT OF TWEETS PROVIDED A TWITTERNAME OBJECT HASNT ALREADY RUN THIS QUERY
+    begin
+    current_tn_in_db_before_action = TwitterName.find(twittername.twitter_name_id)
+    rescue
+    end
+    unless current_tn_in_db_before_action && current_tn_in_db_before_action.tweets_collected == "some"
+      options = {
+        exclude_replies: true,
+        include_rts: false,
+        count: 200,
+      }
+
+      tweets = client.user_timeline(twittername.username, options) 
+
+    end      
+
   end
 
   def get_all_twittername_tweets_helper(twittername, client)
-    def collect_with_max_id(collection=[], max_id=nil, &block)
-      response = yield max_id
-      collection += response
-      response.empty? ? collection.flatten : collect_with_max_id(collection, response.last.id - 1, &block)
+    begin
+    current_tn_in_db_before_action = TwitterName.find(twittername.twitter_name_id)
+    rescue
     end
-
-    def get_all_tweets(user)
-      collect_with_max_id do |max_id|
-        options = {:count => 200, :include_rts => true}
-        options[:max_id] = max_id unless max_id.nil?
-        client.user_timeline(user, options)
+    unless current_tn_in_db_before_action && current_tn_in_db_before_action.tweets_collected == "all"
+      def collect_with_max_id(collection=[], max_id=nil, &block)
+        response = yield max_id
+        collection += response
+        response.empty? ? collection.flatten : collect_with_max_id(collection, response.last.id - 1, &block)
       end
-    end
 
-    #HERE WE PULL IN ALL TWEETS (warning) FROM A USER
-    tweets = get_all_tweets(twittername.username)
+      def get_all_tweets(user, client)
+        collect_with_max_id do |max_id|
+          options = {:count => 200, :include_rts => true}
+          options[:max_id] = max_id unless max_id.nil?
+          client.user_timeline(user, options)
+        end
+      end
+
+      #HERE WE PULL IN ALL TWEETS (warning) FROM A USER PROVIDED WE DONT ALREADY HAVE THEM
+      tweets = get_all_tweets(twittername.username, client)
+    end
   end
 
   def get_all_twittername_tweets(twittername)

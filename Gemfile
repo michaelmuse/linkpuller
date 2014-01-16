@@ -13,6 +13,7 @@ gem 'devise'
 gem 'capybara'
 gem 'json'
 gem 'httparty'
+gem 'diffbot'
 
 
 # Gems used only for assets and not required
