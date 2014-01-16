@@ -1,6 +1,0 @@
-LINKPULLER
-
-"Linkpuller pulls the links out of a Twitter feed and makes a reading list out of them"
-
-HEROKU http://linkpuller.herokuapp.com/
-GITHUB https://github.com/michaelmuse/linkpuller
