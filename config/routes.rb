@@ -2,7 +2,7 @@ Linkpuller::Application.routes.draw do
 
   devise_for :users
 
-  root :to => 'users#index'
+  root :to => 'twitter_names#index'
   resources :twitter_names
 
   get '/tweets' => 'tweets#index'
