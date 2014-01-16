@@ -2,10 +2,14 @@ Linkpuller::Application.routes.draw do
 
   devise_for :users
 
+  get '/users/sign_out' => 'devise/sessions#destroy', as: 'destroy_user_session'
+
   root :to => 'twitter_names#index'
   resources :twitter_names
 
   get '/tweets' => 'tweets#index'
+
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

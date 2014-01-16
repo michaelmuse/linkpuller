@@ -1,4 +1,5 @@
 class TwitterNamesController < ApplicationController
+  # before_filter :authenticate_user!
 
   def new
     
@@ -17,7 +18,7 @@ class TwitterNamesController < ApplicationController
     @new_tname.save
     #import the requested amount of tweets via the corresponding User class method
     if @new_tname.tweets_collected == "a few"
-    @curr_user.get_some_twittername_tweets(@new_tname)
+    @curr_user.get_a_few_twittername_tweets(@new_tname)
     elsif @new_tname.tweets_collected == "some"
     @curr_user.get_some_twittername_tweets(@new_tname)
     elsif @new_tname.tweets_collected == "all"

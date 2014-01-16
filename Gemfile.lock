@@ -139,6 +139,7 @@ GEM
       rspec-core (~> 2.14.0)
       rspec-expectations (~> 2.14.0)
       rspec-mocks (~> 2.14.0)
+    ruby-prof (0.14.2)
     sass (3.2.13)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
@@ -199,6 +200,7 @@ DEPENDENCIES
   pry
   rails (= 3.2.13)
   rspec-rails
+  ruby-prof
   sass-rails (~> 3.2.3)
   simplecov
   twitter

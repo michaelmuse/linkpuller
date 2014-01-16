@@ -17,6 +17,7 @@ class User < ActiveRecord::Base
     end
   end
   def save_tweets(tweets)
+  RubyProf.start
     if tweets != nil
       tweets.each do |tweet|
         begin 
@@ -47,6 +48,9 @@ class User < ActiveRecord::Base
         end
       end
     end
+  result = RubyProf.stop
+  printer = RubyProf::FlatPrinter.new(result)
+  printer.print(STDOUT)
   end
 
   def get_a_few_twittername_tweets_helper(twittername, client)
