@@ -6,25 +6,29 @@ describe Link do
       @options = {title: "title", author: "jim", authored_date: "Tue Jan 07 18:06:21 +0000 2014", twitter_tweet_id: "141290871412908714129087"}
       @l1 = Link.new(@options)
       @l2 = Link.new(@options)
+      @l1.save
+      @l2.save
       #possibly because of uniqueness contraint on the db, cant use Link.create here (breaks)
     end
     #Unique URLs
     describe "and given the urls are unique" do
       before do
         @l1.url = "http://www.theatlantic.com/technology/archive/2014/01/him-love-in-the-time-of-operating-systems/283062/"
-        @l1.build_attributes
         @l1.kind_of_url = "article"
+        @l1.build_attributes
         @l1.save
         @l2.url = "http://www.theatlantic.com/business/archive/2013/07/the-economic-cost-of-hangovers/277546/"
-        @l2.build_attributes
         @l2.kind_of_url = "article"
+        @l2.build_attributes
         @l2.save
+
       end
       it "should have the links saved and return the right values" do
-        @links = Link.all
+        @links = Link.find([@l1.id, @l2.id])
         @links.count.should == 2
         @links.each do |link|
           link.kind_of_url.should == "article"
+
           link.title.should == @options[:title]
           link.author.should == @options[:author]
           link.authored_date.should == @options[:authored_date]
