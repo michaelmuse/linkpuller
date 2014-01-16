@@ -16,7 +16,9 @@ class TwitterNamesController < ApplicationController
     @new_tname.twitter_name_id = twitter_person.attrs[:id].to_s
     @new_tname.save
     #import the requested amount of tweets via the corresponding User class method
-    if @new_tname.tweets_collected == "some"
+    if @new_tname.tweets_collected == "a few"
+    @curr_user.get_some_twittername_tweets(@new_tname)
+    elsif @new_tname.tweets_collected == "some"
     @curr_user.get_some_twittername_tweets(@new_tname)
     elsif @new_tname.tweets_collected == "all"
     @curr_user.get_all_twittername_tweets(@new_tname)
