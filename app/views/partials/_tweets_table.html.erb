@@ -30,7 +30,7 @@
   </tr>
 <!----><% @last_tweet_domain = tweet.domain %>
   <!----><%if user_name_and_links_array[1][0]%>
-  <!----><%bookmark_file.puts("<a href=#{tweet.domain}>#{user_name_and_links_array[1][0].title}</a>")%>
+  <!----><%bookmark_file.puts("<a href=#{tweet.url}>#{user_name_and_links_array[1][0].title}</a>")%>
   <!----><%else%>
   <!----><%bookmark_file.puts("<a href=#{tweet.domain}></a>")%>
   <!----><%end%>
