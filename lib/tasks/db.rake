@@ -84,4 +84,23 @@ namespace :db do
     TwitterName.delete_all
   end
 
+  desc "enrich plain links"
+  task :enrich_links => :environment do
+    links = Link.all
+    @social_domains = ["app.strava.com","4sq.com", "yfrog.com", "fb.me", "i.imgur.com", "imgur.com", "instagr.am", "Instagram.com", "instagram.com", "kck.st", "livestream.com", "linkd.in", "lnkd.in", "lockerz.com", "path.com", "pinterest.com", "qr.ae", "songza.com", "spoti.fi", "tinyurl.com", "tumblr.com", "tmblr.co","twitpic.com", "twitter.com", "www.eventbrite.com", "www.facebook.com", "www.giltcity.com", "www.grouponworks.com", "www.groupon.com", "www.linkedin.com", "www.quora.com", "youtu.be", "www.youtube.com"] 
+    links.each do |link|
+      if @social_domains.include?(link.domain)
+        link.kind_of_url = "social"
+      elsif link.author == nil && link.authored_date == nil && link.title == nil && link.kind_of_url == nil
+        json = HTTParty.get("http://api.diffbot.com/v2/article?token=#{ENV['DIFFBOT_TOKEN']}&url=#{link.url}")
+        link.author = json["author"]
+        link.authored_date = json["date"]
+        #convert the date
+        link.authored_date ? link.authored_date.strftime("%m/%d/%Y") : nil
+        link.title = json["title"]
+        link.kind_of_url = json["type"]
+        link.save
+      end
+    end
+  end
 end
