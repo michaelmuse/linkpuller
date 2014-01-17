@@ -17,40 +17,70 @@ class User < ActiveRecord::Base
     end
   end
   def save_tweets(tweets)
-  RubyProf.start
+    ###trying to solve so many saves to db
+    tweet_arr = []
+    twitter_name_arr = []
+    link_arr = []
     if tweets != nil
       tweets.each do |tweet|
         begin 
-          curr_url = tweet.uris.first.attrs
+          #TRYING THE BELOW INSTEAD## curr_url = tweet.uris.first.attrs
+          curr_url = tweet.attrs[:entities][:urls][0]
         rescue 
         end
         if curr_url 
-          #Store a new tweet
-          t = Tweet.new
-          t.twitter_tweet_id = tweet.attrs[:id].to_s
-          t.url = curr_url[:expanded_url]
-          t.build_domain
-          t.tweet_date = tweet.attrs[:created_at]
-          t.twitter_name_id = tweet.attrs[:user][:id].to_s
-          t.text = tweet.attrs[:text]
-          t.save
-          #Store a new TwitterName
-          tn = TwitterName.new
-          tn.twitter_name_id = tweet.attrs[:user][:id].to_s #if this already exists, the user is not remade
-          tn.username = tweet.attrs[:user][:screen_name]
-          tn.save
-          #Store a new link
-          l = Link.new(url: t.url)
-          l.tweet_id = t.id
-          l.build_attributes
-          l.twitter_tweet_id = t.twitter_tweet_id
-          l.save
+            
+          #create tweet obj hash literal
+          tweet_hash = {}
+          tweet_hash[:twitter_tweet_id] = tweet.attrs[:id].to_s
+          tweet_hash[:url]              = curr_url[:expanded_url]
+          tweet_hash[:tweet_date]       = tweet.attrs[:created_at]
+          tweet_hash[:twitter_name_id]  = tweet.attrs[:user][:id].to_s
+          tweet_hash[:text]             = tweet.attrs[:text]
+          tweet_hash[:domain]           = URI.parse(curr_url[:expanded_url]).host
+          tweet_arr << tweet_hash  
+
+          # #Store a new tweet
+          # # t = Tweet.new
+          # # t.twitter_tweet_id = tweet.attrs[:id].to_s
+          # # t.url = curr_url[:expanded_url]
+          # # t.build_domain
+          # # t.tweet_date = tweet.attrs[:created_at]
+          # # t.twitter_name_id = tweet.attrs[:user][:id].to_s
+          # # t.text = tweet.attrs[:text]
+          # # t.save
+
+          # #Store a new TwitterName
+          # tn = TwitterName.new
+          # tn.twitter_name_id = tweet.attrs[:user][:id].to_s #if this already exists, the user is not remade
+          # tn.username = tweet.attrs[:user][:screen_name]
+          # tn.save
+
+          twitter_name_hash = {}
+          twitter_name_hash[:twitter_name_id] = tweet.attrs[:user][:id].to_s #if this already exists, the user is not remade
+          twitter_name_hash[:username]        = tweet.attrs[:user][:screen_name]
+          twitter_name_arr << twitter_name_hash
+
+          # #Store a new link
+          # l = Link.new(url: t.url)
+          # l.tweet_id = t.id
+          # l.build_attributes
+          # l.twitter_tweet_id = t.twitter_tweet_id
+          # l.save
+          link_hash = {}
+          link_hash[:twitter_tweet_id]        = tweet.attrs[:id].to_s
+          link_hash[:url]                     = curr_url[:expanded_url]
+          link_hash[:domain]                  = URI.parse(curr_url[:expanded_url]).host
+          link_arr << link_hash
+          #STILL NEED TO FIGURE OUT RELATION OR GO TWITTER-ONLY
         end
       end
+      # SAVE ALL THE DATA I HAVE COLLECTED
+      Tweet.create(tweet_arr)
+      TwitterName.create(twitter_name_arr)
+      new_links = Link.create(link_arr)
+      # DO DIFFBOT CALLS - return and do it in view?
     end
-  result = RubyProf.stop
-  printer = RubyProf::FlatPrinter.new(result)
-  printer.print(STDOUT)
   end
 
   def get_a_few_twittername_tweets_helper(twittername, client)

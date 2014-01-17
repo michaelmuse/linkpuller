@@ -3,7 +3,8 @@ class Link < ActiveRecord::Base
   validates :url, uniqueness: true
 
   #Here I use the default key unlike for usernames, because tweet IDs arent special
-  belongs_to :tweet
+  # belongs_to :tweet
+  belongs_to :tweet, :foreign_key => :twitter_tweet_id.to_s
 
   def build_attributes
     unless self.domain
@@ -22,7 +23,6 @@ class Link < ActiveRecord::Base
       self.title = json["title"]
       self.kind_of_url = json["type"]
     end
-    #lots more
   end
 end
 

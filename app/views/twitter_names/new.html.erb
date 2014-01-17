@@ -1,6 +1,7 @@
 <form action="<%=twitter_names_path%>" method="post" class="col-md-6">
+  <%= token_tag :authentication_token %>
   <h3>Whose tweets should we get?</h3>
-  <input type="text" id="username" name="username" placeholder="username" class="form-control input-lg">
+  <input type="text" id="username" name="username" placeholder="username" class="form-control input-lg">  
   <h3>How many of this user's tweets do you want to collect?</h3>
   <select id="tweet_amount" name="tweets_collected" class="tweet_amount form-control input-lg">
     <option value="a few" id="a_few">A few</option>

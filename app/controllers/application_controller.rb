@@ -12,8 +12,8 @@ class ApplicationController < ActionController::Base
     tweets.each do |tweet|
       uNameAndLinks = []
       uNameAndLinks << username
-      uNameAndLinks << tweet.links
-      #give me a hash where I can get my data without more DB calls
+      uNameAndLinks <<  Link.find_by_sql(["SELECT * FROM links WHERE twitter_tweet_id = ?", tweet.twitter_tweet_id])
+  #give me a hash where I can get my data without more DB calls
       data[tweet] = uNameAndLinks
     end
     return data
