@@ -28,8 +28,7 @@ class User < ActiveRecord::Base
         rescue 
         end
         if curr_url 
-            
-          #create tweet obj hash literal
+          #Store a new tweet
           tweet_hash = {}
           tweet_hash[:twitter_tweet_id] = tweet.attrs[:id].to_s
           tweet_hash[:url]              = curr_url[:expanded_url]
@@ -39,33 +38,13 @@ class User < ActiveRecord::Base
           tweet_hash[:domain]           = URI.parse(curr_url[:expanded_url]).host
           tweet_arr << tweet_hash  
 
-          # #Store a new tweet
-          # # t = Tweet.new
-          # # t.twitter_tweet_id = tweet.attrs[:id].to_s
-          # # t.url = curr_url[:expanded_url]
-          # # t.build_domain
-          # # t.tweet_date = tweet.attrs[:created_at]
-          # # t.twitter_name_id = tweet.attrs[:user][:id].to_s
-          # # t.text = tweet.attrs[:text]
-          # # t.save
-
-          # #Store a new TwitterName
-          # tn = TwitterName.new
-          # tn.twitter_name_id = tweet.attrs[:user][:id].to_s #if this already exists, the user is not remade
-          # tn.username = tweet.attrs[:user][:screen_name]
-          # tn.save
-
+          # Store a new TwitterName
           twitter_name_hash = {}
           twitter_name_hash[:twitter_name_id] = tweet.attrs[:user][:id].to_s #if this already exists, the user is not remade
           twitter_name_hash[:username]        = tweet.attrs[:user][:screen_name]
           twitter_name_arr << twitter_name_hash
 
-          # #Store a new link
-          # l = Link.new(url: t.url)
-          # l.tweet_id = t.id
-          # l.build_attributes
-          # l.twitter_tweet_id = t.twitter_tweet_id
-          # l.save
+          # Store a new link
           link_hash = {}
           link_hash[:twitter_tweet_id]        = tweet.attrs[:id].to_s
           link_hash[:url]                     = curr_url[:expanded_url]
@@ -73,7 +52,7 @@ class User < ActiveRecord::Base
           link_arr << link_hash
         end
       end
-      # SAVE ALL THE DATA I HAVE COLLECTED
+      # SAVE ALL THE DATA I HAVE COLLECTED IN THESE HASHES WITH THREE DB CALLS
       Tweet.create(tweet_arr)
       TwitterName.create(twitter_name_arr)
       new_links = Link.create(link_arr)
