@@ -29,6 +29,12 @@ class TwitterNamesController < ApplicationController
       ntweet_id_array << tweet.twitter_tweet_id
     end
     new_links = Link.where("twitter_tweet_id IN (?)", ntweet_id_array)
+#Maybe we could use hydra here somehow instead of build_attributes
+#     hydra = Typhoeus::Hydra.new(max_concurrency: 20)
+#     new_links.each do |link|
+#     hydra.queue Typhoeus::Request.new("http://api.diffbot.com/v2/article?token=#{ENV['DIFFBOT_TOKEN']}&url=#{link.url}")
+#     end
+#     hydra_array = hydra.run
     new_links.each do |link|
       link.build_attributes
     end

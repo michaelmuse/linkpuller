@@ -552,7 +552,6 @@
         1,
         1,
         24,
-        null,
         24,
         null,
         null,
@@ -603,11 +602,9 @@
         null,
         null,
         null,
-        null,
         1,
         1,
         1,
-        null,
         null,
         null,
         null,
@@ -698,6 +695,8 @@
       "/Users/michaelmuse/Documents/ga_wdi/projects/linkpuller/app/controllers/application_controller.rb": [
         1,
         1,
+        null,
+        null,
         null,
         1,
         1,
@@ -793,6 +792,12 @@
         2,
         null,
         1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         1,
         2,
         null,
@@ -1057,6 +1062,6 @@
         null
       ]
     },
-    "timestamp": 1389928430
+    "timestamp": 1389931628
   }
 }

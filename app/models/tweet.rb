@@ -8,7 +8,7 @@ class Tweet < ActiveRecord::Base
   has_many :links, :foreign_key => :twitter_tweet_id.to_s
   # has_many :links
 
-#MAY NOT NEED THE METHOD BELOW
+#MAY NOT NEED THE METHOD BELOW1
   def build_domain 
     unless self.domain
       self.domain = URI.parse(self.url).host      

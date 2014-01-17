@@ -24,7 +24,6 @@ class User < ActiveRecord::Base
     if tweets != nil
       tweets.each do |tweet|
         begin 
-          #TRYING THE BELOW INSTEAD## curr_url = tweet.uris.first.attrs
           curr_url = tweet.attrs[:entities][:urls][0]
         rescue 
         end
@@ -72,14 +71,12 @@ class User < ActiveRecord::Base
           link_hash[:url]                     = curr_url[:expanded_url]
           link_hash[:domain]                  = URI.parse(curr_url[:expanded_url]).host
           link_arr << link_hash
-          #STILL NEED TO FIGURE OUT RELATION OR GO TWITTER-ONLY
         end
       end
       # SAVE ALL THE DATA I HAVE COLLECTED
       Tweet.create(tweet_arr)
       TwitterName.create(twitter_name_arr)
       new_links = Link.create(link_arr)
-      # DO DIFFBOT CALLS - return and do it in view?
     end
   end
 

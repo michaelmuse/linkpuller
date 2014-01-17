@@ -1,6 +1,8 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
+
+
   def get_all_tweet_info_for_table(tname_id)
     if tname_id
     username = TwitterName.find(tname_id)
