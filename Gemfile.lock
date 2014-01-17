@@ -64,10 +64,14 @@ GEM
     docile (1.1.2)
     equalizer (0.0.9)
     erubis (2.7.0)
+    ethon (0.6.2)
+      ffi (>= 1.3.0)
+      mime-types (~> 1.18)
     excon (0.31.0)
     execjs (2.0.2)
     faraday (0.8.9)
       multipart-post (~> 1.2.0)
+    ffi (1.9.3)
     hashie (2.0.5)
     hike (1.2.3)
     http (0.5.0)
@@ -175,6 +179,8 @@ GEM
       json (~> 1.8)
       memoizable (~> 0.4.0)
       simple_oauth (~> 0.2.0)
+    typhoeus (0.6.7)
+      ethon (~> 0.6.2)
     tzinfo (0.3.38)
     uglifier (2.4.0)
       execjs (>= 0.3.0)
@@ -204,4 +210,5 @@ DEPENDENCIES
   sass-rails (~> 3.2.3)
   simplecov
   twitter
+  typhoeus
   uglifier (>= 1.0.3)

@@ -16,6 +16,10 @@ class Link < ActiveRecord::Base
       self.kind_of_url = "social"
     elsif self.author == nil || self.authored_date == nil || self.title == nil || self.kind_of_url == nil
       json = HTTParty.get("http://api.diffbot.com/v2/article?token=#{ENV['DIFFBOT_TOKEN']}&url=#{self.url}")
+      10.times do 
+        puts "I'M SLEEPING"
+        sleep 1
+      end
       self.author = json["author"]
       self.authored_date = json["date"]
       #convert the date

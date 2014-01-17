@@ -16,6 +16,7 @@ gem 'httparty'
 gem 'diffbot'
 gem 'simplecov', :require => false, :group => :test 
 gem 'ruby-prof'
+gem "typhoeus"
 
 # Gems used only for assets and not required
 # in production environments by default.
