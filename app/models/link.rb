@@ -22,6 +22,7 @@ class Link < ActiveRecord::Base
       self.authored_date ? self.authored_date.strftime("%m/%d/%Y") : nil
       self.title = json["title"]
       self.kind_of_url = json["type"]
+      self.save
     end
   end
   handle_asynchronously :build_attributes
