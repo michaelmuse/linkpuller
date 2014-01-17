@@ -1,6 +1,6 @@
 #LINKPULLER
 ---
-Linkpuller is a simple tool that pulls the links out of a Twitter feed and makes a reading list out of them for you"
+##Linkpuller is a simple tool that pulls the links out of a Twitter feed and makes a reading list out of them for you
 
 ---
 
@@ -78,7 +78,7 @@ Other interesting refactoring involved making fewer database calls to prepare th
 ```ruby
     @data = get_all_tweet_info_for_table(params[:id])
     @domain_counts = get_domain_info_for_table_columns(@data.keys) #this method takes just the tweets
-###### helper methods for the above are beolw:
+###### helper methods for the above are below:
   def get_all_tweet_info_for_table(tname_id)
     if tname_id
     username = TwitterName.find(tname_id)
