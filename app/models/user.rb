@@ -116,7 +116,6 @@ class User < ActiveRecord::Base
           client.user_timeline(user, options)
         end
       end
-
       #HERE WE PULL IN ALL TWEETS (warning) FROM A USER PROVIDED WE DONT ALREADY HAVE THEM
       tweets = get_all_tweets(twittername.username, client)
     end
@@ -127,6 +126,7 @@ class User < ActiveRecord::Base
     tweets = get_all_twittername_tweets_helper(twittername, client)
     save_tweets(tweets)
   end
+  handle_asynchronously :get_all_twittername_tweets
 
   def get_some_twittername_tweets(twittername)
     client = auth_twitter
