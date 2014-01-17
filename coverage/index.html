@@ -14,27 +14,27 @@
       <img src="./assets/0.8.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2014-01-16T23:46:19-05:00">2014-01-16T23:46:19-05:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2014-01-17T02:05:37-05:00">2014-01-17T02:05:37-05:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">91.14%</span></span>
+    (<span class="covered_percent"><span class="green">90.53%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.34
+         1.31
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>26</b> files in total.
-    <b>350</b> relevant lines. 
-    <span class="green"><b>319</b> lines covered</span> and
-    <span class="red"><b>31</b> lines missed </span>
+    <b>27</b> files in total.
+    <b>359</b> relevant lines. 
+    <span class="green"><b>325</b> lines covered</span> and
+    <span class="red"><b>34</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -72,12 +72,12 @@
       
       <tr>
         <td class="strong"><a href="#e7c873ecbeed2fff9decc95779d90c72cd11f795" class="src_link" title="app/controllers/twitter_names_controller.rb">app/controllers/twitter_names_controller.rb</a></td>
-        <td class="yellow strong">85.19 %</td>
-        <td>52</td>
-        <td>27</td>
-        <td>23</td>
-        <td>4</td>
-        <td>0.9</td>
+        <td class="red strong">78.13 %</td>
+        <td>59</td>
+        <td>32</td>
+        <td>25</td>
+        <td>7</td>
+        <td>0.8</td>
       </tr>
       
       <tr>
@@ -103,11 +103,11 @@
       <tr>
         <td class="strong"><a href="#9c9378966b27d5972f8474a659589a5ab3711f14" class="src_link" title="app/models/link.rb">app/models/link.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>28</td>
-        <td>18</td>
-        <td>18</td>
+        <td>29</td>
+        <td>19</td>
+        <td>19</td>
         <td>0</td>
-        <td>2.7</td>
+        <td>2.3</td>
       </tr>
       
       <tr>
@@ -188,6 +188,16 @@
         <td>0</td>
         <td>0</td>
         <td>0</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#e2a07b299bfe98d755ee5e15c0eb731169f34d60" class="src_link" title="config/initializers/delayed_job_config.rb">config/initializers/delayed_job_config.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+        <td>0</td>
+        <td>1.0</td>
       </tr>
       
       <tr>
@@ -273,9 +283,9 @@
       <tr>
         <td class="strong"><a href="#2ac0aed3821d115e3bbd883fea4a3bd12f3952fc" class="src_link" title="spec/models/link_spec.rb">spec/models/link_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>76</td>
-        <td>55</td>
-        <td>55</td>
+        <td>78</td>
+        <td>57</td>
+        <td>57</td>
         <td>0</td>
         <td>1.2</td>
       </tr>
@@ -553,7 +563,7 @@
         <li class="never" data-hits="" data-linenumber="2">
           
           
-          <code class="ruby">#NEED to not do this if they are signed in, fix in twitternames controller too  # before_filter :authenticate_user!</code>
+          <code class="ruby"># before_filter :authenticate_user!</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="3">
@@ -599,11 +609,11 @@
         <div class="source_table" id="e7c873ecbeed2fff9decc95779d90c72cd11f795">
   <div class="header">
     <h3>app/controllers/twitter_names_controller.rb</h3>
-    <h4><span class="yellow">85.19 %</span> covered</h4>
+    <h4><span class="red">78.13 %</span> covered</h4>
     <div>
-      <b>27</b> relevant lines. 
-      <span class="green"><b>23</b> lines covered</span> and
-      <span class="red"><b>4</b> lines missed.</span>
+      <b>32</b> relevant lines. 
+      <span class="green"><b>25</b> lines covered</span> and
+      <span class="red"><b>7</b> lines missed.</span>
     </div>
   </div>
   
@@ -667,256 +677,298 @@
         <li class="covered" data-hits="1" data-linenumber="10">
           <span class="hits">1</span>
           
-          <code class="ruby">    @new_tname = TwitterName.new</code>
+          <code class="ruby">    tn = TwitterName.find_by_username(params[:username])</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="11">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    @new_tname.username = params[:username]</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="12">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    @new_tname.tweets_collected = params[:tweets_collected]    </code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="13">
+        <li class="never" data-hits="" data-linenumber="11">
           
           
           <code class="ruby">    #make a temporary User so we have access to those class methods</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="14">
+        <li class="covered" data-hits="1" data-linenumber="12">
           <span class="hits">1</span>
           
           <code class="ruby">    @current_user = User.new</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="15">
+        <li class="covered" data-hits="1" data-linenumber="13">
           <span class="hits">1</span>
           
           <code class="ruby">    twitter_client = @current_user.auth_twitter</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="16">
+        <li class="covered" data-hits="1" data-linenumber="14">
           <span class="hits">1</span>
           
-          <code class="ruby">    twitter_person = twitter_client.user(@new_tname.username)</code>
+          <code class="ruby">    if tn</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="17">
+        <li class="missed" data-hits="0" data-linenumber="15">
+          
+          
+          <code class="ruby">      @curr_tname = tn</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="16">
+          
+          
+          <code class="ruby">      @curr_tname.tweets_collected = params[:tweets_collected]</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="17">
+          
+          
+          <code class="ruby">      @curr_tname.save</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="18">
+          
+          
+          <code class="ruby">    else      </code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="19">
           <span class="hits">1</span>
           
-          <code class="ruby">    @new_tname.twitter_name_id = twitter_person.attrs[:id].to_s</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="18">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    @new_tname.save</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="19">
-          
-          
-          <code class="ruby">    #import the requested amount of tweets via the corresponding User class method</code>
+          <code class="ruby">      @curr_tname = TwitterName.new</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="20">
           <span class="hits">1</span>
           
-          <code class="ruby">    if @new_tname.tweets_collected == &quot;a few&quot;</code>
+          <code class="ruby">      @curr_tname.username = params[:username]</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="21">
           <span class="hits">1</span>
           
-          <code class="ruby">    new_tweets = @current_user.get_a_few_twittername_tweets(@new_tname)</code>
+          <code class="ruby">      @curr_tname.tweets_collected = params[:tweets_collected]    </code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="22">
+        <li class="covered" data-hits="1" data-linenumber="22">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    elsif @new_tname.tweets_collected == &quot;some&quot;</code>
+          <code class="ruby">      twitter_person = twitter_client.user(@curr_tname.username)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="23">
+        <li class="covered" data-hits="1" data-linenumber="23">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    new_tweets = @current_user.get_some_twittername_tweets(@new_tname)</code>
+          <code class="ruby">      @curr_tname.twitter_name_id = twitter_person.attrs[:id].to_s</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="24">
+        <li class="covered" data-hits="1" data-linenumber="24">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    elsif @new_tname.tweets_collected == &quot;all&quot;</code>
+          <code class="ruby">      @curr_tname.save</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="25">
+        <li class="never" data-hits="" data-linenumber="25">
           
           
-          <code class="ruby">    new_tweets = @current_user.get_all_twittername_tweets(@new_tname)</code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="26">
           
           
-          <code class="ruby">    end</code>
+          <code class="ruby">    #import the requested amount of tweets via the corresponding User class method</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="27">
           <span class="hits">1</span>
           
-          <code class="ruby">    ntweet_id_array = []</code>
+          <code class="ruby">    if @curr_tname.tweets_collected == &quot;a few&quot;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="28">
           <span class="hits">1</span>
           
-          <code class="ruby">    new_tweets.each do |tweet|</code>
+          <code class="ruby">    new_tweets = @current_user.get_a_few_twittername_tweets(@curr_tname)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="29">
-          <span class="hits">2</span>
+        <li class="never" data-hits="" data-linenumber="29">
           
-          <code class="ruby">      ntweet_id_array &lt;&lt; tweet.twitter_tweet_id</code>
+          
+          <code class="ruby">    elsif @curr_tname.tweets_collected == &quot;some&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="30">
+        <li class="missed" data-hits="0" data-linenumber="30">
           
           
-          <code class="ruby">    end</code>
+          <code class="ruby">    new_tweets = @current_user.get_some_twittername_tweets(@curr_tname)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="31">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="31">
           
-          <code class="ruby">    new_links = Link.where(&quot;twitter_tweet_id IN (?)&quot;, ntweet_id_array)</code>
+          
+          <code class="ruby">    elsif @curr_tname.tweets_collected == &quot;all&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="32">
+        <li class="missed" data-hits="0" data-linenumber="32">
           
           
-          <code class="ruby">#Maybe we could use hydra here somehow instead of build_attributes</code>
+          <code class="ruby">    new_tweets = @current_user.get_all_twittername_tweets(@curr_tname)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="33">
           
           
-          <code class="ruby">#     hydra = Typhoeus::Hydra.new(max_concurrency: 20)</code>
+          <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="34">
+        <li class="covered" data-hits="1" data-linenumber="34">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">#     new_links.each do |link|</code>
+          <code class="ruby">    ntweet_id_array = []</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="35">
+        <li class="covered" data-hits="1" data-linenumber="35">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">#     hydra.queue Typhoeus::Request.new(&quot;http://api.diffbot.com/v2/article?token=#{ENV[&#39;DIFFBOT_TOKEN&#39;]}&amp;url=#{link.url}&quot;)</code>
+          <code class="ruby">    new_tweets.each do |tweet|</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="36">
+        <li class="covered" data-hits="2" data-linenumber="36">
+          <span class="hits">2</span>
           
-          
-          <code class="ruby">#     end</code>
+          <code class="ruby">      ntweet_id_array &lt;&lt; tweet.twitter_tweet_id</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="37">
           
           
-          <code class="ruby">#     hydra_array = hydra.run</code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="38">
           <span class="hits">1</span>
           
-          <code class="ruby">    new_links.each do |link|</code>
+          <code class="ruby">    new_links = Link.where(&quot;twitter_tweet_id IN (?)&quot;, ntweet_id_array)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="39">
-          <span class="hits">2</span>
+        <li class="never" data-hits="" data-linenumber="39">
           
-          <code class="ruby">      link.build_attributes</code>
+          
+          <code class="ruby">#Maybe we could use hydra here somehow instead of build_attributes</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="40">
           
           
-          <code class="ruby">    end</code>
+          <code class="ruby">#     hydra = Typhoeus::Hydra.new(max_concurrency: 20)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="41">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="41">
           
-          <code class="ruby">    redirect_to twitter_names_path</code>
+          
+          <code class="ruby">#     new_links.each do |link|</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="42">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">#     hydra.queue Typhoeus::Request.new(&quot;http://api.diffbot.com/v2/article?token=#{ENV[&#39;DIFFBOT_TOKEN&#39;]}&amp;url=#{link.url}&quot;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="43">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">#     end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="44">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="44">
           
-          <code class="ruby">  def index</code>
+          
+          <code class="ruby">#     hydra_array = hydra.run</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="45">
           <span class="hits">1</span>
           
-          <code class="ruby">    @twitternames = TwitterName.all</code>
+          <code class="ruby">    new_links.each do |link|</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="46">
+        <li class="covered" data-hits="2" data-linenumber="46">
+          <span class="hits">2</span>
           
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">      link.build_attributes</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="47">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="48">
           <span class="hits">1</span>
           
-          <code class="ruby">  def show</code>
+          <code class="ruby">    redirect_to twitter_names_path</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="49">
-          
-          
-          <code class="ruby">    @data = get_all_tweet_info_for_table(params[:id])</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="50">
-          
-          
-          <code class="ruby">    @domain_counts = get_domain_info_for_table_columns(@data.keys) #this method takes just the tweets</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="51">
+        <li class="never" data-hits="" data-linenumber="49">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="52">
+        <li class="never" data-hits="" data-linenumber="50">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="51">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def index</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="52">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    @twitternames = TwitterName.all</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="53">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="54">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="55">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def show</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="56">
+          
+          
+          <code class="ruby">    @data = get_all_tweet_info_for_table(params[:id])</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="57">
+          
+          
+          <code class="ruby">    @domain_counts = get_domain_info_for_table_columns(@data.keys) #this method takes just the tweets</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="58">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="59">
           
           
           <code class="ruby">end</code>
@@ -1021,8 +1073,8 @@
     <h3>app/models/link.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>18</b> relevant lines. 
-      <span class="green"><b>18</b> lines covered</span> and
+      <b>19</b> relevant lines. 
+      <span class="green"><b>19</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -1084,20 +1136,20 @@
           <code class="ruby">  def build_attributes</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="10">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="5" data-linenumber="10">
+          <span class="hits">5</span>
           
           <code class="ruby">    unless self.domain</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="11">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="3" data-linenumber="11">
+          <span class="hits">3</span>
           
           <code class="ruby">      self.domain = URI.parse(self.url).host</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="12">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="3" data-linenumber="12">
+          <span class="hits">3</span>
           
           <code class="ruby">      self.save</code>
         </li>
@@ -1108,20 +1160,20 @@
           <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="14">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="5" data-linenumber="14">
+          <span class="hits">5</span>
           
           <code class="ruby">    social_domains = [&quot;app.strava.com&quot;,&quot;4sq.com&quot;, &quot;yfrog.com&quot;, &quot;fb.me&quot;, &quot;i.imgur.com&quot;, &quot;imgur.com&quot;, &quot;instagr.am&quot;, &quot;Instagram.com&quot;, &quot;instagram.com&quot;, &quot;kck.st&quot;, &quot;livestream.com&quot;, &quot;linkd.in&quot;, &quot;lnkd.in&quot;, &quot;lockerz.com&quot;, &quot;path.com&quot;, &quot;pinterest.com&quot;, &quot;qr.ae&quot;, &quot;songza.com&quot;, &quot;spoti.fi&quot;, &quot;tinyurl.com&quot;, &quot;tumblr.com&quot;, &quot;tmblr.co&quot;,&quot;twitpic.com&quot;, &quot;twitter.com&quot;, &quot;www.eventbrite.com&quot;, &quot;www.facebook.com&quot;, &quot;www.giltcity.com&quot;, &quot;www.grouponworks.com&quot;, &quot;www.groupon.com&quot;, &quot;www.linkedin.com&quot;, &quot;www.quora.com&quot;, &quot;youtu.be&quot;, &quot;www.youtube.com&quot;]</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="15">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="5" data-linenumber="15">
+          <span class="hits">5</span>
           
           <code class="ruby">    if social_domains.include?(self.domain)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="16">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="1" data-linenumber="16">
+          <span class="hits">1</span>
           
           <code class="ruby">      self.kind_of_url = &quot;social&quot;</code>
         </li>
@@ -1186,13 +1238,19 @@
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="27">
+        <li class="covered" data-hits="1" data-linenumber="27">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  handle_asynchronously :build_attributes</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="28">
           
           
           <code class="ruby">end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="28">
+        <li class="never" data-hits="" data-linenumber="29">
           
           
           <code class="ruby"></code>
@@ -3260,6 +3318,30 @@
           
           
           <code class="ruby"># Rails.backtrace_cleaner.remove_silencers!</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
+        <div class="source_table" id="e2a07b299bfe98d755ee5e15c0eb731169f34d60">
+  <div class="header">
+    <h3>config/initializers/delayed_job_config.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>1</b> relevant lines. 
+      <span class="green"><b>1</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">Delayed::Worker.delay_jobs = !Rails.env.test?</code>
         </li>
       
     </ol>
@@ -5761,8 +5843,8 @@
     <h3>spec/models/link_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>55</b> relevant lines. 
-      <span class="green"><b>55</b> lines covered</span> and
+      <b>57</b> relevant lines. 
+      <span class="green"><b>57</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -5875,13 +5957,13 @@
         <li class="covered" data-hits="1" data-linenumber="18">
           <span class="hits">1</span>
           
-          <code class="ruby">        @l1.build_attributes</code>
+          <code class="ruby">        @l1.save</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="19">
           <span class="hits">1</span>
           
-          <code class="ruby">        @l1.save</code>
+          <code class="ruby">        @l1.build_attributes</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="20">
@@ -5899,13 +5981,13 @@
         <li class="covered" data-hits="1" data-linenumber="22">
           <span class="hits">1</span>
           
-          <code class="ruby">        @l2.build_attributes</code>
+          <code class="ruby">        @l2.save</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="23">
           <span class="hits">1</span>
           
-          <code class="ruby">        @l2.save</code>
+          <code class="ruby">        @l2.build_attributes</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="24">
@@ -6031,196 +6113,208 @@
         <li class="covered" data-hits="1" data-linenumber="44">
           <span class="hits">1</span>
           
-          <code class="ruby">        @l1.build_attributes</code>
+          <code class="ruby">        @l1.save</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="45">
           <span class="hits">1</span>
           
-          <code class="ruby">        @l1.save</code>
+          <code class="ruby">        @l1.build_attributes</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="46">
           <span class="hits">1</span>
           
-          <code class="ruby">        @l2.url = &quot;http://4sq.com/1kdpgzr&quot;</code>
+          <code class="ruby">        @l1.save</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="47">
           <span class="hits">1</span>
           
-          <code class="ruby">        @l2.build_attributes</code>
+          <code class="ruby">        @l2.url = &quot;http://4sq.com/1kdpgzr&quot;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="48">
           <span class="hits">1</span>
           
+          <code class="ruby">        @l2.title = &quot;title2&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="49">
+          <span class="hits">1</span>
+          
           <code class="ruby">        @l2.save</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="49">
+        <li class="never" data-hits="" data-linenumber="50">
           
           
           <code class="ruby">      end</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="50">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      it &quot;should have only one link saved, with the tag of social and the correct domain&quot; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="51">
           <span class="hits">1</span>
           
-          <code class="ruby">        @domain_counts = {}</code>
+          <code class="ruby">      it &quot;should have only one link saved, with the tag of social and the correct domain&quot; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="52">
           <span class="hits">1</span>
           
-          <code class="ruby">        @links = Link.all</code>
+          <code class="ruby">        @domain_counts = {}</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="53">
           <span class="hits">1</span>
           
-          <code class="ruby">        @links.count.should == 1</code>
+          <code class="ruby">        @links = Link.all</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="54">
           <span class="hits">1</span>
           
-          <code class="ruby">        @links.each do |link|</code>
+          <code class="ruby">        @links.count.should == 1</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="55">
           <span class="hits">1</span>
           
-          <code class="ruby">          link.url.should == &quot;http://4sq.com/1kdpgzr&quot;</code>
+          <code class="ruby">        @links.each do |link|</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="56">
           <span class="hits">1</span>
           
-          <code class="ruby">          link.domain.should == &quot;4sq.com&quot;</code>
+          <code class="ruby">          link.url.should == &quot;http://4sq.com/1kdpgzr&quot;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="57">
           <span class="hits">1</span>
           
+          <code class="ruby">          link.domain.should == &quot;4sq.com&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="58">
+          <span class="hits">1</span>
+          
+          <code class="ruby">binding.pry </code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="59">
+          <span class="hits">1</span>
+          
           <code class="ruby">          link.kind_of_url.should == &quot;social&quot;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="58">
-          
-          
-          <code class="ruby">        end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="59">
-          
-          
-          <code class="ruby">      end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="60">
           
           
-          <code class="ruby">    end</code>
+          <code class="ruby">        end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="61">
           
           
-          <code class="ruby">    #end of duplicate URLs</code>
+          <code class="ruby">      end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="62">
           
           
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="63">
+          
+          
+          <code class="ruby">    #end of duplicate URLs</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="64">
+          
+          
           <code class="ruby">  end</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="63">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  describe &quot;given a link we already have attributes for runs through the system&quot; do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="64">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    before do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="65">
           <span class="hits">1</span>
           
-          <code class="ruby">      @l3 = Link.new(author: &quot;test author&quot;, authored_date: &quot;Tue Jan 07 18:06:21 +0000 2014&quot;, title: &quot;Test title&quot;, kind_of_url: &quot;Test kind&quot;, url: &quot;http://gawker.com/5624387/new-york-city-restaurants-surprisingly-not-disgusting&quot;)</code>
+          <code class="ruby">  describe &quot;given a link we already have attributes for runs through the system&quot; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="66">
           <span class="hits">1</span>
           
-          <code class="ruby">      @l3.save</code>
+          <code class="ruby">    before do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="67">
           <span class="hits">1</span>
           
-          <code class="ruby">      @l4 = Link.find(@l3.id)      </code>
+          <code class="ruby">      @l3 = Link.new(author: &quot;test author&quot;, authored_date: &quot;Tue Jan 07 18:06:21 +0000 2014&quot;, title: &quot;Test title&quot;, kind_of_url: &quot;Test kind&quot;, url: &quot;http://gawker.com/5624387/new-york-city-restaurants-surprisingly-not-disgusting&quot;)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="68">
+        <li class="covered" data-hits="1" data-linenumber="68">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    end</code>
+          <code class="ruby">      @l3.save</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="69">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &quot;Should not overwrite the existing data&quot; do</code>
+          <code class="ruby">      @l4 = Link.find(@l3.id)      </code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="70">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      @l3.author.should == @l4.author</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="71">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      @l3.authored_date.should == @l4.authored_date</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="72">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      @l3.title.should == @l4.title</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="73">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      @l3.kind_of_url.should == @l4.kind_of_url</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="74">
+        <li class="never" data-hits="" data-linenumber="70">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="75">
+        <li class="covered" data-hits="1" data-linenumber="71">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;Should not overwrite the existing data&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="72">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      @l3.author.should == @l4.author</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="73">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      @l3.authored_date.should == @l4.authored_date</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="74">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      @l3.title.should == @l4.title</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="75">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      @l3.kind_of_url.should == @l4.kind_of_url</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="76">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="77">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="76">
+        <li class="never" data-hits="" data-linenumber="78">
           
           
           <code class="ruby">end</code>

@@ -138,6 +138,9 @@
         null,
         null
       ],
+      "/Users/michaelmuse/Documents/ga_wdi/projects/linkpuller/config/initializers/delayed_job_config.rb": [
+        1
+      ],
       "/Users/michaelmuse/Documents/ga_wdi/projects/linkpuller/config/initializers/devise.rb": [
         null,
         null,
@@ -771,14 +774,21 @@
         null,
         null,
         1,
+        null,
         1,
         1,
+        1,
+        0,
+        0,
+        0,
         null,
         1,
         1,
         1,
         1,
         1,
+        1,
+        null,
         null,
         1,
         1,
@@ -844,14 +854,14 @@
         1,
         null,
         1,
-        6,
+        5,
+        3,
+        3,
+        null,
+        5,
+        5,
+        1,
         4,
-        4,
-        null,
-        6,
-        6,
-        2,
-        4,
         2,
         2,
         2,
@@ -861,6 +871,7 @@
         2,
         null,
         null,
+        1,
         null,
         null
       ],
@@ -933,7 +944,9 @@
         1,
         1,
         1,
+        1,
         null,
+        1,
         1,
         1,
         1,
@@ -1062,6 +1075,6 @@
         null
       ]
     },
-    "timestamp": 1389933978
+    "timestamp": 1389942337
   }
 }

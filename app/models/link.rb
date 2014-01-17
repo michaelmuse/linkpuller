@@ -24,5 +24,6 @@ class Link < ActiveRecord::Base
       self.kind_of_url = json["type"]
     end
   end
+  handle_asynchronously :build_attributes
 end
 
