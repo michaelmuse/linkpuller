@@ -11,12 +11,12 @@ HEROKU http://linkpuller.herokuapp.com/
 
 -External data:
 
-..*Twitter gem
-....*specifically to look up user timelines, in different quantities
+..* Twitter gem
+....* Specifically to look up user timelines, in different quantities
 
 
-..*Diffbot API
-....*To enrich the articles - this may run out of credits at some point
+..* Diffbot API
+....* To enrich the articles - this may run out of credits at some point
     
 To use linkpuller, just log in, choose a username that generally has great links, and pick an amount of tweets to pull. The more you pull, the longer it takes. Generally, pulling all tweets from a user will take a very long time.
 
