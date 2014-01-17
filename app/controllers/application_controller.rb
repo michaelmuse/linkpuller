@@ -12,11 +12,11 @@ class ApplicationController < ActionController::Base
     end
     data = {}
     tweets.each do |tweet|
-      uNameAndLinks = []
-      uNameAndLinks << username
-      uNameAndLinks <<  Link.find_by_sql(["SELECT * FROM links WHERE twitter_tweet_id = ?", tweet.twitter_tweet_id])
+      user_name_and_links_array = []
+      user_name_and_links_array << username
+      user_name_and_links_array <<  Link.find_by_sql(["SELECT * FROM links WHERE twitter_tweet_id = ?", tweet.twitter_tweet_id])
   #give me a hash where I can get my data without more DB calls
-      data[tweet] = uNameAndLinks
+      data[tweet] = user_name_and_links_array
     end
     return data
   end
