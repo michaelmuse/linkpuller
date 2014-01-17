@@ -9,14 +9,15 @@ HEROKU http://linkpuller.herokuapp.com/
 ---
 
 
--External data:
+-Here were the things I used to get external data:
   * Twitter gem
     * Specifically to look up user timelines, in different quantities
 
   * Diffbot API
     * To enrich the articles - this may run out of credits at some point
-    
-To use linkpuller, just log in, choose a username that generally has great links, and pick an amount of tweets to pull. The more you pull, the longer it takes. Generally, pulling all tweets from a user will take a very long time.
+
+---    
+To use linkpuller, just log in, choose a username that generally has great links, and pick an amount of tweets to pull. The more you pull, the longer it takes. Generally, pulling all tweets from a user will take a very long time and potentially cause issues.
 
 In the view function, it arranges links by domain and actually writes you an export file of the bookmarks that you can upload to your browser. This would let you quickly bookmark all the links in your browser from an @username you like so that you might browse them later.
 
@@ -108,7 +109,7 @@ end
 
 The API that looks up the URL's attributes is very slow (which hangs long enough to cause Heroku to time out unfortunately), so I also spent a lot of time trying to figure out how to use RubyProf to measure that within my loop, Typhoeus to see if I could make many requests concurrently (needs more work), and ultimately decided upon delayed_job to redirect you to the page and lookup this data later. If I had more time, I would implement a scheduler to kick off these delayed jobs regularly, but currently, I do it manually :)
 
-My test coverage is still decent despite all the refactoring, which is a nice win:
+My test coverage is still ok despite LOTS of refactoring since the tests were written, which is a nice win:
 
 ![Test Coverage](http://content.screencast.com/users/MichaelMuse/folders/Jing/media/aed9443e-3e21-49bb-b011-d2d419579cf5/00000018.png)
 
