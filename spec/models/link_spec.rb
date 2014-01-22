@@ -13,15 +13,14 @@ describe Link do
     #Unique URLs
     describe "and given the urls are unique" do
       before do
-        @l1.url = "http://www.theatlantic.com/technology/archive/2014/01/him-love-in-the-time-of-operating-systems/283062/"
+        @l1.url = "http://www.theatlantic.com/technology/archive/2014/01/sit-back-relax-and-read-that-long-story-on-your-phone/283205/"
         @l1.kind_of_url = "article"
+        @l1.build_domain
         @l1.save
-        @l1.build_attributes
         @l2.url = "http://www.theatlantic.com/business/archive/2013/07/the-economic-cost-of-hangovers/277546/"
         @l2.kind_of_url = "article"
+        @l2.build_domain
         @l2.save
-        @l2.build_attributes
-
       end
       it "should have the links saved and return the right values" do
         @links = Link.find([@l1.id, @l2.id])
@@ -41,11 +40,11 @@ describe Link do
     describe "and given the urls are the same and social" do
       before do
         @l1.url = "http://4sq.com/1kdpgzr"
-        @l1.save
-        @l1.build_attributes
+        @l1.build_domain
         @l1.save
         @l2.url = "http://4sq.com/1kdpgzr"
         @l2.title = "title2"
+        @l2.build_domain
         @l2.save
       end
       it "should have only one link saved, with the tag of social and the correct domain" do
