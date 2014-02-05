@@ -32,6 +32,17 @@ Linkpuller::Application.configure do
   # Raise exception on mass assignment protection for Active Record models
   config.active_record.mass_assignment_sanitizer = :strict
 
+  config.action_mailer.default_url_options = {:host => 'localhost:3000'}
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :authentication => :plain,
+    :address => "smtp.mailgun.org",
+    :port => 587,
+    :domain => "localhost:3000",
+    :user_name => "postmaster@linkpuller.herokuapp.com",
+    :password => ENV['MAILGUN_PASSWORD']
+  }
+
   # Print deprecation notices to the stderr
   config.active_support.deprecation = :stderr
 end

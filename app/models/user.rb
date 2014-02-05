@@ -140,5 +140,19 @@ class User < ActiveRecord::Base
     save_tweets(tweets)
   end
 
+  def lookup_diffbot(links)
+    @lookups = []
+    links.each do |link|
+      if link.kind_of_url == "social"
+      elsif link.author == nil || link.authored_date == nil || link.title == nil || link.kind_of_url == nil
+        @lookups << link.url
+      end
+    end
+    if @lookups
+      @lookups = @lookups.join(' ')
+      HTTParty.post('http://api.diffbot.com/v2/bulk', {:body => { :token => ENV['DIFFBOT_TOKEN'], :urls => @lookups, :apiUrl => "http://api.diffbot.com/v2/article", :name => "MJM#{Time.now}", :notifyWebHook => "http://linkpuller.herokuapp.com/twitter_names/diffbot_links"} }) 
+      binding.pry
+    end
+  end
 end
 

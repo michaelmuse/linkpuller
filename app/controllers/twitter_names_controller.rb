@@ -58,12 +58,16 @@ class TwitterNamesController < ApplicationController
       link.build_domain
     end
 
-    #Here we schedule the Diffbot lookup (except for during testing)
-    unless ENV["RAILS_ENV"] == 'test'
-      new_links.each do |link|
-        link.build_attributes
-      end
-    end
+  # Temporarily comment out
+  #   #Here we schedule the Diffbot lookup (except for during testing)
+  #   unless ENV["RAILS_ENV"] == 'test'
+  #     new_links.each do |link|
+  #       link.build_attributes
+  #     end
+  #   end
+
+    #Bulk way to schedule diffbot:
+    @current_user.lookup_diffbot(new_links)
 
     #Want to be able to call rake tasks
     require 'rake'
@@ -86,5 +90,18 @@ class TwitterNamesController < ApplicationController
   def show
     @data = get_all_tweet_info_for_table(params[:id])
     @domain_counts = get_domain_info_for_table_columns(@data.keys) #this method takes just the tweets
+  end
+  def diffbot_links
+    @json = params
+    binding.pry
+    #need to save all the links we got => create a bunch of hashes, look up the link id for each one based on the link, and save all at once.
+      # link.author = json["author"]
+      # link.authored_date = json["date"]
+      # #convert the date
+      # link.authored_date ? link.authored_date.strftime("%m/%d/%Y")! : nil
+      # link.title = json["title"]
+      # link.kind_of_url = json["type"]
+      # link.save
+
   end
 end

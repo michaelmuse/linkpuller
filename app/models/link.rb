@@ -30,6 +30,6 @@ class Link < ActiveRecord::Base
       self.save
     end
   end
-  handle_asynchronously :build_attributes
+  handle_asynchronously :build_attributes, :run_at => Proc.new { 10.seconds.from_now }
 end
 

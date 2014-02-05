@@ -9,7 +9,7 @@ Linkpuller::Application.routes.draw do
 
   get '/tweets' => 'tweets#index'
 
-
+  post '/twitter_names/diffbot_links' => 'twitter_names#diffbot_links'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
